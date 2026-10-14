@@ -2468,8 +2468,8 @@ body {
 }
 
 .cd-cap-icon {
-    width: 56px;
-    height: 56px;
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2495,7 +2495,7 @@ body {
 
 /* ---- Process steps ---- */
 .cd-process {
-    background: #fff;
+    background: #EEF2F9;
 }
 
 .cd-steps {
@@ -2507,38 +2507,53 @@ body {
 }
 
 .cd-step {
-    flex: 1;
-    min-width: 160px;
+    flex: 1 1 220px;
+    min-width: 0;
+    max-width: 280px;
     text-align: left;
-    max-width: 220px;
 }
 
 .cd-step-head {
     display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 14px;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 0;
 }
 
 .cd-step-icon {
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
     border-radius: 50%;
     background: #fff;
-    border: 2px solid #cbd6ea;
+    border: 3px solid #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--cs-primary, #000080);
-    font-size: 1.8rem;
-    flex-shrink: 0;
+    box-shadow: 0 0 0 1px #dce5f2;
+}
+
+.cd-step-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
+
+.cd-step-content {
+    flex: 1;
+    min-width: 0;
 }
 
 .cd-step-no {
-    color: var(--cs-icon, #d81159);
-    font-size: 1.6rem;
+    display: block;
+    color: var(--cs-icon, #f07818);
+    font-size: 1.1rem;
     font-weight: 700;
+    line-height: 1.2;
     letter-spacing: 1px;
+    margin-bottom: 3px;
 }
 
 .cd-step h5 {
@@ -2883,7 +2898,7 @@ body {
 
 /* ---- Capability cards (image + body + bullet list) ---- */
 .da-capabilities {
-    background: #EEF2F9;
+    background: #FFFFFF;
 }
 
 .da-cap-card {
@@ -2905,7 +2920,8 @@ body {
 
 .da-cap-img {
     flex: 0 0 36%;
-    min-height: 220px;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
     border-radius: 8px;
     background-size: cover;
     background-position: center;
@@ -2983,7 +2999,7 @@ body {
 
 /* ---- Industries pill row ---- */
 .da-industries {
-    background: #EEF2F9;
+    background: #fff;
 }
 
 .da-industry-row {
@@ -3199,8 +3215,8 @@ body {
 }
 
 .vm-sol-icon {
-    width: 54px;
-    height: 54px;
+    width: 65px;
+    height: 65px;
     border-radius: 10px;
     background: #EEF2F9;
     display: flex;
