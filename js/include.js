@@ -1,8 +1,16 @@
 (function () {
+    var scripts = document.querySelectorAll('script[src*="include.js"]');
+    var scriptSrc = scripts[scripts.length - 1].getAttribute('src');
+    var base = scriptSrc.replace('js/include.js', '');
+
     function loadHTML(url, target) {
-        return fetch(url)
+        return fetch(base + url)
             .then(function (res) { return res.text(); })
             .then(function (html) {
+                if (base) {
+                    html = html.replace(/href="(?!https?:\/\/|#|mailto:)([^"]+)"/g, 'href="' + base + '$1"');
+                    html = html.replace(/src="(?!https?:\/\/|data:)([^"]+)"/g, 'src="' + base + '$1"');
+                }
                 target.innerHTML = html;
                 target.replaceWith.apply(target, target.childNodes);
             });

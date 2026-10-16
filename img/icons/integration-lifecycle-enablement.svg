@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 722 722" width="722" height="722">
+	<style>
+		.s0 { fill: none;stroke: #0b5cff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 44 } 
+	</style>
+	<g>
+		<path fill-rule="evenodd" class="s0" d="m69 69h584c19.33 0 35 15.67 35 35v400c0 19.33-15.67 35-35 35h-584c-19.33 0-35-15.67-35-35v-400c0-19.33 15.67-35 35-35z"/>
+		<path class="s0" d="m34 414h654m-449 235h244m-122-110v110"/>
+	</g>
+</svg>
