@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 713 713" width="713" height="713">
+	<style>
+		.s0 { fill: none;stroke: #0b5cff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 44 } 
+	</style>
+	<g>
+		<path class="s0" d="m305 47c-95-30-175 45-165 140-80 25-105 125-45 185-55 75-10 175 75 190 5 95 105 145 180 90v-555c0-25-18-43-45-50z"/>
+		<path class="s0" d="m429 47c95-30 175 45 165 140 80 25 105 125 45 185 55 75 10 175-75 190-5 95-105 145-180 90v-555c0-25 18-43 45-50z"/>
+		<path class="s0" d="m220 192c70 0 90 45 90 95m204-95c-70 0-90 45-90 95m-219 150c65 0 105-35 105-95m219 95c-65 0-105-35-105-95"/>
+	</g>
+</svg>

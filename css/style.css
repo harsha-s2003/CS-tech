@@ -1190,7 +1190,7 @@ body {
 .why-icon {
     width: 70px;
     height: 70px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #EEF2F9;
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     display: flex;
@@ -3174,6 +3174,7 @@ body {
 }
 
 .da-industry-pill {
+    width: 100%;
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -3329,6 +3330,7 @@ body {
 
     .da-industry-pill {
         flex: 1 1 100%;
+        margin-bottom: 15px;
     }
 
     .da-case-img {
@@ -3478,7 +3480,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background: #0A3A8C;
+    background: #EEF2F9;
     border: 2px solid rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
@@ -3550,7 +3552,9 @@ body {
     font-size: 2rem;
     flex-shrink: 0;
 }
-
+.vm-plat-card .vm-plat-icon img {
+    width: 40px;
+}
 .vm-prog-list {
     display: flex;
     flex-direction: column;
@@ -4406,8 +4410,8 @@ body {
 }
 
 .vm-plat-ico img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -4479,11 +4483,6 @@ body {
 .vm-prog-card .vm-plat-ico {
     width: 50px !important;
     height: 50px !important;
-}
-
-.vm-prog-card .vm-plat-ico img {
-    width: 32px;
-    height: 32px;
 }
 
 .vm-prog-text {
