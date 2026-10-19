@@ -5698,3 +5698,1266 @@ body {
     /* Brighter orange for better contrast on the dark navy background */
     /* filter: brightness(0) saturate(100%) invert(45%) sepia(85%) saturate(2200%) hue-rotate(355deg) brightness(102%) contrast(100%); */
 }
+
+
+/* ---- Platform / Delivery Snapshot: icon color #e23a59 ---- */
+.vm-plat-icon img,
+.vm-plat-icon .stat-icon-raster,
+.vm-plat-ico img,
+.vm-plat-ico .stat-icon-raster {
+    width: 40%;
+    height: 40%;
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: contain;
+    /* #e23a59 red-pink filter chain */
+    filter: brightness(0) saturate(100%) invert(32%) sepia(78%) saturate(2500%) hue-rotate(329deg) brightness(97%) contrast(92%) !important;
+}
+
+/* ===================== AUTOMOTIVE & MOBILITY ===================== */
+.auto-hero {
+    background-color: #eaf1fb;
+    background-position: right center;
+    min-height: 480px;
+    padding: 60px 0;
+}
+
+.auto-hero .gcc-hero-sub {
+    max-width: 560px;
+}
+
+/* Soft light fade on the left keeps the copy readable over the skyline */
+.auto-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(238, 244, 252, 0.95) 0%,
+            rgba(238, 244, 252, 0.8) 35%,
+            rgba(238, 244, 252, 0) 60%);
+    pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+    .auto-hero::before {
+        background: rgba(238, 244, 252, 0.85);
+    }
+}
+
+.auto-hero .hero-title {
+    font-size: 2.4rem;
+}
+
+/* ---- Experience at scale ---- */
+.auto-stat-row {
+    border-bottom: 1px solid var(--cs-border);
+}
+
+.auto-stat-row-wide {
+    border-bottom: 0;
+}
+
+.auto-stat-row > [class*="col-"]:not(:last-child) .auto-stat {
+    border-right: 1px solid var(--cs-border);
+}
+
+.auto-stat {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 22px 28px;
+    height: 100%;
+}
+
+.auto-stat-icon {
+    color: var(--cs-primary);
+    font-size: 2.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.auto-stat-number {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 0 0 2px;
+}
+
+.auto-stat h5 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+}
+
+.auto-stat-label {
+    color: var(--cs-muted);
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ---- Shared card ---- */
+.auto-industries,
+.auto-solutions {
+    background: var(--cs-bg-light);
+}
+
+.auto-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 128, 0.12);
+    color: inherit;
+}
+
+.auto-card-img {
+    height: 170px;
+    background-color: #dfe6f3;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.auto-card-img-lg {
+    height: 200px;
+}
+
+/* Shown when the photo for a card has not been added yet */
+.auto-card-img.is-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cs-primary) 0%, #1f3fa8 60%, var(--cs-accent) 140%);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 3.4rem;
+}
+
+.auto-card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px 18px 52px;
+}
+
+.auto-card-body h5 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.auto-card-body .auto-card-title-lg {
+    font-size: 1.2rem;
+}
+
+.auto-card-body p {
+    color: var(--cs-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
+}
+
+.auto-list {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--cs-text);
+}
+
+.auto-list li {
+    margin-bottom: 4px;
+}
+
+.auto-list li::marker {
+    color: var(--cs-primary);
+}
+
+.auto-card-arrow {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid var(--cs-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cs-primary);
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.auto-industries .auto-card-arrow {
+    left: 18px;
+    right: auto;
+}
+
+.auto-card:hover .auto-card-arrow {
+    background: var(--cs-primary);
+    color: #fff;
+}
+
+/* ---- What we help you achieve ---- */
+.auto-achieve {
+    background: linear-gradient(135deg, var(--cs-primary-dark) 0%, var(--cs-primary) 100%);
+    color: #fff;
+}
+
+.auto-achieve-row > [class*="col-"]:not(:last-child) .auto-achieve-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.auto-achieve-item {
+    text-align: center;
+    padding: 10px 18px;
+    height: 100%;
+}
+
+.auto-achieve-item i {
+    font-size: 2.4rem;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.auto-achieve-item h5 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.98rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.auto-achieve-item p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.83rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ---- Case studies ---- */
+.auto-link {
+    color: var(--cs-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.auto-link i {
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.auto-link:hover i,
+.auto-card:hover .auto-link i {
+    transform: translateX(4px);
+}
+
+.auto-case .auto-card-img {
+    height: 150px;
+}
+
+.auto-case .auto-card-body {
+    padding-bottom: 18px;
+}
+
+.auto-case h6 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 14px;
+    flex: 1;
+}
+
+/* ---- Contact ---- */
+.auto-connect > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cs-primary);
+    line-height: 1.3;
+}
+
+.auto-connect i {
+    font-size: 1.8rem;
+    color: var(--cs-accent);
+}
+
+.auto-form-title {
+    color: var(--cs-primary);
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.auto-submit {
+    background: #f26b21;
+    color: #fff;
+    border: none;
+    padding: 11px 28px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.auto-submit:hover {
+    background: #d95a14;
+    color: #fff;
+}
+
+/* ---- Automotive responsive ---- */
+@media (max-width: 1199.98px) {
+    .auto-achieve-row > [class*="col-"] .auto-achieve-item {
+        border-right: 0 !important;
+        padding: 18px 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .auto-hero .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .auto-stat-row > [class*="col-"] .auto-stat {
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--cs-border);
+        padding: 18px 4px;
+    }
+
+    .auto-stat-row {
+        border-bottom: 0;
+    }
+}
+
+/* ===================== AUTOMOTIVE - INDUSTRIES WE SERVE ===================== */
+.auto-ind-hero {
+    align-items: flex-start;
+    padding-top: 28px;
+}
+
+.auto-breadcrumb {
+    font-size: 0.8rem;
+    margin-bottom: 1.75rem;
+    --bs-breadcrumb-divider: '>';
+}
+
+.auto-breadcrumb a {
+    color: var(--cs-primary);
+    text-decoration: none;
+}
+
+.auto-breadcrumb .active {
+    color: var(--cs-muted);
+}
+
+/* Shared fallback for the image slots on this page */
+.auto-explore-img.is-fallback,
+.auto-seg-img.is-fallback,
+.auto-wheel-img.is-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cs-primary) 0%, #1f3fa8 60%, var(--cs-accent) 140%);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 3rem;
+}
+
+/* ---- Explore tiles ---- */
+.auto-explore-tile {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auto-explore-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 128, 0.12);
+}
+
+.auto-explore-img {
+    height: 130px;
+    background-color: #f3f6fb;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 12px 12px 0;
+    border-radius: 6px;
+}
+
+.auto-explore-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 14px;
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.auto-explore-foot i {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #f26b21;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.auto-explore-tile:hover .auto-explore-foot i {
+    transform: translateX(3px);
+}
+
+/* ---- Segment sections ---- */
+.auto-solutions {
+    scroll-margin-top: 90px;
+}
+
+.auto-seg {
+    scroll-margin-top: 90px;
+    background: #fff;
+}
+
+.auto-seg-alt {
+    background: var(--cs-bg-light);
+}
+
+.auto-seg-support {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+.auto-seg-support i {
+    font-size: 1.4rem;
+}
+
+.auto-seg-img {
+    height: 240px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.auto-sys-body {
+    padding-bottom: 18px;
+}
+
+/* ---- Two & three wheeler cards ---- */
+.auto-wheel-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.auto-wheel-img {
+    width: 42%;
+    min-width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.auto-wheel-card h5 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* ---- Case study tags ---- */
+.auto-case-tag {
+    color: var(--cs-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.auto-link-accent {
+    color: #f26b21;
+}
+
+@media (max-width: 575.98px) {
+    .auto-explore-foot {
+        font-size: 0.8rem;
+    }
+
+    .auto-wheel-img {
+        width: 38%;
+        min-width: 100px;
+    }
+}
+
+/* ===================== AUTOMOTIVE - ENGINEERING SERVICES ===================== */
+.auto-svc-tile {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    padding: 20px 44px 20px 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auto-svc-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 128, 0.12);
+}
+
+.auto-svc-icon {
+    font-size: 2.2rem;
+    color: var(--cs-primary);
+    line-height: 1;
+}
+
+.auto-svc-tile h5 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.auto-svc-tile p {
+    color: var(--cs-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.auto-svc-arrow,
+.auto-orange-arrow {
+    color: #f26b21;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.auto-svc-arrow {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+.auto-orange-arrow {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+}
+
+.auto-svc-tile:hover .auto-svc-arrow,
+.auto-card:hover .auto-orange-arrow {
+    transform: translateX(4px);
+}
+
+.auto-ext {
+    color: #f26b21;
+    font-size: 0.75rem;
+    margin-left: 4px;
+}
+
+/* Five equal columns on large screens */
+@media (min-width: 1200px) {
+    .auto-col-5 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+/* ---- Consultancy process steps ---- */
+.auto-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+}
+
+.auto-step {
+    position: relative;
+    padding: 6px 22px;
+}
+
+.auto-step:not(:last-child) {
+    border-right: 1px solid var(--cs-border);
+}
+
+/* Arrow between steps */
+.auto-step:not(:last-child)::after {
+    content: "\F138";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    right: -9px;
+    top: 22px;
+    background: #fff;
+    color: var(--cs-primary);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.auto-step-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.auto-step-head > i {
+    font-size: 2.2rem;
+    color: var(--cs-primary);
+    line-height: 1;
+}
+
+.auto-step-head span {
+    color: var(--cs-primary);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.auto-step-head h5 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.auto-step p {
+    color: var(--cs-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.auto-band {
+    height: 220px;
+    border-radius: 8px;
+    background-color: #dfe6f3;
+    background-size: cover;
+    background-position: center;
+}
+
+.auto-band.is-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cs-primary) 0%, #1f3fa8 60%, var(--cs-accent) 140%);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 3.4rem;
+}
+
+.auto-case .auto-card-body p {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 991.98px) {
+    .auto-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 0;
+    }
+
+    .auto-step:not(:last-child) {
+        border-right: 0;
+    }
+
+    .auto-step::after {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .auto-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .auto-band {
+        height: 160px;
+    }
+}
+
+/* ===================== AUTOMOTIVE - SOLUTIONS ===================== */
+/* Horizontal image + text card */
+.auto-hcard {
+    display: flex;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.auto-hcard-img {
+    width: 38%;
+    min-height: 180px;
+    flex-shrink: 0;
+    background-color: #dfe6f3;
+    background-size: cover;
+    background-position: center;
+}
+
+.auto-hcard-img.is-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cs-primary) 0%, #1f3fa8 60%, var(--cs-accent) 140%);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 3rem;
+}
+
+.auto-hcard-body {
+    padding: 16px 18px;
+}
+
+.auto-hcard-body h5 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1.02rem;
+    margin-bottom: 6px;
+}
+
+.auto-hcard-body p {
+    color: var(--cs-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.auto-hcard-body .auto-list {
+    font-size: 0.83rem;
+}
+
+@media (max-width: 575.98px) {
+    .auto-hcard {
+        flex-direction: column;
+    }
+
+    .auto-hcard-img {
+        width: 100%;
+        min-height: 160px;
+    }
+}
+
+/* Industries banner: vehicles fill the right side, so fit the image to the hero height
+   instead of cropping it, keeping the vehicles clear of the copy */
+@media (min-width: 1200px) {
+    .auto-ind-banner {
+        min-height: 420px;
+        padding-bottom: 40px;
+        background-size: auto 100%;
+        background-position: right center;
+    }
+
+    .auto-ind-banner .gcc-hero-sub {
+        margin-bottom: 0;
+    }
+}
+
+/* Provided SVG icons, recoloured through a mask so they follow each section's text colour */
+.auto-svg {
+    display: inline-block;
+    width: 1.3em;
+    height: 1.1em;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    vertical-align: middle;
+}
+
+/* Multi-tone icon that can't be masked; sized to match .auto-svg */
+.auto-svg-img {
+    display: inline-block;
+    width: 3.1rem;
+    height: 2.65rem;
+    object-fit: contain;
+    margin-bottom: 14px;
+}
+
+/* Product shots on a white background: show the whole part instead of cropping it */
+.auto-card-img-contain {
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Vehicle cut-outs on white: let the section colour show through the white */
+.auto-seg-img,
+.auto-explore-img {
+    mix-blend-mode: multiply;
+}
+
+/* Service tile icons: fixed box so wide and square icons read at the same size */
+.auto-svc-tile .auto-svg {
+    width: 46px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* ===================== ABOUT US ===================== */
+.about-hero {
+    background-color: #eaf1fb;
+}
+
+.about-hero-title {
+    color: var(--cs-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.about-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    color: var(--cs-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.about-dash {
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background: #f26b21;
+    margin-right: 14px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    color: var(--cs-primary);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+/* ---- Snapshot ---- */
+.about-snapshot,
+.about-people-alt {
+    background: var(--cs-bg-light);
+}
+
+.about-stat {
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    padding: 20px 12px;
+    text-align: center;
+    color: var(--cs-primary);
+}
+
+.about-stat > i {
+    font-size: 2.3rem;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.about-stat h3 {
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.about-stat h3 small {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.about-stat p {
+    color: var(--cs-muted);
+    font-size: 0.86rem;
+    line-height: 1.35;
+    margin: 4px 0 0;
+}
+
+/* ---- Core strengths ---- */
+.about-strength {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    padding: 20px 18px;
+}
+
+.about-strength > i {
+    color: #f26b21;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.about-strength h5 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.about-strength p {
+    color: var(--cs-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ---- Parent group + global presence ---- */
+.about-group {
+    background: linear-gradient(90deg, #eef3fb 0%, #f6f9fd 100%);
+}
+
+.about-parent {
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+    background-color: #eaf1fb;
+    background-size: cover;
+    background-position: right center;
+    display: flex;
+    align-items: center;
+}
+
+.about-parent-text {
+    position: relative;
+    max-width: 440px;
+    padding: 40px 24px 40px max(24px, calc((100vw - 1320px) / 2 + 12px));
+}
+
+.about-parent-text p {
+    color: var(--cs-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-presence {
+    padding: 40px max(24px, calc((100vw - 1320px) / 2 + 12px)) 40px 24px;
+}
+
+.about-presence-body {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.about-map {
+    position: relative;
+    flex: 1;
+    min-height: 210px;
+    overflow: hidden;
+}
+
+.about-map-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12rem;
+    color: #cfe0f5;
+    line-height: 1;
+}
+
+.about-pin {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--cs-primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.about-pin i {
+    color: #f26b21;
+    font-size: 1rem;
+}
+
+.about-pin-main i {
+    color: var(--cs-accent);
+    font-size: 1.25rem;
+}
+
+.about-offices {
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    min-width: 150px;
+}
+
+.about-offices h6 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.about-offices h6 i {
+    color: #f26b21;
+    margin-right: 6px;
+}
+
+.about-offices ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--cs-primary);
+}
+
+.about-offices li {
+    padding: 2px 0;
+}
+
+.about-offices li::before {
+    content: "\25B8";
+    margin: 0 8px 0 4px;
+    font-size: 0.75rem;
+}
+
+/* ---- Alliances ---- */
+.about-logos {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+}
+
+.about-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 74px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.about-logo-sm {
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+/* ---- People ---- */
+.about-person {
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    padding: 18px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cs-primary) 0%, #1f3fa8 70%, var(--cs-accent) 140%);
+    background-size: cover;
+    background-position: center top;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.about-person h6 {
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.about-person p {
+    color: var(--cs-muted);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.about-person .auto-link {
+    font-size: 0.82rem;
+}
+
+@media (min-width: 1200px) {
+    .about-col-8 {
+        width: 12.5%;
+    }
+}
+
+/* ---- Certifications ---- */
+.about-cert-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+.about-cert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-radius: 8px;
+    padding: 16px 10px;
+    text-align: center;
+    color: var(--cs-primary);
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.about-cert-img {
+    height: 64px;
+    width: auto;
+}
+
+.about-cert-mark {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #10307a;
+}
+
+.about-cert-cmmi {
+    color: #333;
+    font-size: 1.9rem;
+}
+
+/* ---- CTA ---- */
+.about-cta {
+    position: relative;
+    padding: 56px 0;
+    background-color: var(--cs-primary);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.about-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 85, 0.95) 0%, rgba(0, 0, 110, 0.85) 50%, rgba(0, 0, 128, 0.45) 100%);
+}
+
+.about-cta .container {
+    position: relative;
+}
+
+.about-cta h2 {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.about-cta p {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.about-cta-btn {
+    background: #fff;
+    color: var(--cs-primary);
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 6px;
+}
+
+.about-cta-btn:hover {
+    background: #f26b21;
+    color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+    .about-logos {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .about-cert-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-hero-title {
+        font-size: 1.9rem;
+    }
+
+    .about-logos,
+    .about-cert-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-presence-body {
+        flex-direction: column;
+    }
+
+    .about-parent-text,
+    .about-presence {
+        padding: 32px 16px;
+    }
+}
