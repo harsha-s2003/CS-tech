@@ -5937,7 +5937,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 18px 18px 52px;
+    padding: 18px 18px 20px;
 }
 
 .auto-card-body h5 {
@@ -6584,7 +6584,7 @@ body {
     display: inline-block;
     width: 1.3em;
     height: 1.1em;
-    background-color: currentColor;
+    background-color: #d81159;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
@@ -7048,4 +7048,291 @@ body {
     .about-presence {
         padding: 32px 16px;
     }
+}
+
+/* Shared contact form (includes/form.html): clear the fixed header when jumped to via #contact */
+#contact {
+    scroll-margin-top: 90px;
+}
+
+/* Mobility pages: card titles in black */
+.auto-card-body h5,
+.auto-case h6,
+.auto-svc-tile h5,
+.auto-hcard-body h5,
+.auto-wheel-card h5,
+.auto-explore-foot span {
+    color: #000;
+}
+
+/* Industries page segment banners (Commercial Vehicles, Off-Highway): the vehicle photo runs
+   behind the section header and fades into the cards. Each section only sets its own photo. */
+.auto-seg-cv,
+.auto-seg-oh,
+.auto-seg-tw {
+    position: relative;
+    overflow: hidden;
+}
+
+.auto-seg-cv > .container,
+.auto-seg-oh > .container,
+.auto-seg-tw > .container {
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 1200px) {
+    .auto-seg-cv::before,
+    .auto-seg-oh::before,
+    .auto-seg-tw::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 440px;
+        background-position: right center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -webkit-mask-image: linear-gradient(180deg, #000 65%, transparent 100%);
+        mask-image: linear-gradient(180deg, #000 65%, transparent 100%);
+    }
+
+    .auto-seg-cv::before {
+        background-image: url('../img/automotive/cv-section-banner.webp');
+    }
+
+    .auto-seg-oh::before {
+        background-image: url('../img/automotive/oh-section-banner.webp');
+    }
+
+    .auto-seg-tw::before {
+        background-image: url('../img/automotive/tw-section-banner.webp');
+        /* Scooter sits far left in this photo: the photo gets its own box on the right at its natural
+           3:1 ratio (380px tall = 1140px wide), so wide screens push it clear of the text, and its left
+           edge fades into the section instead of ending in a hard line */
+        left: auto;
+        width: 1140px;
+        max-width: 100%;
+        height: 380px;
+        background-size: cover;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%), linear-gradient(180deg, #000 65%, transparent 100%);
+        mask-image: linear-gradient(90deg, transparent 0%, #000 30%), linear-gradient(180deg, #000 65%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+    }
+
+    /* Start the cards below the vehicles, as in the design */
+    .auto-seg-tw > .container > .row:first-child {
+        min-height: 330px;
+    }
+
+    /* The photo is the background here, so the side image would repeat it */
+    .auto-seg-img-banner {
+        visibility: hidden;
+    }
+}
+
+/* Phones/tablets: show the photo as a normal image above the cards */
+.auto-seg-img-banner {
+    background-size: cover;
+    background-position: 70% center;
+    mix-blend-mode: normal;
+}
+
+/* Segment label above a case-card title (mobility pages) */
+.case-body .case-tag {
+    display: block;
+    color: #d81159;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+/* Case study header: keep a long subtitle from pushing "View All" onto its own line */
+.case-studies .section-sub {
+    max-width: 820px;
+}
+
+/* Product Engineering (automotive-services): photo on the front, full details on the back.
+   Reuses the .water-service-card flip from industries.html. */
+.auto-flip {
+    min-height: 360px;
+    outline: none;
+}
+
+.auto-flip .flip-front {
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
+    text-align: left;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+}
+
+.auto-flip-img {
+    flex: 1;
+    background-color: #dfe6f3;
+    background-size: cover;
+    background-position: center;
+}
+
+.auto-flip-img.is-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cs-primary) 0%, #1f3fa8 60%, var(--cs-accent) 140%);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 3rem;
+}
+
+.auto-flip-title {
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 0;
+    padding: 14px 16px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.auto-flip .flip-back {
+    padding: 18px;
+    overflow-y: auto;
+}
+
+.auto-flip .flip-back h5 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.3;
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid var(--cs-accent);
+    align-self: flex-start;
+}
+
+.auto-flip .flip-back p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 10px;
+}
+
+.auto-flip-link {
+    margin-top: auto;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auto-flip-link:hover {
+    color: #ffb892;
+}
+
+/* About: real map image (pins and labels are part of the image) */
+.about-map {
+    min-height: 0;
+    display: flex;
+    align-items: center;
+}
+
+.about-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* About: Megha Group building fills the right half of the panel and fades into the text side */
+.about-parent-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+    background-position: 70% center;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 35%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 35%);
+}
+
+.about-parent-text {
+    position: relative;
+    z-index: 1;
+    max-width: 56%;
+    padding-right: 0;
+}
+
+@media (max-width: 575.98px) {
+    /* Too narrow to sit beside the building: photo behind the text with a light wash */
+    .about-parent-img {
+        width: 100%;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .about-parent::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(238, 243, 251, 0.85);
+    }
+
+    .about-parent-text {
+        max-width: none;
+    }
+}
+
+/* About: team photo replaces the initials avatar */
+.about-avatar.has-photo {
+    background-color: #e9eef6;
+    background-size: cover;
+    background-position: center top;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 128, 0.12);
+}
+
+/* About: partner logo images inside the alliance tiles */
+.about-logo img {
+    max-width: 100%;
+    max-height: 44px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* About page: all section icons in brand magenta */
+.about-stat > i,
+.about-strength > i,
+.about-offices h6 i {
+    color: #d81159;
+}
+
+/* Mobility cards: arrows sit in the flow below the text (pushed to the card bottom)
+   instead of being pinned over it, so they never overlap whatever the padding is */
+.auto-card-body > .auto-card-arrow,
+.auto-card-body > .auto-orange-arrow {
+    position: static;
+    margin-top: auto;
+    align-self: flex-end;
+    flex-shrink: 0;
+}
+
+.auto-industries .auto-card-body > .auto-card-arrow {
+    align-self: flex-start;
+}
+
+/* Breathing room between the last line of text and the arrow */
+.auto-card-body > p:has(+ .auto-card-arrow),
+.auto-card-body > p:has(+ .auto-orange-arrow),
+.auto-card-body > .auto-list:has(+ .auto-card-arrow),
+.auto-card-body > .auto-list:has(+ .auto-orange-arrow),
+.auto-card-body > a:has(+ .auto-orange-arrow) {
+    margin-bottom: 14px;
 }

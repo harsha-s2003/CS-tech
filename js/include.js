@@ -17,10 +17,6 @@
         return fetch(new URL(file, root))
             .then(function (res) { return res.text(); })
             .then(function (html) {
-                if (base) {
-                    html = html.replace(/href="(?!https?:\/\/|#|mailto:)([^"]+)"/g, 'href="' + base + '$1"');
-                    html = html.replace(/src="(?!https?:\/\/|data:)([^"]+)"/g, 'src="' + base + '$1"');
-                }
                 target.innerHTML = html;
                 fixLinks(target);
                 target.replaceWith.apply(target, target.childNodes);
@@ -29,10 +25,12 @@
 
     var header = document.getElementById('site-header');
     var footer = document.getElementById('site-footer');
+    var form = document.getElementById('site-form');
 
     var tasks = [];
     if (header) tasks.push(loadHTML('includes/header.html', header));
     if (footer) tasks.push(loadHTML('includes/footer.html', footer));
+    if (form) tasks.push(loadHTML('includes/form.html', form));
 
     Promise.all(tasks).then(function () {
         var path = location.pathname.replace(/\/$/, '/index.html');
@@ -43,5 +41,18 @@
                 link.classList.add('active');
             }
         });
+        // A page reached through a dropdown highlights its item and the menu it sits in
+        document.querySelectorAll('.navbar-nav .dropdown-item').forEach(function (item) {
+            if (item.hash || item.pathname !== path) return;
+            item.classList.add('active');
+            var toggle = item.closest('.dropdown').querySelector('.nav-link');
+            if (toggle) toggle.classList.add('active');
+        });
+
+        // Targets like #contact only exist once the includes are in, so jump to them now
+        if (location.hash) {
+            var target = document.getElementById(location.hash.slice(1));
+            if (target) target.scrollIntoView({ behavior: 'instant' });
+        }
     });
 })();
