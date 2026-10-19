@@ -903,6 +903,27 @@ body {
     align-self: center;
 }
 
+@media (max-width: 767.98px) {
+  .services-section .container.text-center {
+    	text-align: left !important;
+	}
+
+	.services-section .section-sub {
+    	margin-left: 0;
+    	margin-right: 0;
+	}
+
+	.services-visual {
+    	max-width: 250px;
+    	margin: 0 auto 20px;
+	}
+
+	.visual-device img, .visual-logo {
+    	max-width: 100% !important;
+    	max-height: 100%;
+    }
+}
+
 /* ---- Split services layout (hub + two sides) ---- */
 .services-section .section-sub {
     max-width: 820px;
@@ -1169,7 +1190,7 @@ body {
 .why-icon {
     width: 70px;
     height: 70px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #EEF2F9;
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     display: flex;
@@ -1509,6 +1530,26 @@ body {
 
     .why-grid>[class*="col"]:last-child {
         border-bottom: none;
+    }
+
+    .services-section .container.text-center {
+        text-align: left !important;
+    }
+
+    .services-section .section-sub {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .services-visual {
+        max-width: 250px;
+        margin: 0 auto 20px;
+    }
+
+    .visual-device img,
+    .visual-logo {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -3072,6 +3113,54 @@ body {
     background: var(--cs-icon, #d81159);
 }
 
+/* ---- BIM capabilities: 3-column horizontal cards ---- */
+.bim-capabilities .da-cap-card {
+    gap: 16px;
+    padding: 16px;
+    align-items: stretch;
+}
+
+.bim-capabilities .da-cap-img {
+    flex: 0 0 43%;
+    aspect-ratio: auto;
+    border-radius: 12px;
+}
+
+.bim-capabilities .da-cap-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.bim-capabilities .da-cap-icon img {
+    width: 28px;
+}
+
+.bim-capabilities .da-cap-head {
+    gap: 10px;
+}
+
+.bim-capabilities .da-cap-card h5 {
+    font-size: 0.95rem;
+}
+
+.bim-capabilities .da-cap-body p {
+    font-size: 0.8rem;
+}
+
+.bim-capabilities .da-cap-list li {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 991.98px) {
+    .bim-capabilities .da-cap-card {
+        flex-direction: row;
+    }
+
+    .bim-capabilities .da-cap-img {
+        flex: 0 0 35%;
+    }
+}
+
 /* ---- Industries pill row ---- */
 .da-industries {
     background: #fff;
@@ -3085,6 +3174,7 @@ body {
 }
 
 .da-industry-pill {
+    width: 100%;
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -3240,6 +3330,7 @@ body {
 
     .da-industry-pill {
         flex: 1 1 100%;
+        margin-bottom: 15px;
     }
 
     .da-case-img {
@@ -3389,7 +3480,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background: #0A3A8C;
+    background: #EEF2F9;
     border: 2px solid rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
@@ -3461,7 +3552,9 @@ body {
     font-size: 2rem;
     flex-shrink: 0;
 }
-
+.vm-plat-card .vm-plat-icon img {
+    width: 40px;
+}
 .vm-prog-list {
     display: flex;
     flex-direction: column;
@@ -3836,7 +3929,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
+    background: #EEF2F9;
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--cs-icon, #d81159);
     font-size: 2rem;
@@ -4317,8 +4410,8 @@ body {
 }
 
 .vm-plat-ico img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -4390,11 +4483,6 @@ body {
 .vm-prog-card .vm-plat-ico {
     width: 50px !important;
     height: 50px !important;
-}
-
-.vm-prog-card .vm-plat-ico img {
-    width: 32px;
-    height: 32px;
 }
 
 .vm-prog-text {
@@ -5127,7 +5215,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
+    background: #eef2f9;
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--cs-icon, #d81159);
     font-size: 2rem;

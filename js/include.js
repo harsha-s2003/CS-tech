@@ -17,6 +17,10 @@
         return fetch(new URL(file, root))
             .then(function (res) { return res.text(); })
             .then(function (html) {
+                if (base) {
+                    html = html.replace(/href="(?!https?:\/\/|#|mailto:)([^"]+)"/g, 'href="' + base + '$1"');
+                    html = html.replace(/src="(?!https?:\/\/|data:)([^"]+)"/g, 'src="' + base + '$1"');
+                }
                 target.innerHTML = html;
                 fixLinks(target);
                 target.replaceWith.apply(target, target.childNodes);

@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 802 802" width="802" height="802">
+	<style>
+		.s0 { fill: none;stroke: #0b5cff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 44 } 
+	</style>
+	<g>
+		<path fill-rule="evenodd" class="s0" d="m279 34h244c33.14 0 60 26.86 60 60v614c0 33.14-26.86 60-60 60h-244c-33.14 0-60-26.86-60-60v-614c0-33.14 26.86-60 60-60z"/>
+		<path class="s0" d="m314 134h174m-214 70h254m-254 375h254"/>
+		<path fill-rule="evenodd" class="s0" d="m401 702c-15.48 0-28-12.52-28-28 0-15.48 12.52-28 28-28 15.48 0 28 12.52 28 28 0 15.48-12.52 28-28 28z"/>
+	</g>
+</svg>
