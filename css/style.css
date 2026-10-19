@@ -7336,3 +7336,64 @@ body {
 .auto-card-body > a:has(+ .auto-orange-arrow) {
     margin-bottom: 14px;
 }
+
+/* ===== Mobile card slider ([data-mobile-slider], js/mobile-slider.js) ===== */
+.mobile-slider-dots {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    [data-mobile-slider] {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 6px;
+    }
+
+    [data-mobile-slider]::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* One card per view, with the edge of the next one peeking in */
+    [data-mobile-slider] > * {
+        flex: 0 0 86%;
+        max-width: 86%;
+        scroll-snap-align: start;
+    }
+
+    .mobile-slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .mobile-slider-dot {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        border: 0;
+        border-radius: 4px;
+        background: #c3cbe0;
+        transition: width 0.25s ease, background 0.25s ease;
+    }
+
+    .mobile-slider-dot.active {
+        width: 22px;
+        background: var(--cs-accent);
+    }
+}
+
+/* Delivery-lifecycle journey (americas.html) reused with five steps (automotive-services) */
+@media (min-width: 992px) {
+    .am-journey-5 .am-journey-row {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* The journey has no top margin of its own; the section intro uses mb-4 here */
+.am-journey-5 {
+    margin-top: 40px;
+}
