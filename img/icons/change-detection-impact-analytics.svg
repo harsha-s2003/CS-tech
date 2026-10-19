@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 591 591" width="591" height="591">
+	<style>
+		.s0 { fill: none;stroke: #0b5cff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 44 } 
+	</style>
+	<g>
+		<path class="s0" d="m84 169c70-135 245-180 370-80 45 35 75 80 90 130"/>
+		<path class="s0" d="m519 84l35 145-150-10"/>
+		<path class="s0" d="m508 424c-70 135-245 180-370 80-45-35-75-80-90-130"/>
+		<path class="s0" d="m73 509l-35-145 150 10"/>
+	</g>
+</svg>
