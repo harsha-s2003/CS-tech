@@ -47,6 +47,30 @@
             item.classList.add('active');
             var toggle = item.closest('.dropdown').querySelector('.nav-link');
             if (toggle) toggle.classList.add('active');
+            var sub = item.closest('.dropdown-submenu');
+            if (sub && !item.classList.contains('submenu-toggle')) sub.querySelector('.submenu-toggle').classList.add('active');
+        });
+
+        // Nested submenu (e.g. Solutions & Products > Products): a click opens it without closing the parent menu
+        document.querySelectorAll('.navbar .submenu-toggle').forEach(function (toggle) {
+            var sub = toggle.parentElement;
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var open = !sub.classList.contains('show');
+                sub.parentElement.querySelectorAll('.dropdown-submenu.show').forEach(function (s) {
+                    s.classList.remove('show');
+                    s.querySelector('.submenu-toggle').setAttribute('aria-expanded', 'false');
+                });
+                sub.classList.toggle('show', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            // Close the submenu whenever its parent dropdown closes
+            var parentToggle = sub.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
+            if (parentToggle) parentToggle.addEventListener('hidden.bs.dropdown', function () {
+                sub.classList.remove('show');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
         });
 
         // Targets like #contact only exist once the includes are in, so jump to them now

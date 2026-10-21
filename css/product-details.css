@@ -1,0 +1,310 @@
+/* Shared product detail layout, scoped to these product pages. */
+.product-detail-page {
+    --product-accent: #ff6900;
+}
+
+.product-detail-hero {
+    position: relative;
+    isolation: isolate;
+    background: #03204f no-repeat center / cover;
+    color: #fff;
+}
+
+.product-detail-hero-content {
+    padding: 46px 0;
+}
+
+.product-detail-hero .section-eyebrow {
+    color: #fff;
+}
+
+.product-detail-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.product-detail-hero-content > p:not(.section-eyebrow) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 560px;
+}
+
+
+
+
+
+.product-detail-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 22px 0;
+    gap: 20px;
+}
+
+.product-detail-metric {
+    display: flex;
+    gap: 12px;
+}
+
+.product-detail-metric + .product-detail-metric {
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    padding-left: 18px;
+}
+
+.product-detail-metric h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.product-detail-metric p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.product-detail-icon {
+    width: 40px;
+    height: 40px;
+    color: #e23a59;
+    display: block;
+}
+
+.product-detail-metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #e23a59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.product-detail-metric-icon .product-detail-icon {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
+
+.product-detail-page .cd-cap-card {
+    height: 100%;
+    padding: 18px;
+    gap: 16px;
+    border: 1px solid #e0e9f5;
+    border-radius: 6px;
+}
+
+.product-detail-cap-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    background: #eff8ff;
+    flex-shrink: 0;
+}
+
+.product-detail-page h3 {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.product-detail-page .cd-process {
+    background: #eff8ff;
+}
+
+.product-detail-steps {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 28px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.product-detail-steps li {
+    position: relative;
+    min-width: 0;
+}
+
+.product-detail-steps li:not(:last-child)::after {
+    content: "\2192";
+    color: #0758ff;
+    position: absolute;
+    right: -18px;
+    top: 18px;
+    font-size: 1.5rem;
+}
+
+.product-detail-step-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.product-detail-step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #a5c5ff;
+    border-radius: 50%;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.product-detail-step-number {
+    color: var(--product-accent);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.product-detail-steps p {
+    font-size: 0.9rem;
+    color: #233e70;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.product-detail-app {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e0e9f5;
+    border-radius: 6px;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-detail-app:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(3, 40, 107, 0.12);
+}
+
+.product-detail-app > img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-detail-app-body {
+    padding: 14px;
+}
+
+.product-detail-app ul {
+    padding-left: 18px;
+    margin: 0;
+    color: #233e70;
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+.product-detail-app li::marker {
+    color: var(--product-accent);
+}
+
+@media (max-width: 991.98px) {
+    .product-detail-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .product-detail-steps li::after {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .product-detail-metrics,
+    .product-detail-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .product-detail-metric + .product-detail-metric {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .product-detail-hero-content {
+        padding: 36px 0;
+    }
+
+    .product-detail-app > img {
+        height: 200px;
+    }
+}
+
+/* Same icon sizes as the industry pages: 28px inside the 58px capability box */
+.product-detail-cap-icon .product-detail-icon {
+    width: 28px;
+    height: 28px;
+}
+
+@media (max-width: 767.98px) {
+    .product-detail-hero h1 {
+        font-size: 1.9rem;
+    }
+}
+
+/* Applications flip cards (shared .auto-flip): keep the front title tight like the other flip cards */
+.product-detail-page .auto-flip-title {
+    margin: 0;
+}
+
+/* Hero without the blue overlay: the photos already fade to light blue on the left,
+   so the copy uses the same dark colours as the other pages' banners */
+.product-detail-hero {
+    background-color: #eaf1fb;
+    color: #334155;
+}
+
+.product-detail-hero h1 {
+    color: var(--cs-primary);
+}
+
+.product-detail-hero .section-eyebrow {
+    color: var(--cs-accent);
+}
+
+.product-detail-hero-content > p:not(.section-eyebrow) {
+    color: #334155;
+    font-weight: 500;
+}
+
+.product-detail-metric h2 {
+    color: var(--cs-primary);
+}
+
+.product-detail-metric p {
+    color: #475569;
+}
+
+.product-detail-metric + .product-detail-metric {
+    border-left-color: rgba(0, 0, 128, 0.15);
+}
+
+/* Light fade behind the copy, same as the other pages' banners (.auto-hero) */
+.product-detail-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(238, 244, 252, 0.92) 0%, rgba(238, 244, 252, 0.75) 38%, rgba(238, 244, 252, 0) 58%);
+    z-index: -1;
+}
+
+@media (max-width: 991.98px) {
+    /* Narrow screens: the photo sits behind the text, so add a light wash for contrast */
+    .product-detail-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(234, 241, 251, 0.85);
+        z-index: -1;
+    }
+}
