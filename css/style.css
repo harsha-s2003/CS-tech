@@ -8378,3 +8378,21 @@ body {
     margin: 0;
     color: #e23a59;
 }
+
+/* Delivery-lifecycle journey with four steps (services pages) */
+@media (min-width: 992px) {
+    .am-journey-4 .am-journey-row {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.am-journey-4 {
+    margin-top: 40px;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    /* tablets: 2 x 2 instead of 3 + 1 */
+    .am-journey-4 .am-journey-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
