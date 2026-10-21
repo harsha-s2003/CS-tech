@@ -3338,6 +3338,417 @@ body {
     }
 }
 
+/* ---- Enterprise GIS: Spatial intelligence capability card grid ---- */
+.egis-capabilities {
+    background: #fff;
+}
+
+.egis-capability-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+}
+
+.egis-capability-grid > .col-lg-4 {
+    width: auto;
+    max-width: none;
+    padding: 0;
+    grid-column: span 2;
+}
+
+.egis-capability-grid > .col-lg-4:nth-child(4),
+.egis-capability-grid > .col-lg-4:nth-child(5) {
+    grid-column: span 3;
+}
+
+.egis-capabilities .da-cap-card {
+    display: flex;
+    min-height: 184px;
+    height: 100%;
+    align-items: stretch;
+    gap: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #e2e9f0;
+    border-radius: 7px;
+    box-shadow: 0 2px 9px rgba(3, 40, 107, 0.07);
+}
+
+.egis-capabilities .da-cap-img {
+    width: auto;
+    height: auto;
+    flex: 0 0 37%;
+    aspect-ratio: auto;
+    border-radius: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.egis-capabilities .da-cap-body {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    padding: 13px 14px;
+}
+
+.egis-capabilities .da-cap-head {
+    min-height: 50px;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.egis-capabilities .da-cap-icon {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    font-size: 2rem;
+}
+
+.egis-capabilities .da-cap-card h5 {
+    color: #03286b;
+    font-size: 0.95rem;
+    line-height: 1.25;
+}
+
+.egis-capabilities .da-cap-body p,
+.egis-capabilities .da-cap-list li {
+    font-size: 0.8rem;
+}
+
+.egis-capabilities .da-cap-body p {
+    line-height: 1.24;
+    margin-bottom: 5px;
+}
+
+.egis-capabilities .da-cap-list {
+    margin-top: auto;
+    padding-top: 5px;
+}
+
+.egis-capabilities .da-cap-list li {
+    line-height: 1.2;
+    margin-bottom: 1px;
+    padding-left: 15px;
+}
+
+.egis-capability-grid > .col-lg-4:nth-child(2) .da-cap-card {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1199.98px) {
+    .egis-capability-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .egis-capability-grid > .col-lg-4,
+    .egis-capability-grid > .col-lg-4:nth-child(4),
+    .egis-capability-grid > .col-lg-4:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .egis-capability-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .egis-capabilities .da-cap-img {
+        height: 170px;
+        flex-basis: 170px;
+        width: 100%;
+    }
+
+    .egis-capabilities .da-cap-card,
+    .egis-capability-grid > .col-lg-4:nth-child(2) .da-cap-card {
+        flex-direction: column;
+    }
+
+    .egis-capabilities .da-cap-body {
+        min-height: 0;
+    }
+}
+
+/* ---- Product services: Hero ---- */
+.ps-hero-slide {
+    background-color: #eaf1fb;
+    background-position: right center;
+}
+
+/* Product services capability icons follow the shared BIM tile sizing. */
+.ps-capabilities .da-cap-icon .stat-icon-raster {
+    filter: none;
+}
+
+.ps-hero-slide .hero-overlay {
+    background: linear-gradient(90deg,
+            rgba(234, 241, 251, 0.98) 0%,
+            rgba(234, 241, 251, 0.9) 42%,
+            rgba(234, 241, 251, 0.48) 62%,
+            rgba(234, 241, 251, 0) 82%);
+}
+
+.ps-hero-platforms {
+    position: absolute;
+    z-index: 2;
+    top: 46px;
+    right: clamp(24px, 4vw, 70px);
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: min(820px, 52vw);
+    min-height: 64px;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 22px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(3, 40, 107, 0.1);
+}
+
+.ps-hero-platforms img {
+    display: block;
+    width: 100%;
+    height: 34px;
+    object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+    .ps-hero-slide {
+        min-height: 510px;
+        background-position: 64% center;
+    }
+
+    .ps-hero-platforms {
+        top: 22px;
+        right: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .ps-hero-slide .hero-content {
+        margin-top: 72px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ps-hero-slide {
+        min-height: 460px;
+        padding: 56px 0;
+        background-position: 63% center;
+    }
+
+    .ps-hero-slide .hero-overlay {
+        background: linear-gradient(180deg,
+                rgba(234, 241, 251, 0.98) 0%,
+                rgba(234, 241, 251, 0.94) 62%,
+                rgba(234, 241, 251, 0.78) 100%);
+    }
+
+    .ps-hero-platforms {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px 14px;
+        min-height: 88px;
+        padding: 10px 14px;
+    }
+
+    .ps-hero-platforms img {
+        height: 23px;
+    }
+
+    .ps-hero-slide .hero-content {
+        margin-top: 94px;
+    }
+}
+
+/* ---- Product services: Technology ecosystem ---- */
+.ps-ecosystem {
+    background: #eef7fc;
+}
+
+.ps-ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.ps-platform-card {
+    display: flex;
+    min-width: 0;
+    min-height: 278px;
+    flex-direction: column;
+    padding: 17px 12px 12px;
+    border: 1px solid #dce8f2;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(3, 40, 107, 0.05);
+}
+
+.ps-platform-brand {
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.ps-platform-brand img {
+    display: block;
+    width: 100%;
+    height: 52px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.ps-platform-card p {
+    min-height: 77px;
+    margin: 7px 0 12px;
+    color: #42536d;
+    font-size: 0.75rem;
+    line-height: 1.42;
+}
+
+.ps-platform-image {
+    width: 100%;
+    aspect-ratio: 1.45 / 1;
+    margin-top: auto;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+/* ---- Product services: Where we add value ---- */
+.ps-value {
+    background: #fff;
+}
+
+.ps-value-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    margin-top: 28px;
+}
+
+.ps-value-item {
+    min-width: 0;
+    padding: 0 18px;
+    border-left: 1px solid #dce5ee;
+}
+
+.ps-value-item:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+.ps-value-item:last-child {
+    padding-right: 0;
+}
+
+.ps-value-icon {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 13px;
+    aspect-ratio: 1;
+}
+
+.ps-value-icon img {
+    width: 132%;
+    height: 132%;
+    max-width: none;
+    object-fit: contain;
+}
+
+.ps-value-item h5 {
+    margin: 0 0 7px;
+    color: #03286b;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.ps-value-item p {
+    margin: 0;
+    color: #4b5f7e;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+@media (max-width: 1199.98px) {
+    .ps-ecosystem-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .ps-value-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 28px;
+    }
+
+    .ps-value-item:nth-child(4) {
+        padding-left: 0;
+        border-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .ps-ecosystem-grid,
+    .ps-value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ps-value-item:nth-child(3),
+    .ps-value-item:nth-child(5) {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .ps-value-item:nth-child(4) {
+        padding-left: 18px;
+        border-left: 1px solid #dce5ee;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ps-ecosystem-grid,
+    .ps-value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ps-platform-card {
+        min-height: 0;
+    }
+
+    .ps-platform-card p {
+        min-height: 0;
+    }
+
+    .ps-value-item,
+    .ps-value-item:nth-child(3),
+    .ps-value-item:nth-child(4),
+    .ps-value-item:nth-child(5) {
+        padding: 18px 0 0;
+        border-top: 1px solid #dce5ee;
+        border-left: 0;
+    }
+
+    .ps-value-item:first-child {
+        padding-top: 0;
+        border-top: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bim-capabilities .da-cap-card {
+        flex-direction: row;
+    }
+
+    .bim-capabilities .da-cap-img {
+        flex: 0 0 35%;
+    }
+}
 
 /* =========================================================
    VEGETATION MANAGEMENT PAGE
