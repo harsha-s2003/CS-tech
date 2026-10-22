@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/icons.css">
 </head>
 
-<body>
+<body class="service-detail-page">
 
     <!-- ===================== NAVBAR ===================== -->
     <div id="site-header"></div>
@@ -170,6 +170,7 @@
     </section>
 
     <!-- ===================== HOW WE DELIVER ===================== -->
+
     <section class="cd-process py-5">
         <div class="container">
             <p class="section-eyebrow"><span class="eyebrow-bar"></span>HOW WE DELIVER</p>
@@ -179,48 +180,44 @@
                 checks to deliver geospatial data suited to project-specific requirements.
             </p> -->
 
-            <div class="cd-steps">
-                <div class="cd-step">
-                    <div class="cd-step-head">
-                        <div class="cd-step-icon"><img src="../img/icons/capture-data-preparation.svg" alt="" class="stat-icon-raster"></div>
-                        <div class="cd-step-content">
-                            <span class="cd-step-no">01</span>
+            <div class="am-journey am-journey-4">
+                <!-- Decorative wave: crests and dips sit on the steps -->
+                <svg class="am-journey-curve" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="svc-journey-grad-servicesgeospatialdataprocessingmappinghtml" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#03286B"/>
+                            <stop offset="100%" stop-color="#E55B1D"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M 0 160 C 40 90, 80 60, 150 60 C 300 60, 300 260, 450 260 S 600 60, 750 60 S 900 260, 1050 260 C 1120 260, 1160 230, 1200 160"
+                          fill="none" stroke="url(#svc-journey-grad-servicesgeospatialdataprocessingmappinghtml)" stroke-width="2.5" stroke-dasharray="6 7"/>
+                </svg>
+
+                <div class="am-journey-row">
+                    <div class="am-journey-step am-up" data-wm="1">
+                        <div class="am-journey-icon"><img src="../img/icons/database.svg" alt="" class="stat-icon-raster" style="width:40px"></div>
+                        <div class="am-journey-body">
                             <h5>Capture & Data Preparation</h5>
                             <p>Use laser scanning, LiDAR, imagery and existing project data to establish accurate as-is conditions.</p>
                         </div>
                     </div>
-                </div>
-                <div class="cd-step-arrow"><i class="bi bi-arrow-right"></i></div>
-
-                <div class="cd-step">
-                    <div class="cd-step-head">
-                        <div class="cd-step-icon"><img src="../img/icons/settings-1.svg" alt="" class="stat-icon-raster"></div>
-                        <div class="cd-step-content">
-                            <span class="cd-step-no">02</span>
+                    <div class="am-journey-step am-down" data-wm="2">
+                        <div class="am-journey-icon"><img src="../img/icons/settings-1.svg" alt="" class="stat-icon-raster" style="width:40px"></div>
+                        <div class="am-journey-body">
                             <h5>Model Development</h5>
                             <p>Convert point clouds and engineering information into structured BIM, GIS and 3D models.</p>
                         </div>
                     </div>
-                </div>
-                <div class="cd-step-arrow"><i class="bi bi-arrow-right"></i></div>
-
-                <div class="cd-step">
-                    <div class="cd-step-head">
-                        <div class="cd-step-icon"><img src="../img/icons/coordination-validation.svg" alt="" class="stat-icon-raster"></div>
-                        <div class="cd-step-content">
-                            <span class="cd-step-no">03</span>
+                    <div class="am-journey-step am-up" data-wm="3">
+                        <div class="am-journey-icon"><img src="../img/icons/coordination-validation.svg" alt="" class="stat-icon-raster" style="width:40px"></div>
+                        <div class="am-journey-body">
                             <h5>Coordination & Validation</h5>
                             <p>Perform clash detection, constructability reviews, design coordination and model validation.</p>
                         </div>
                     </div>
-                </div>
-                <div class="cd-step-arrow"><i class="bi bi-arrow-right"></i></div>
-
-                <div class="cd-step">
-                    <div class="cd-step-head">
-                        <div class="cd-step-icon"><img src="../img/icons/integration-lifecycle-enablement.svg" alt="" class="stat-icon-raster"></div>
-                        <div class="cd-step-content">
-                            <span class="cd-step-no">04</span>
+                    <div class="am-journey-step am-down" data-wm="4">
+                        <div class="am-journey-icon"><img src="../img/icons/integration-lifecycle-enablement.svg" alt="" class="stat-icon-raster" style="width:40px"></div>
+                        <div class="am-journey-body">
                             <h5>Integration & Lifecycle Enablement</h5>
                             <p>Connect models with asset, project and operational information for ongoing planning, monitoring and management.</p>
                         </div>
@@ -231,11 +228,12 @@
     </section>
 
     <!-- ===================== INDUSTRIES WE SERVE ===================== -->
-    <section class="da-industries py-5">
+    <section class="service-industries da-industries py-5" style="background-color: #010080;">
         <div class="container">
             <p class="section-eyebrow"><span class="eyebrow-bar"></span>INDUSTRIES WE SERVE</p>
-            <h2 class="section-title mb-4">Supporting Digital Modelling Across Asset-Intensive Industries</h2>
+            <h2 class="section-title text-white mb-4">Supporting Digital Modelling Across Asset-Intensive Industries</h2>
 
+            <div class="service-industries-grid">
             <div class="row my-3">
                 <div class="col-lg-4">
                     <a href="#" class="da-industry-pill">
@@ -281,6 +279,7 @@
                     <i class="bi bi-arrow-right da-industry-arrow"></i>
                 </a>
                 </div>
+            </div>
             </div>
         </div>
     </section>

@@ -3584,6 +3584,8 @@ body {
     border-radius: 7px;
     background: #fff;
     box-shadow: 0 2px 10px rgba(3, 40, 107, 0.05);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .ps-platform-brand {
@@ -3616,6 +3618,16 @@ body {
     margin-top: auto;
     border-radius: 3px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.ps-platform-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(3, 40, 107, 0.12);
+}
+
+.ps-platform-card:hover .ps-platform-image {
+    transform: scale(1.04);
 }
 
 /* ---- Product services: Where we add value ---- */
@@ -3633,6 +3645,7 @@ body {
     min-width: 0;
     padding: 0 18px;
     border-left: 1px solid #dce5ee;
+    transition: transform 0.25s ease;
 }
 
 .ps-value-item:first-child {
@@ -3653,6 +3666,7 @@ body {
     overflow: hidden;
     margin-bottom: 13px;
     aspect-ratio: 1;
+    transition: transform 0.25s ease;
 }
 
 .ps-value-icon img {
@@ -3675,6 +3689,14 @@ body {
     color: #4b5f7e;
     font-size: 0.78rem;
     line-height: 1.45;
+}
+
+.ps-value-item:hover {
+    transform: translateY(-4px);
+}
+
+.ps-value-item:hover .ps-value-icon {
+    transform: scale(1.06);
 }
 
 @media (max-width: 1199.98px) {
@@ -3740,6 +3762,171 @@ body {
     }
 }
 
+/* ---- Service detail pages: responsive layout rhythm ---- */
+.service-detail-page > section:not(.hero-section) {
+    padding-block: 60px !important;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .service-detail-page > section .container {
+        width: 100%;
+        max-width: none;
+        padding-inline: 40px;
+    }
+
+    .ps-hero-platforms {
+        right: 40px;
+        width: calc(100% - 80px);
+    }
+
+    .service-detail-page .service-industries-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .service-detail-page .service-industries-grid .row {
+        display: contents;
+        margin: 0 !important;
+    }
+
+    .service-detail-page .service-industries-grid .col-lg-4 {
+        width: auto;
+        max-width: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .service-detail-page .service-industries .da-industry-pill {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .service-detail-page > section:not(.hero-section) {
+        padding-block: 40px !important;
+    }
+
+    .service-detail-page > section .container {
+        width: 100%;
+        max-width: none;
+        padding-inline: 20px;
+    }
+
+    .service-detail-page .service-industries-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .service-detail-page .service-industries-grid .row {
+        display: contents;
+        margin: 0 !important;
+    }
+
+    .service-detail-page .service-industries-grid .col-lg-4 {
+        width: auto;
+        max-width: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .service-detail-page .service-industries .da-industry-pill {
+        margin-bottom: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ps-platform-card,
+    .ps-platform-image,
+    .ps-value-item,
+    .ps-value-icon {
+        transition: none;
+    }
+}
+
+/* ---- Product services: two-column value cards on mobile ---- */
+@media (max-width: 575.98px) {
+    .ps-value .ps-value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 0;
+        row-gap: 24px;
+    }
+
+    .ps-value .ps-value-item,
+    .ps-value .ps-value-item:nth-child(3),
+    .ps-value .ps-value-item:nth-child(4),
+    .ps-value .ps-value-item:nth-child(5) {
+        min-width: 0;
+        padding: 0 0 0 12px;
+        border-top: 0;
+        border-left: 1px solid #dce5ee;
+    }
+
+    .ps-value .ps-value-item:nth-child(1),
+    .ps-value .ps-value-item:nth-child(3),
+    .ps-value .ps-value-item:nth-child(5) {
+        padding: 0 12px 0 0;
+        border-left: 0;
+    }
+
+    .ps-value .ps-value-item h5,
+    .ps-value .ps-value-item p {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* ---- Enterprise GIS capabilities: readable two-column tablet cards ---- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .egis-capabilities .egis-capability-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+    }
+
+    .egis-capabilities .egis-capability-grid > .col-lg-4 {
+        display: flex;
+        min-width: 0;
+    }
+
+    .egis-capabilities .da-cap-card,
+    .egis-capability-grid > .col-lg-4:nth-child(2) .da-cap-card {
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+    }
+
+    .egis-capabilities .da-cap-card {
+        flex: 1 1 auto;
+    }
+
+    .egis-capabilities .da-cap-img {
+        width: 100%;
+        height: 150px;
+        flex: 0 0 150px;
+    }
+
+    .egis-capabilities .da-cap-body {
+        min-height: auto;
+        flex: 0 0 auto;
+        padding: 16px;
+    }
+
+    .egis-capabilities .da-cap-head {
+        min-height: 0;
+    }
+
+    .egis-capabilities .da-cap-list {
+        margin-top: 0;
+        padding-top: 10px;
+    }
+
+    .egis-capabilities .da-cap-card h5,
+    .egis-capabilities .da-cap-body p,
+    .egis-capabilities .da-cap-list li {
+        overflow-wrap: anywhere;
+    }
+}
+
 @media (max-width: 991.98px) {
     .bim-capabilities .da-cap-card {
         flex-direction: row;
@@ -3747,6 +3934,21 @@ body {
 
     .bim-capabilities .da-cap-img {
         flex: 0 0 35%;
+    }
+}
+
+/* ---- Engineering & Consulting: clean-copy hero artwork ---- */
+.ec-hero {
+    background-color: #eef3f9;
+}
+
+.ec-hero::before {
+    background: transparent;
+}
+
+@media (max-width: 991.98px) {
+    .ec-hero::before {
+        background: rgba(238, 243, 249, 0.85);
     }
 }
 
@@ -5855,13 +6057,13 @@ body {
 
     .am-journey-step::before {
         font-size: 5rem;
-        top: -20px;
+        top: -60px;
         bottom: auto;
     }
 
     .am-journey-step.am-down::before {
         bottom: auto;
-        top: -20px;
+        top: -60px;
     }
 }
 
