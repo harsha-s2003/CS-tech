@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS TECH Ai | Case Studies - Real-World Impact Across Industries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <div id="site-header"></div>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero-section">
+        <div class="hero-slide auto-hero ind-hero cs-hero" style="background-image:url('img/case-studies/banner.webp')">
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6">
+                        <div class="hero-content">
+                            <p class="gcc-hero-eyebrow"><span class="gcc-hero-dash"></span>Resources</p>
+                            <h1 class="hero-title about-hero-title">Case Studies</h1>
+                            <p class="gcc-hero-sub">Explore in-depth success stories, strategic solutions, and real-world impact through our featured projects &ndash; showcasing how we solve complex challenges and deliver measurable results across industries.</p>
+                            <a href="#case-list" class="btn hero-btn">Explore Case Studies <i class="bi bi-arrow-down ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CASE STUDIES ===================== -->
+    <section class="case-studies cs-list py-5" id="case-list">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                <div>
+                    <p class="section-eyebrow"><span class="eyebrow-bar"></span>FEATURED PROJECTS</p>
+                    <h2 class="section-title mb-0">Our work in action</h2>
+                </div>
+                <!-- <p class="cs-count mb-0">Showing <strong id="cs-count">97</strong> of 97 case studies</p> -->
+            </div>
+
+            <div class="cs-tabs" role="tablist">
+                <button type="button" class="cs-tab active" data-cat="all">All </button>
+                <button type="button" class="cs-tab" data-cat="geospatial">Geospatial </button>
+                <button type="button" class="cs-tab" data-cat="mobility">Mobility </button>
+                <button type="button" class="cs-tab" data-cat="emerging-tech">Emerging Tech </button>
+                <button type="button" class="cs-tab" data-cat="industries">Industries </button>
+                <button type="button" class="cs-tab" data-cat="services">Services </button>
+                <button type="button" class="cs-tab" data-cat="gcc">GCC </button>
+                <button type="button" class="cs-tab" data-cat="usa">USA </button>
+            </div>
+
+            <div class="cs-filters">
+                <div class="cs-search">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="cs-search" placeholder="Search case studies" aria-label="Search case studies">
+                </div>
+                <select class="form-select cs-select" id="cs-industry" aria-label="Filter by industry">
+                    <option value="">All Industries</option>
+                            <option value="water">Water &amp; Wastewater</option>
+                            <option value="aec">Architecture, Engineering &amp; Construction </option>
+                            <option value="manufacturing">Industrial &amp; Manufacturing </option>
+                            <option value="land">Land &amp; Natural Resources </option>
+                            <option value="power">Power &amp; Energy </option>
+                            <option value="transport">Transportation Infrastructure </option>
+                            <option value="automotive">Automotive &amp; Mobility </option>
+                            <option value="telecom">Telecom </option>
+                </select>
+                <select class="form-select cs-select" id="cs-service" aria-label="Filter by service">
+                    <option value="">All Services</option>
+                            <option value="data-acquisition">Data Acquisition </option>
+                            <option value="geospatial-processing">Geospatial Data Processing &amp; Mapping </option>
+                            <option value="enterprise-gis">Enterprise GIS &amp; Spatial Intelligence </option>
+                            <option value="bim">BIM, 3D Modelling &amp; Digital Twins </option>
+                            <option value="engineering">Engineering &amp; Consulting </option>
+                            <option value="product-engineering">Product &amp; Manufacturing Engineering </option>
+                            <option value="emerging-tech">Emerging Tech </option>
+                </select>
+                <button type="button" class="cs-clear" id="cs-clear" hidden><i class="bi bi-x-lg"></i> Clear filters</button>
+            </div>
+
+            <div class="row g-4" id="cs-grid">
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="transport" data-service="emerging-tech data-acquisition enterprise-gis" data-market="" data-search="turning multi-source imagery and lidar into structured geospatial intelligence large volumes of imagery and 3d point-cloud data contain valuable information about infrastructure, assets and the surrounding environment. extracting these features manually, however, can require substantial interpretation and processing effort.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/turning-multi-source-imagery-and-lidar-into-structured-geospatial-intelligence-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Turning Multi-Source Imagery and LiDAR into Structured Geospatial Intelligence</h5>
+                                <p>Large volumes of imagery and 3D point-cloud data contain valuable information about infrastructure, assets and the surrounding environment. Extracting…</p>
+                                <a href="case-studies/turning-multi-source-imagery-and-lidar-into-structured-geospatial-intelligence.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="automotive" data-service="emerging-tech data-acquisition bim" data-market="" data-search="lidar sensor digital twin for testing &amp; validation testing and validating lidar sensors requires the ability to evaluate sensor performance across different scenarios and operating conditions.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/lidar-sensor-digital-twin-for-testing-and-validation-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>LiDAR Sensor Digital Twin for Testing &amp; Validation</h5>
+                                <p>Testing and validating LiDAR sensors requires the ability to evaluate sensor performance across different scenarios and operating conditions.</p>
+                                <a href="case-studies/lidar-sensor-digital-twin-for-testing-and-validation.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="telecom" data-service="emerging-tech" data-market="" data-search="web &amp; mobile platform for site inspection &amp; billing site inspection and billing processes involve multiple stakeholders, field activities, validations and approvals. managing these activities efficiently requires information captured at site to move through a structured workflow from inspection through review and final bill confirmation.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/web-and-mobile-platform-for-site-inspection-and-billing-thumb.webp')">
+                        <span class="cs-card-tag">Telecom</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Web &amp; Mobile Platform for Site Inspection &amp; Billing</h5>
+                                <p>Site inspection and billing processes involve multiple stakeholders, field activities, validations and approvals. Managing these activities…</p>
+                                <a href="case-studies/web-and-mobile-platform-for-site-inspection-and-billing.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="gcc" data-industry="water" data-service="engineering" data-market="gcc" data-search="citywide nrw reduction programme reducing non-revenue water across a large urban water distribution system requires a detailed understanding of existing network conditions, demand patterns and hydraulic performance.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/citywide-nrw-reduction-programme-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Citywide NRW Reduction Programme</h5>
+                                <p>Reducing Non-Revenue Water across a large urban water distribution system requires a detailed understanding of existing network conditions, demand…</p>
+                                <a href="case-studies/citywide-nrw-reduction-programme.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="gcc" data-industry="land" data-service="enterprise-gis" data-market="gcc" data-search="land management &amp; digital transformation platform managing land, projects and related administrative processes across multiple stakeholders can involve disconnected records, documents and approval workflows, making it difficult to maintain visibility and control.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/land-management-and-digital-transformation-platform-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Land Management &amp; Digital Transformation Platform</h5>
+                                <p>Managing land, projects and related administrative processes across multiple stakeholders can involve disconnected records, documents and approval…</p>
+                                <a href="case-studies/land-management-and-digital-transformation-platform.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="new-generation electric two-wheeler – product development &amp; vehicle integration a leading electric two-wheeler manufacturer required engineering support for the development of a new-generation electric vehicle platform, covering multiple vehicle systems from concept development through detailed engineering and validation.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/new-generation-electric-two-wheeler-product-development-and-vehicle-integration-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>New-Generation Electric Two-Wheeler – Product Development &amp; Vehicle Integration</h5>
+                                <p>A leading electric two-wheeler manufacturer required engineering support for the development of a new-generation electric vehicle platform, covering…</p>
+                                <a href="case-studies/new-generation-electric-two-wheeler-product-development-and-vehicle-integration.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="automotive interior / exterior system engineering an automotive oem required engineering support for the development of interior and exterior vehicle systems, with a focus on translating styling and functional requirements into manufacturable, production-ready component designs.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/automotive-interior-exterior-system-engineering-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Automotive Interior / Exterior System Engineering</h5>
+                                <p>An automotive OEM required engineering support for the development of interior and exterior vehicle systems, with a focus on translating styling and…</p>
+                                <a href="case-studies/automotive-interior-exterior-system-engineering.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="transport aec" data-service="bim" data-market="" data-search="5d bim &amp; program management for major infrastructure a major road infrastructure project required an integrated digital project-management environment to improve visibility across design, construction progress, schedule and cost.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/5d-bim-and-program-management-for-major-infrastructure-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>5D BIM &amp; Program Management for Major Infrastructure</h5>
+                                <p>A major road infrastructure project required an integrated digital project-management environment to improve visibility across design, construction…</p>
+                                <a href="case-studies/5d-bim-and-program-management-for-major-infrastructure.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="land" data-service="data-acquisition" data-market="" data-search="statewide spatial data infrastructure using high-resolution satellite imagery a large-scale government mapping programme required high-resolution satellite imagery to establish a consistent spatial-data foundation for statewide mapping and land-administration applications.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Statewide Spatial Data Infrastructure Using High-Resolution Satellite Imagery</h5>
+                                <p>A large-scale government mapping programme required high-resolution satellite imagery to establish a consistent spatial-data foundation for statewide…</p>
+                                <a href="case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services industries" data-industry="land" data-service="data-acquisition bim" data-market="" data-search="heritage conservation using bim-based architectural and structural modelling historic monuments and heritage structures require detailed documentation to support conservation, restoration and long-term preservation. their architectural complexity and cultural significance make accurate capture of existing conditions particularly important.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modelling-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Heritage Conservation Using BIM-Based Architectural and Structural Modelling</h5>
+                                <p>Historic monuments and heritage structures require detailed documentation to support conservation, restoration and long-term preservation. Their…</p>
+                                <a href="case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modelling.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="transport" data-service="data-acquisition enterprise-gis" data-market="" data-search="road asset management system for efficient infrastructure oversight road infrastructure authorities require reliable and up-to-date information about both roadway condition and the assets distributed along the network to plan maintenance, rehabilitation and infrastructure investments effectively.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/road-asset-management-system-for-efficient-infrastructure-oversight-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Road Asset Management System for Efficient Infrastructure Oversight</h5>
+                                <p>Road infrastructure authorities require reliable and up-to-date information about both roadway condition and the assets distributed along the network…</p>
+                                <a href="case-studies/road-asset-management-system-for-efficient-infrastructure-oversight.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="water" data-service="engineering" data-market="" data-search="detailed design &amp; engineering for water infrastructure water and wastewater infrastructure projects require coordinated engineering across multiple disciplines to ensure that treatment facilities, pipelines and associated systems are technically sound, constructible and suited to project requirements.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/detailed-design-and-engineering-for-water-infrastructure-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Detailed Design &amp; Engineering for Water Infrastructure</h5>
+                                <p>Water and wastewater infrastructure projects require coordinated engineering across multiple disciplines to ensure that treatment facilities…</p>
+                                <a href="case-studies/detailed-design-and-engineering-for-water-infrastructure.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="transport" data-service="engineering" data-market="" data-search="technical &amp; digital project management for transportation infrastructure large transportation infrastructure programmes require coordinated technical, engineering and project-management inputs across planning, design, construction and monitoring. managing spatial data, engineering models, schedules, costs and project information in separate systems can limit visibility and make effective coordination more difficult.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/technical-and-digital-project-management-for-transportation-infrastructure-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Technical &amp; Digital Project Management for Transportation Infrastructure</h5>
+                                <p>Large transportation infrastructure programmes require coordinated technical, engineering and project-management inputs across planning, design…</p>
+                                <a href="case-studies/technical-and-digital-project-management-for-transportation-infrastructure.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services gcc" data-industry="power" data-service="enterprise-gis" data-market="gcc" data-search="unified gis platform for utility-scale power distribution management power utilities manage extensive networks of interconnected assets, consumers and operational systems. as the volume and complexity of network information increases, utilities require a unified spatial environment that can bring together network, asset and operational information and make it accessible across the enterprise.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/unified-gis-platform-for-utility-scale-power-distribution-management-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Unified GIS Platform for Utility-Scale Power Distribution Management</h5>
+                                <p>Power utilities manage extensive networks of interconnected assets, consumers and operational systems. As the volume and complexity of network…</p>
+                                <a href="case-studies/unified-gis-platform-for-utility-scale-power-distribution-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="land" data-service="enterprise-gis" data-market="" data-search="gis-enabled property &amp; tax information management urban local bodies and government agencies require accurate property information to support administration, planning, service delivery and revenue-related processes. when property records, maps and associated information are maintained across disconnected systems, obtaining a reliable spatial view of properties becomes difficult.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/gis-enabled-property-and-tax-information-management-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>GIS-Enabled Property &amp; Tax Information Management</h5>
+                                <p>Urban local bodies and government agencies require accurate property information to support administration, planning, service delivery and…</p>
+                                <a href="case-studies/gis-enabled-property-and-tax-information-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="land aec" data-service="enterprise-gis geospatial-processing" data-market="" data-search="webgis-based asset mapping &amp; land management government organisations and public-sector agencies often manage large portfolios of land, buildings, infrastructure and other geographically distributed assets. when information about these assets is maintained across separate maps, records and departmental systems, obtaining a consolidated view for planning and management becomes difficult.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/webgis-based-asset-mapping-and-land-management-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>WebGIS-Based Asset Mapping &amp; Land Management</h5>
+                                <p>Government organisations and public-sector agencies often manage large portfolios of land, buildings, infrastructure and other geographically…</p>
+                                <a href="case-studies/webgis-based-asset-mapping-and-land-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="transport" data-service="geospatial-processing enterprise-gis" data-market="" data-search="roadside gis asset extraction at scale large road networks generate substantial volumes of lidar, imagery and point-cloud data containing valuable information about roadside infrastructure. converting this raw data into structured gis information requires individual assets to be identified, attributed and made available for downstream mapping and asset-management workflows.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/roadside-gis-asset-extraction-at-scale-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Roadside GIS Asset Extraction at Scale</h5>
+                                <p>Large road networks generate substantial volumes of LiDAR, imagery and point-cloud data containing valuable information about roadside infrastructure.…</p>
+                                <a href="case-studies/roadside-gis-asset-extraction-at-scale.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="land" data-service="geospatial-processing" data-market="" data-search="statewide spatial data processing &amp; mapping large-scale government mapping and land-administration programmes require spatial information that is accurate, consistent and structured for use across multiple applications.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/statewide-spatial-data-processing-and-mapping-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Statewide Spatial Data Processing &amp; Mapping</h5>
+                                <p>Large-scale government mapping and land-administration programmes require spatial information that is accurate, consistent and structured for use…</p>
+                                <a href="case-studies/statewide-spatial-data-processing-and-mapping.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="services" data-industry="land" data-service="geospatial-processing" data-market="" data-search="cadastral &amp; land parcel mapping land-administration and government gis programmes depend on structured, geographically referenced information that clearly represents land parcels and supports their use within broader information systems.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/cadastral-and-land-parcel-mapping-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Cadastral &amp; Land Parcel Mapping</h5>
+                                <p>Land-administration and government GIS programmes depend on structured, geographically referenced information that clearly represents land parcels and…</p>
+                                <a href="case-studies/cadastral-and-land-parcel-mapping.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="usa" data-industry="water" data-service="geospatial-processing" data-market="usa" data-search="drainage infrastructure mapping accurate mapping of drainage infrastructure across large and varied environments requires a combination of capture technologies capable of documenting both developed and less accessible areas.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/drainage-infrastructure-mapping-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Drainage Infrastructure Mapping</h5>
+                                <p>Accurate mapping of drainage infrastructure across large and varied environments requires a combination of capture technologies capable of documenting…</p>
+                                <a href="case-studies/drainage-infrastructure-mapping.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="usa" data-industry="telecom" data-service="data-acquisition bim" data-market="usa" data-search="telecom as-built capture &amp; 3d modelling telecom infrastructure is continuously upgraded and maintained, requiring engineers and field teams to have accurate, current information on towers, rooftops, equipment and existing site conditions.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/telecom-as-built-capture-and-3d-modelling-thumb.webp')">
+                        <span class="cs-card-tag">Telecom</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Telecom As-Built Capture &amp; 3D Modelling</h5>
+                                <p>Telecom infrastructure is continuously upgraded and maintained, requiring engineers and field teams to have accurate, current information on towers…</p>
+                                <a href="case-studies/telecom-as-built-capture-and-3d-modelling.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries services" data-industry="aec" data-service="bim" data-market="" data-search="digital twin for airport operations &amp; facility management a major airport was planning extensive renovations and wanted to evaluate the use of a 3d digital model for energy studies, facility planning and ongoing operations.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/digital-twin-for-airport-operations-and-facility-management-thumb.webp')">
+                        <span class="cs-card-tag">Architecture, Engineering &amp; Construction</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Digital Twin for Airport Operations &amp; Facility Management</h5>
+                                <p>A major airport was planning extensive renovations and wanted to evaluate the use of a 3D digital model for energy studies, facility planning and…</p>
+                                <a href="case-studies/digital-twin-for-airport-operations-and-facility-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="aec" data-service="bim" data-market="" data-search="architecture, structure, mep &amp; digital twin modelling the assignment required the development of a coordinated digital representation of a building environment, bringing architectural, structural and mep disciplines together within an integrated bim framework.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/architecture-structure-mep-and-digital-twin-modelling-thumb.webp')">
+                        <span class="cs-card-tag">Architecture, Engineering &amp; Construction</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Architecture, Structure, MEP &amp; Digital Twin Modelling</h5>
+                                <p>The assignment required the development of a coordinated digital representation of a building environment, bringing architectural, structural and MEP…</p>
+                                <a href="case-studies/architecture-structure-mep-and-digital-twin-modelling.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries mobility" data-industry="manufacturing automotive" data-service="product-engineering" data-market="" data-search="automated battery module assembly line engineering a battery manufacturing programme required the engineering and development of production tooling for an automated battery module assembly line.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/automated-battery-module-assembly-line-engineering-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Automated Battery Module Assembly Line Engineering</h5>
+                                <p>A battery manufacturing programme required the engineering and development of production tooling for an automated battery module assembly line.</p>
+                                <a href="case-studies/automated-battery-module-assembly-line-engineering.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries mobility" data-industry="manufacturing automotive" data-service="product-engineering" data-market="" data-search="digital manufacturing &amp; robotic production-line engineering an american automotive oem required manufacturing engineering support to design and optimize automated production lines integrating welding fixtures, robotic systems and factory-layout requirements.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/digital-manufacturing-and-robotic-production-line-engineering-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Digital Manufacturing &amp; Robotic Production-Line Engineering</h5>
+                                <p>An American automotive OEM required manufacturing engineering support to design and optimize automated production lines integrating welding fixtures…</p>
+                                <a href="case-studies/digital-manufacturing-and-robotic-production-line-engineering.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries mobility" data-industry="manufacturing automotive" data-service="product-engineering" data-market="" data-search="virtual assembly validation for construction equipment a north american construction equipment oem required virtual validation of its assembly processes before physical production.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/virtual-assembly-validation-for-construction-equipment-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Virtual Assembly Validation for Construction Equipment</h5>
+                                <p>A North American construction equipment OEM required virtual validation of its assembly processes before physical production.</p>
+                                <a href="case-studies/virtual-assembly-validation-for-construction-equipment.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="manufacturing" data-service="product-engineering" data-market="" data-search="ai-based 360° inspection of automotive gears automotive gear manufacturing requires consistent inspection of component surfaces while maintaining the cycle times demanded by high-speed production environments.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/ai-based-360-inspection-of-automotive-gears-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>AI-Based 360° Inspection of Automotive Gears</h5>
+                                <p>Automotive gear manufacturing requires consistent inspection of component surfaces while maintaining the cycle times demanded by high-speed production…</p>
+                                <a href="case-studies/ai-based-360-inspection-of-automotive-gears.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries mobility" data-industry="manufacturing automotive" data-service="product-engineering" data-market="" data-search="complete biw body shop – controls &amp; automation a major automotive manufacturing programme required controls and automation engineering for a complete body-in-white (biw) body shop.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/complete-biw-body-shop-controls-and-automation-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Complete BIW Body Shop – Controls &amp; Automation</h5>
+                                <p>A major automotive manufacturing programme required controls and automation engineering for a complete Body-in-White (BIW) body shop.</p>
+                                <a href="case-studies/complete-biw-body-shop-controls-and-automation.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries mobility" data-industry="manufacturing automotive" data-service="product-engineering" data-market="" data-search="electrical design for automotive welding line an automotive manufacturing programme required electrical engineering support for an automated welding line, with multiple production stations and equipment requiring coordinated electrical design and documentation.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/electrical-design-for-automotive-welding-line-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Electrical Design for Automotive Welding Line</h5>
+                                <p>An automotive manufacturing programme required electrical engineering support for an automated welding line, with multiple production stations and…</p>
+                                <a href="case-studies/electrical-design-for-automotive-welding-line.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries mobility" data-industry="manufacturing automotive" data-service="product-engineering" data-market="" data-search="teamcenter / plm engineering transformation a leading asian automotive tier-1 supplier required a centralized product lifecycle management (plm) environment to improve the management of cad data, engineering changes and product-release processes across engineering teams in india and japan.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/teamcenter-plm-engineering-transformation-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Teamcenter / PLM Engineering Transformation</h5>
+                                <p>A leading Asian automotive Tier-1 supplier required a centralized Product Lifecycle Management (PLM) environment to improve the management of CAD…</p>
+                                <a href="case-studies/teamcenter-plm-engineering-transformation.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries services" data-industry="manufacturing aec" data-service="product-engineering bim data-acquisition" data-market="" data-search="scan-to-bim for manufacturing plant expansion a pharmaceutical manufacturing plant in north carolina was undergoing an expansion and retrofit to improve plant operations.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/scan-to-bim-for-manufacturing-plant-expansion-thumb.webp')">
+                        <span class="cs-card-tag">Industrial &amp; Manufacturing</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Scan-to-BIM for Manufacturing Plant Expansion</h5>
+                                <p>A pharmaceutical manufacturing plant in North Carolina was undergoing an expansion and retrofit to improve plant operations.</p>
+                                <a href="case-studies/scan-to-bim-for-manufacturing-plant-expansion.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="land" data-service="geospatial-processing" data-market="" data-search="land &amp; cadastral information management land administration requires accurate, structured and accessible information about land parcels, boundaries and associated records. when cadastral information exists across fragmented datasets or legacy systems, it can become difficult for government agencies and enterprises to maintain reliable land information and use it effectively across planning, administration and operational workflows.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/land-and-cadastral-information-management-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Land &amp; Cadastral Information Management</h5>
+                                <p>Land administration requires accurate, structured and accessible information about land parcels, boundaries and associated records. When cadastral…</p>
+                                <a href="case-studies/land-and-cadastral-information-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="land" data-service="enterprise-gis" data-market="" data-search="smart agriculture decision-support platform the assignment involved developing a centralized smart agriculture platform to bring together information from multiple sources and make it easily accessible to farmers, scientific communities and policymakers.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/smart-agriculture-decision-support-platform-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Smart Agriculture Decision-Support Platform</h5>
+                                <p>The assignment involved developing a centralized smart agriculture platform to bring together information from multiple sources and make it easily…</p>
+                                <a href="case-studies/smart-agriculture-decision-support-platform.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="power" data-service="enterprise-gis" data-market="" data-search="enterprise gis for electrical transmission across three states the engagement involved electrical transmission utilities across three indian states, responsible for managing critical power-transmission infrastructure and supporting reliable electricity delivery across large and complex networks.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/enterprise-gis-for-electrical-transmission-across-three-states-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Enterprise GIS for Electrical Transmission Across Three States</h5>
+                                <p>The engagement involved electrical transmission utilities across three Indian states, responsible for managing critical power-transmission…</p>
+                                <a href="case-studies/enterprise-gis-for-electrical-transmission-across-three-states.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="power" data-service="enterprise-gis" data-market="" data-search="building connected grid operations through gis, scada and utility-system integration a large power distribution utility programme covering 587+ towns, requiring a unified technology environment to improve visibility of the electrical distribution network, strengthen operational monitoring and support more effective management of network assets and consumers.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/building-connected-grid-operations-through-gis-scada-and-utility-system-integrat-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Building Connected Grid Operations Through GIS, SCADA and Utility-System Integration</h5>
+                                <p>A large power distribution utility programme covering 587+ towns, requiring a unified technology environment to improve visibility of the electrical…</p>
+                                <a href="case-studies/building-connected-grid-operations-through-gis-scada-and-utility-system-integrat.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="power" data-service="geospatial-processing" data-market="" data-search="advanced metering &amp; network mapping for 10m consumers a large electricity distribution environment serving approximately 10 million consumers, requiring comprehensive network mapping and structured geospatial information to support advanced metering and utility operations.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/advanced-metering-and-network-mapping-for-10m-consumers-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Advanced Metering &amp; Network Mapping for 10M Consumers</h5>
+                                <p>A large electricity distribution environment serving approximately 10 million consumers, requiring comprehensive network mapping and structured…</p>
+                                <a href="case-studies/advanced-metering-and-network-mapping-for-10m-consumers.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries usa" data-industry="power" data-service="data-acquisition" data-market="usa" data-search="offshore 3d laser scanning for oil &amp; gas facilities an offshore oil &amp; gas operator requiring high-detail existing-condition capture of multiple offshore platforms in angola to create dependable digital information for downstream engineering activities.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/offshore-3d-laser-scanning-for-oil-and-gas-facilities-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Offshore 3D Laser Scanning for Oil &amp; Gas Facilities</h5>
+                                <p>An offshore Oil &amp; Gas operator requiring high-detail existing-condition capture of multiple offshore platforms in Angola to create dependable digital…</p>
+                                <a href="case-studies/offshore-3d-laser-scanning-for-oil-and-gas-facilities.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="power" data-service="enterprise-gis" data-market="" data-search="transmission asset management system for 400 kv substations a major power transmission utility in maharashtra responsible for operating and maintaining critical high-voltage transmission infrastructure, including 400 kv substations.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/transmission-asset-management-system-for-400-kv-substations-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Transmission Asset Management System for 400 kV Substations</h5>
+                                <p>A major power transmission utility in Maharashtra responsible for operating and maintaining critical high-voltage transmission infrastructure…</p>
+                                <a href="case-studies/transmission-asset-management-system-for-400-kv-substations.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="power" data-service="enterprise-gis" data-market="" data-search="unified grid intelligence for real-time power system operations the maharashtra state load despatch centre (msldc) plays a critical role in monitoring and managing power-system operations across maharashtra.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/unified-grid-intelligence-for-real-time-power-system-operations-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Unified Grid Intelligence for Real-Time Power System Operations</h5>
+                                <p>The Maharashtra State Load Despatch Centre (MSLDC) plays a critical role in monitoring and managing power-system operations across Maharashtra.</p>
+                                <a href="case-studies/unified-grid-intelligence-for-real-time-power-system-operations.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="power" data-service="enterprise-gis" data-market="" data-search="unified gis for statewide power distribution network management uttar pradesh power corporation limited (uppcl) is responsible for power distribution across uttar pradesh through its distribution companies, serving an extensive electrical network spread across urban and rural areas.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/unified-gis-for-statewide-power-distribution-network-management-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Unified GIS for Statewide Power Distribution Network Management</h5>
+                                <p>Uttar Pradesh Power Corporation Limited (UPPCL) is responsible for power distribution across Uttar Pradesh through its distribution companies, serving…</p>
+                                <a href="case-studies/unified-gis-for-statewide-power-distribution-network-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="transport" data-service="bim" data-market="" data-search="5d bim &amp; program management – missing link project the missing link project required an integrated digital approach to program management for a major transportation infrastructure development.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/5d-bim-and-program-management-missing-link-project-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>5D BIM &amp; Program Management – Missing Link Project</h5>
+                                <p>The Missing Link Project required an integrated digital approach to program management for a major transportation infrastructure development.</p>
+                                <a href="case-studies/5d-bim-and-program-management-missing-link-project.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="transport aec" data-service="bim engineering" data-market="" data-search="bim-enabled digital pmc – real-time road infrastructure progress monitoring a major road infrastructure project required a digitally enabled project management approach to improve visibility and control over construction progress.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/bim-enabled-digital-pmc-real-time-road-infrastructure-progress-monitoring-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>BIM-Enabled Digital PMC – Real-Time Road Infrastructure Progress Monitoring</h5>
+                                <p>A major road infrastructure project required a digitally enabled project management approach to improve visibility and control over construction…</p>
+                                <a href="case-studies/bim-enabled-digital-pmc-real-time-road-infrastructure-progress-monitoring.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="transport" data-service="enterprise-gis" data-market="" data-search="road asset management for toll operate and transfer (tot) the assignment involved assessing the physical condition of national highway assets as part of the toll operate and transfer (tot) framework for highway monetisation.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/road-asset-management-for-toll-operate-and-transfer-tot-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Road Asset Management for Toll Operate and Transfer (ToT)</h5>
+                                <p>The assignment involved assessing the physical condition of National Highway assets as part of the Toll Operate and Transfer (ToT) framework for…</p>
+                                <a href="case-studies/road-asset-management-for-toll-operate-and-transfer-tot.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="transport" data-service="data-acquisition" data-market="" data-search="lidar-based transportation corridor &amp; clearance analysis the assignment involved the use of mobile lidar data to capture and analyse transportation corridors and surrounding infrastructure assets with a high level of spatial detail.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/lidar-based-transportation-corridor-and-clearance-analysis-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>LiDAR-Based Transportation Corridor &amp; Clearance Analysis</h5>
+                                <p>The assignment involved the use of Mobile LiDAR data to capture and analyse transportation corridors and surrounding infrastructure assets with a high…</p>
+                                <a href="case-studies/lidar-based-transportation-corridor-and-clearance-analysis.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="project formulation dpr – urban &amp; rural government agencies required detailed project reports (dprs) for urban and rural water supply and wastewater schemes across multiple states and national &amp; state programmes.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/project-formulation-dpr-urban-and-rural-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Project Formulation DPR – Urban &amp; Rural</h5>
+                                <p>Government agencies required Detailed Project Reports (DPRs) for urban and rural water supply and wastewater schemes across multiple states and…</p>
+                                <a href="case-studies/project-formulation-dpr-urban-and-rural.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="wainganga–nalganga river-linking project the wainganga–nalganga river-linking project was conceived to transfer water from the gosikhurd (indira sagar) project on the wainganga river to the nalganga project in the tapi basin, addressing regional water imbalance across the vidarbha region of maharashtra.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/wainganga-nalganga-river-linking-project-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Wainganga–Nalganga River-Linking Project</h5>
+                                <p>The Wainganga–Nalganga River-Linking Project was conceived to transfer water from the Gosikhurd (Indira Sagar) Project on the Wainganga River to the…</p>
+                                <a href="case-studies/wainganga-nalganga-river-linking-project.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="pench lift irrigation schemes – wapcos / vidc the pench irrigation project required planning of lift irrigation schemes to support command areas affected by upstream utilisation of pench water at chourai dam in madhya pradesh.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/pench-lift-irrigation-schemes-wapcos-vidc-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Pench Lift Irrigation Schemes – WAPCOS / VIDC</h5>
+                                <p>The Pench Irrigation Project required planning of Lift Irrigation Schemes to support command areas affected by upstream utilisation of Pench water at…</p>
+                                <a href="case-studies/pench-lift-irrigation-schemes-wapcos-vidc.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="nar-par-girna river link project – wapcos / tidc the nar-par-girna river link project required a comprehensive detailed project report (dpr) for transferring surplus water from the nar, par, auranga and ambika basins to the water-scarce girna command area in nashik and jalgaon districts of maharashtra.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/nar-par-girna-river-link-project-wapcos-tidc-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Nar-Par-Girna River Link Project – WAPCOS / TIDC</h5>
+                                <p>The Nar-Par-Girna River Link Project required a comprehensive Detailed Project Report (DPR) for transferring surplus water from the Nar, Par, Auranga…</p>
+                                <a href="case-studies/nar-par-girna-river-link-project-wapcos-tidc.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="barrages on wardha river – wapcos / vidc wapcos, for vidarbha irrigation development corporation (vidc), required detailed project reports (dprs) for the development of three barrages on the wardha river in chandrapur district, maharashtra.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/barrages-on-wardha-river-wapcos-vidc-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Barrages on Wardha River – WAPCOS / VIDC</h5>
+                                <p>WAPCOS, for Vidarbha Irrigation Development Corporation (VIDC), required Detailed Project Reports (DPRs) for the development of three barrages on the…</p>
+                                <a href="case-studies/barrages-on-wardha-river-wapcos-vidc.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="emerging-tech" data-market="" data-search="iot-sensor-based monitoring system for rural water supply – swsm maharashtra state water &amp; sanitation mission (swsm), maharashtra required a digital monitoring framework to improve visibility of rural water distribution across villages, districts and the state level.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/iot-sensor-based-monitoring-system-for-rural-water-supply-swsm-maharashtra-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>IoT-Sensor-Based Monitoring System for Rural Water Supply – SWSM Maharashtra</h5>
+                                <p>State Water &amp; Sanitation Mission (SWSM), Maharashtra required a digital monitoring framework to improve visibility of rural water distribution across…</p>
+                                <a href="case-studies/iot-sensor-based-monitoring-system-for-rural-water-supply-swsm-maharashtra.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries gcc" data-industry="water" data-service="engineering" data-market="gcc" data-search="digital project management system for water supply construction monitoring – swsm maharashtra state water &amp; sanitation mission (swsm), maharashtra required a centralized digital platform to manage and monitor the implementation of 924 multi-village water supply schemes across multiple regions.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/digital-project-management-system-for-water-supply-construction-monitoring-swsm-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Digital Project Management System for Water Supply Construction Monitoring – SWSM Maharashtra</h5>
+                                <p>State Water &amp; Sanitation Mission (SWSM), Maharashtra required a centralized digital platform to manage and monitor the implementation of 924…</p>
+                                <a href="case-studies/digital-project-management-system-for-water-supply-construction-monitoring-swsm.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="project formulation dpr – rural uttar pradesh the state water &amp; sanitation mission required detailed project reports (dprs) for rural water supply schemes across the jhansi and mirzapur districts of uttar pradesh.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/project-formulation-dpr-rural-uttar-pradesh-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Project Formulation DPR – Rural Uttar Pradesh</h5>
+                                <p>The State Water &amp; Sanitation Mission required Detailed Project Reports (DPRs) for rural water supply schemes across the Jhansi and Mirzapur districts…</p>
+                                <a href="case-studies/project-formulation-dpr-rural-uttar-pradesh.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="project formulation dpr – jal jeevan mission, assam the public health engineering department (phed), assam required detailed project reports (dprs) for implementing rural water supply schemes under the jal jeevan mission across goalpara, dhubri and south salmara-mankachar districts.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/project-formulation-dpr-jal-jeevan-mission-assam-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Project Formulation DPR – Jal Jeevan Mission, Assam</h5>
+                                <p>The Public Health Engineering Department (PHED), Assam required Detailed Project Reports (DPRs) for implementing rural water supply schemes under the…</p>
+                                <a href="case-studies/project-formulation-dpr-jal-jeevan-mission-assam.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries services" data-industry="water" data-service="engineering" data-market="" data-search="project management consultancy – sonbhadra, uttar pradesh the state water &amp; sanitation mission required project management consultancy (pmc) support for the implementation of rural piped water supply schemes across sonbhadra district in uttar pradesh.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/project-management-consultancy-sonbhadra-uttar-pradesh-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Project Management Consultancy – Sonbhadra, Uttar Pradesh</h5>
+                                <p>The State Water &amp; Sanitation Mission required Project Management Consultancy (PMC) support for the implementation of rural piped water supply schemes…</p>
+                                <a href="case-studies/project-management-consultancy-sonbhadra-uttar-pradesh.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="third party inspection &amp; monitoring – rural water supply projects, uttar pradesh the state water &amp; sanitation mission, uttar pradesh required independent third party inspection &amp; monitoring (tpim) support for large-scale rural water supply projects across 20 districts.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/third-party-inspection-and-monitoring-rural-water-supply-projects-uttar-pradesh-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Third Party Inspection &amp; Monitoring – Rural Water Supply Projects, Uttar Pradesh</h5>
+                                <p>The State Water &amp; Sanitation Mission, Uttar Pradesh required independent Third Party Inspection &amp; Monitoring (TPIM) support for large-scale rural…</p>
+                                <a href="case-studies/third-party-inspection-and-monitoring-rural-water-supply-projects-uttar-pradesh.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="non-revenue water management – smart &amp; amrut cities urban water utilities across smart city and amrut cities in chhattisgarh, uttar pradesh, odisha and andhra pradesh required support to assess and reduce non-revenue water (nrw) within their water distribution systems.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/non-revenue-water-management-smart-and-amrut-cities-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Non-Revenue Water Management – SMART &amp; AMRUT Cities</h5>
+                                <p>Urban water utilities across Smart City and AMRUT cities in Chhattisgarh, Uttar Pradesh, Odisha and Andhra Pradesh required support to assess and…</p>
+                                <a href="case-studies/non-revenue-water-management-smart-and-amrut-cities.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="water supply reforms – urban local bodies, maharashtra urban local bodies (ulbs) across maharashtra required support to improve the efficiency, management and sustainability of their urban water supply systems.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/water-supply-reforms-urban-local-bodies-maharashtra-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Water Supply Reforms – Urban Local Bodies, Maharashtra</h5>
+                                <p>Urban Local Bodies (ULBs) across Maharashtra required support to improve the efficiency, management and sustainability of their urban water supply…</p>
+                                <a href="case-studies/water-supply-reforms-urban-local-bodies-maharashtra.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="engineering" data-market="" data-search="delhi jal board – hydraulic modelling, dma creation &amp; nrw reduction delhi jal board required consultancy support to improve consumer service levels and address high non-revenue water (nrw) within the command areas of primary underground reservoirs (ugrs) in delhi.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/delhi-jal-board-hydraulic-modelling-dma-creation-and-nrw-reduction-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Delhi Jal Board – Hydraulic Modelling, DMA Creation &amp; NRW Reduction</h5>
+                                <p>Delhi Jal Board required consultancy support to improve consumer service levels and address high Non-Revenue Water (NRW) within the command areas of…</p>
+                                <a href="case-studies/delhi-jal-board-hydraulic-modelling-dma-creation-and-nrw-reduction.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="industries" data-industry="water" data-service="data-acquisition engineering" data-market="" data-search="nagpur municipal corporation – consumer survey &amp; water audit nagpur municipal corporation required a comprehensive consumer survey and water audit to assess the performance of the city's water supply system, understand non-revenue water (nrw), identify unauthorized connections and support more efficient water distribution planning.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/nagpur-municipal-corporation-consumer-survey-and-water-audit-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Nagpur Municipal Corporation – Consumer Survey &amp; Water Audit</h5>
+                                <p>Nagpur Municipal Corporation required a comprehensive consumer survey and water audit to assess the performance of the city's water supply system…</p>
+                                <a href="case-studies/nagpur-municipal-corporation-consumer-survey-and-water-audit.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="water" data-service="engineering" data-market="" data-search="digital project monitoring system (dpms) for statewide water infrastructure oversight a public-sector agency responsible for implementing and managing large-scale water supply projects across multiple regional jurisdictions. the client required a centralized platform to improve visibility, accelerate project timelines, and ensure efficient resource utilization across all phases of infrastructure delivery.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/digital-project-management-system-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Digital Project Monitoring System (DPMS) for Statewide Water Infrastructure Oversight</h5>
+                                <p>A public-sector agency responsible for implementing and managing large-scale water supply projects across multiple regional jurisdictions. The client…</p>
+                                <a href="case-studies/digital-project-management-system.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="water" data-service="engineering emerging-tech" data-market="" data-search="transforming water distribution management with iot and digital integration a government-owned water utility responsible for planning, execution, and oversight of water supply infrastructure in urban and peri-urban regions. the client’s mandate includes ensuring equitable access to drinking water, monitoring distribution efficiency, and reducing non-revenue water losses.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Transforming Water Distribution Management with IoT and Digital Integration</h5>
+                                <p>A government-owned water utility responsible for planning, execution, and oversight of water supply infrastructure in urban and peri-urban regions.…</p>
+                                <a href="case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="transport" data-service="engineering" data-market="" data-search="integrated digital project management platform for expressway construction a public-sector agency tasked with planning, developing, and overseeing high-value expressway infrastructure projects across diverse terrain, including tunnels and viaducts. the client sought a centralized digital platform to enhance end-to-end project visibility, streamline construction workflows, and ensure timely decision-making across stakeholders and contractors.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/integrated-digital-project-management-platform-for-expressway-construction-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Integrated Digital Project Management Platform for Expressway Construction</h5>
+                                <p>A public-sector agency tasked with planning, developing, and overseeing high-value expressway infrastructure projects across diverse terrain…</p>
+                                <a href="case-studies/integrated-digital-project-management-platform-for-expressway-construction.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land aec" data-service="geospatial-processing enterprise-gis" data-market="" data-search="web-gis based asset mapping and land management for government facilities a state government department responsible for managing and monitoring public land assets across districts, including educational institutions, administrative buildings, and civic infrastructure. the client required a solution to digitally document, analyze, and govern land usage effectively.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/web-gis-based-asset-mapping-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Web-GIS Based Asset Mapping and Land Management for Government Facilities</h5>
+                                <p>A state government department responsible for managing and monitoring public land assets across districts, including educational institutions…</p>
+                                <a href="case-studies/web-gis-based-asset-mapping.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land" data-service="data-acquisition geospatial-processing enterprise-gis" data-market="" data-search="web-gis enabled property survey and digitization for urban local bodies a municipal corporation overseeing urban planning, property tax collection, and civic infrastructure across multiple city zones. the client needed a technology-driven solution to streamline property record management and improve revenue through accurate mapping and assessment.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/web-gis-enabled-property-survey-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Web-GIS Enabled Property Survey and Digitization for Urban Local Bodies</h5>
+                                <p>A municipal corporation overseeing urban planning, property tax collection, and civic infrastructure across multiple city zones. The client needed a…</p>
+                                <a href="case-studies/web-gis-enabled-property-survey.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land" data-service="enterprise-gis" data-market="" data-search="enterprise platform for data-driven smart agriculture a state agriculture department supporting farmers, agri-extension workers, and research institutions through planning, monitoring, and delivery of agricultural services across multiple regions. the client sought a centralized digital solution to improve productivity and operational efficiency.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/enterprise-platform-for-data-driven-smart-agriculture-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Enterprise Platform for Data-Driven Smart Agriculture</h5>
+                                <p>A state agriculture department supporting farmers, agri-extension workers, and research institutions through planning, monitoring, and delivery of…</p>
+                                <a href="case-studies/enterprise-platform-for-data-driven-smart-agriculture.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land" data-service="enterprise-gis" data-market="" data-search="designing a gis-enabled platform for property and tax information management an urban local body responsible for municipal governance and revenue generation through property taxation. the client aimed to streamline property records and build a central system to improve assessment accuracy, increase collections, and enhance citizen transparency.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/designing-a-gis-enabled-platform-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Designing a GIS-Enabled Platform for Property and Tax Information Management</h5>
+                                <p>An urban local body responsible for municipal governance and revenue generation through property taxation. The client aimed to streamline property…</p>
+                                <a href="case-studies/designing-a-gis-enabled-platform.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="transport" data-service="enterprise-gis" data-market="" data-search="road asset management system for efficient infrastructure oversight a state-level public works department responsible for maintaining the road network across thousands of kilometers of highways, rural roads, and bridges. the client sought a data-driven system to improve visibility, planning, and lifecycle management of road infrastructure assets.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/road-asset-management-thumb.webp')">
+                        <span class="cs-card-tag">Transportation Infrastructure</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Road Asset Management System for Efficient Infrastructure Oversight</h5>
+                                <p>A state-level public works department responsible for maintaining the road network across thousands of kilometers of highways, rural roads, and…</p>
+                                <a href="case-studies/road-asset-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land" data-service="data-acquisition geospatial-processing" data-market="" data-search="predictive flood modeling using high-resolution satellite imagery and remote sensing a national disaster management agency responsible for early warning, risk assessment, and mitigation planning for natural disasters including floods, droughts, and landslides. the client required a technology-enabled approach to enhance preparedness and response mechanisms.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/predictive-flood-modeling-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Predictive Flood Modeling Using High-Resolution Satellite Imagery and Remote Sensing</h5>
+                                <p>A national disaster management agency responsible for early warning, risk assessment, and mitigation planning for natural disasters including floods…</p>
+                                <a href="case-studies/predictive-flood-modeling.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="water" data-service="engineering" data-market="" data-search="third-party quality inspection for rural water infrastructure projects a government department overseeing rural water supply programs aimed at ensuring equitable access to drinking water across villages and habitations. the department is responsible for monitoring the quality, coverage, and sustainability of water infrastructure development.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/third-party-inspection-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Third-Party Quality Inspection for Rural Water Infrastructure Projects</h5>
+                                <p>A government department overseeing rural water supply programs aimed at ensuring equitable access to drinking water across villages and habitations.…</p>
+                                <a href="case-studies/third-party-inspection.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="telecom" data-service="geospatial-processing enterprise-gis" data-market="" data-search="gis-based asset mapping for optical fibre cable infrastructure a leading telecom infrastructure provider responsible for planning, deploying, and maintaining optical fibre cable (ofc) networks to expand digital connectivity across urban and rural regions.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/optical-fibre-cable-infrastructure-thumb.webp')">
+                        <span class="cs-card-tag">Telecom</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>GIS-Based Asset Mapping for Optical Fibre Cable Infrastructure</h5>
+                                <p>A leading telecom infrastructure provider responsible for planning, deploying, and maintaining optical fibre cable (OFC) networks to expand digital…</p>
+                                <a href="case-studies/optical-fibre-cable-infrastructure.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="water" data-service="engineering" data-market="" data-search="geospatial and engineering support for river linking infrastructure a state-level water resources department undertaking an ambitious river linking project aimed at improving water availability for irrigation, drinking water, and industrial purposes across multiple districts.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/river-linking-infrastructure-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Geospatial and Engineering Support for River Linking Infrastructure</h5>
+                                <p>A state-level water resources department undertaking an ambitious river linking project aimed at improving water availability for irrigation, drinking…</p>
+                                <a href="case-studies/river-linking-infrastructure.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land" data-service="geospatial-processing" data-market="" data-search="gps-based tree census for urban forestry and environmental monitoring a municipal corporation, aiming to implement a 3d-enabled smart city initiative by improving environmental visibility through data-backed urban forestry management. the client needed a complete digital inventory of trees within city limits to support sustainability, planning, and research goals.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>GPS-Based Tree Census for Urban Forestry and Environmental Monitoring</h5>
+                                <p>A municipal corporation, aiming to implement a 3D-enabled smart city initiative by improving environmental visibility through data-backed urban…</p>
+                                <a href="case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="power" data-service="enterprise-gis" data-market="" data-search="unified gis platform for utility-scale power distribution management a public-sector electricity distribution agency participating in a nationwide infrastructure modernization initiative aimed at improving service delivery, reducing distribution losses, and enhancing energy accounting across high-density urban areas.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/unified-gis-platform-for-utility-scale-power-distribution-management-2-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Unified GIS Platform for Utility-Scale Power Distribution Management</h5>
+                                <p>A public-sector electricity distribution agency participating in a nationwide infrastructure modernization initiative aimed at improving service…</p>
+                                <a href="case-studies/unified-gis-platform-for-utility-scale-power-distribution-management-2.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="power" data-service="enterprise-gis" data-market="" data-search="integrated gis platform for utility asset management and consumer data visualization a regional electricity utility responsible for power distribution.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization-thumb.webp')">
+                        <span class="cs-card-tag">Power &amp; Energy</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Integrated GIS Platform for Utility Asset Management and Consumer Data Visualization</h5>
+                                <p>A regional electricity utility responsible for power distribution.</p>
+                                <a href="case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land aec" data-service="bim" data-market="" data-search="heritage conservation using bim-based architectural and structural modeling a state archaeological department tasked with preserving historically significant monuments through restoration, documentation, and digital archiving. the client sought a modern, technology-enabled approach to support conservation and promote heritage-driven tourism.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Heritage Conservation Using BIM-Based Architectural and Structural Modeling</h5>
+                                <p>A state archaeological department tasked with preserving historically significant monuments through restoration, documentation, and digital archiving.…</p>
+                                <a href="case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land" data-service="geospatial-processing" data-market="" data-search="unified enterprise platform for mining process management a state government’s mining department tasked with regulating and monitoring mineral exploration, extraction, and transportation. the client needed a transparent, technology-driven system to prevent revenue leakage, curb illegal mining, and streamline operations across all mineral stakeholders.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/unified-enterprise-platform-for-mining-process-management-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Unified Enterprise Platform for Mining Process Management</h5>
+                                <p>A state government’s mining department tasked with regulating and monitoring mineral exploration, extraction, and transportation. The client needed a…</p>
+                                <a href="case-studies/unified-enterprise-platform-for-mining-process-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="land" data-service="data-acquisition" data-market="" data-search="statewide spatial data infrastructure using high-resolution satellite imagery a state government agency undertaking a major land governance modernization program as part of the national gis initiative. the objective was to create a high-accuracy digital land base to support interdepartmental coordination, transparent decision-making, and citizen-facing e-governance platforms.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery-2-thumb.webp')">
+                        <span class="cs-card-tag">Land &amp; Natural Resources</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Statewide Spatial Data Infrastructure Using High-Resolution Satellite Imagery</h5>
+                                <p>A state government agency undertaking a major land governance modernization program as part of the National GIS initiative. The objective was to…</p>
+                                <a href="case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery-2.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="geospatial" data-industry="water" data-service="emerging-tech" data-market="" data-search="smart water monitoring system for rural infrastructure using iot technology a state-level water supply department implementing a large-scale rural water delivery program aimed at ensuring equitable and sustainable access to clean drinking water across villages. the client sought a smart water management solution to improve service reliability, asset longevity, and operational efficiency.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Smart Water Monitoring System for Rural Infrastructure Using IoT Technology</h5>
+                                <p>A state-level water supply department implementing a large-scale rural water delivery program aimed at ensuring equitable and sustainable access to…</p>
+                                <a href="case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="end-to-end system and product design for software-defined vehicle platform a global mobility oem (confidential) undertaking the development of a multi-variant, software-defined vehicle (sdv) platform. the client required a technology partner to lead product and variant-level design, aligned with a multi-year serial launch strategy.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/software-defined-vehicle-platform-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>End-to-End System and Product Design for Software-Defined Vehicle Platform</h5>
+                                <p>A global mobility OEM (confidential) undertaking the development of a multi-variant, software-defined vehicle (SDV) platform. The client required a…</p>
+                                <a href="case-studies/software-defined-vehicle-platform.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="digital biw process planning and fitment strategy for global automotive oem a global automotive oem manufacturing vehicles with diverse styles and complex geometries. the client required a precise and coordinated approach to ensure dimensional accuracy and structural integrity across body-in-white (biw) assembly operations.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/digital-biw-process-planning-and-fitment-strategy-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Digital BIW Process Planning and Fitment Strategy for Global Automotive OEM</h5>
+                                <p>A global automotive OEM manufacturing vehicles with diverse styles and complex geometries. The client required a precise and coordinated approach to…</p>
+                                <a href="case-studies/digital-biw-process-planning-and-fitment-strategy.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="end-to-end cockpit platform engineering for luxury passenger vehicles a leading european luxury passenger car manufacturer pursuing a multi-variant product launch strategy. the client required a design and engineering partner with expertise in interior systems, capable of delivering base platform and variant cockpit designs aligned with high-end styling and functionality.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/cockpit-platform-engineering-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>End-to-End Cockpit Platform Engineering for Luxury Passenger Vehicles</h5>
+                                <p>A leading European luxury passenger car manufacturer pursuing a multi-variant product launch strategy. The client required a design and engineering…</p>
+                                <a href="case-studies/cockpit-platform-engineering.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="integrated interface development for aras innovator, sap, and cad platforms a european mobility oem managing complex engineering and manufacturing operations across multiple locations. the client required seamless integration between their plm (aras innovator), erp (sap), and cad platforms to streamline data exchange and accelerate engineering workflows.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/integrated-interface-development-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Integrated Interface Development for ARAS Innovator, SAP, and CAD Platforms</h5>
+                                <p>A European mobility OEM managing complex engineering and manufacturing operations across multiple locations. The client required seamless integration…</p>
+                                <a href="case-studies/integrated-interface-development.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="end-to-end door panel design for european luxury passenger vehicle a premium european oem in the passenger car luxury segment. the client required a multi-party engineering partnership to support the design, validation, and launch of a technologically advanced, high-finish door trim panel under a simultaneous engineering model.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/door-panel-design-for-european-luxury-passenger-vehicle-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>End-to-End Door Panel Design for European Luxury Passenger Vehicle</h5>
+                                <p>A premium European OEM in the passenger car luxury segment. The client required a multi-party engineering partnership to support the design…</p>
+                                <a href="case-studies/door-panel-design-for-european-luxury-passenger-vehicle.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="front cap styling and surface development for new recreation vehicle launch a u.s.-based recreation vehicle (rv) oem known for delivering high-end, customizable products. the client aimed to refresh the exterior design of a new rv model while minimizing changes to existing structures and maintaining production feasibility.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/new-recreation-vehicle-launch-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Front Cap Styling and Surface Development for New Recreation Vehicle Launch</h5>
+                                <p>A U.S.-based recreation vehicle (RV) OEM known for delivering high-end, customizable products. The client aimed to refresh the exterior design of a…</p>
+                                <a href="case-studies/new-recreation-vehicle-launch.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="instrument panel development for high-customization recreation vehicle program a u.s.-based recreation vehicle (rv) oem preparing to launch a new model featuring high-end automotive design elements. the client required a fast-paced engineering partner to deliver an instrument panel integrating luxury features, modularity, and maximum part reuse within a compressed timeline.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/instrument-panel-development-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Instrument Panel Development for High-Customization Recreation Vehicle Program</h5>
+                                <p>A U.S.-based recreation vehicle (RV) OEM preparing to launch a new model featuring high-end automotive design elements. The client required a…</p>
+                                <a href="case-studies/instrument-panel-development.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="multi-feature armrest development for global luxury passenger vehicle platform a european luxury passenger car oem designing feature-rich interior components for global markets. the client required a multi-functional front and rear armrest that balanced comfort, utility, and cost, while adhering to ergonomic and regulatory guidelines.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/multi-feature-armrest-development-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Multi-Feature Armrest Development for Global Luxury Passenger Vehicle Platform</h5>
+                                <p>A European luxury passenger car OEM designing feature-rich interior components for global markets. The client required a multi-functional front and…</p>
+                                <a href="case-studies/multi-feature-armrest-development.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="electrical system integration for emission compliance in off-road equipment an off-road equipment manufacturer adapting its vehicle platforms to meet new emission norms as part of a regulatory compliance and sustainability initiative. the client required an engineering partner to manage electrical system changes across multiple domains and suppliers under tight timelines.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/electric-system-integration-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Electrical System Integration for Emission Compliance in Off-Road Equipment</h5>
+                                <p>An off-road equipment manufacturer adapting its vehicle platforms to meet new emission norms as part of a regulatory compliance and sustainability…</p>
+                                <a href="case-studies/electric-system-integration.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="virtual validation of instrument panel design for regulatory compliance and tooling readiness a tier-1 automotive interior systems supplier based in europe, supporting global oems. the client required virtual validation of a new instrument panel (ip) design to meet global regulatory standards before tooling release.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/virtual-validation-of-instrument-panel-design-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Virtual Validation of Instrument Panel Design for Regulatory Compliance and Tooling Readiness</h5>
+                                <p>A Tier-1 automotive interior systems supplier based in Europe, supporting global OEMs. The client required virtual validation of a new instrument…</p>
+                                <a href="case-studies/virtual-validation-of-instrument-panel-design.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="lean manufacturing strategy for multi-variant electric two-wheeler assembly facility a plant assembly integrator focused on the growing electric mobility segment. the client partnered with cs tech ai to plan and design a lean manufacturing facility for producing eight electric two-wheeler variants, optimized for speed, quality, and cost-efficiency.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/lean-manufacturing-strategy-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Lean Manufacturing Strategy for Multi-Variant Electric Two-Wheeler Assembly Facility</h5>
+                                <p>A plant assembly integrator focused on the growing electric mobility segment. The client partnered with CS TECH Ai to plan and design a lean…</p>
+                                <a href="case-studies/lean-manufacturing-strategy.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="virtual validation of heavy machinery cab design for safety compliance and operator protection a european cab manufacturer serving the off-highway vehicle segment. the client sought engineering validation support to ensure its heavy machinery cabin design met stringent international safety standards before moving into physical prototyping and certification.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/virtual-validation-of-heavy-machinery-cab-design-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Virtual Validation of Heavy Machinery Cab Design for Safety Compliance and Operator Protection</h5>
+                                <p>A European cab manufacturer serving the off-highway vehicle segment. The client sought engineering validation support to ensure its heavy machinery…</p>
+                                <a href="case-studies/virtual-validation-of-heavy-machinery-cab-design.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="from concept to reality: modular 6dof armrest for off-highway vehicle comfort and functionality a european oem specializing in off-highway vehicles, seeking to improve operator comfort through the development of an advanced, modular armrest system that could adapt to varying user preferences and rugged field environments.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/modular-6d0f-armrest-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>From Concept to Reality: Modular 6DOF Armrest for Off-Highway Vehicle Comfort and Functionality</h5>
+                                <p>A European OEM specializing in off-highway vehicles, seeking to improve operator comfort through the development of an advanced, modular armrest…</p>
+                                <a href="case-studies/modular-6d0f-armrest.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="mobility" data-industry="automotive" data-service="product-engineering" data-market="" data-search="evision: ai-based computer vision system for automated inspection in chassis assembly a tier-1 automotive supplier, producing chassis systems for multiple vehicle models. the client needed to improve inspection accuracy across chassis variants with differing bracket configurations—without increasing manual effort or compromising assembly line efficiency.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/evision-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>eVision: AI-Based Computer Vision System for Automated Inspection in Chassis Assembly</h5>
+                                <p>A Tier-1 automotive supplier, producing chassis systems for multiple vehicle models. The client needed to improve inspection accuracy across chassis…</p>
+                                <a href="case-studies/evision.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="water transport" data-service="emerging-tech engineering" data-market="" data-search="third-party inspection application for infrastructure quality assurance the client is a private-sector consulting organization operating as a third-party inspection (tpi) agency. they specialize in independent quality assurance for infrastructure projects commissioned by government bodies.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance-thumb.webp')">
+                        <span class="cs-card-tag">Water &amp; Wastewater</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Third-Party Inspection Application for Infrastructure Quality Assurance</h5>
+                                <p>The client is a private-sector consulting organization operating as a third-party inspection (TPI) agency. They specialize in independent quality…</p>
+                                <a href="case-studies/third-party-inspection-application-for-infrastructure-quality-assurance.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="automotive" data-service="emerging-tech" data-market="" data-search="wireless battery management system an emerging player in the electric mobility space, focused on delivering sustainable and intelligent two-/three-wheeler electric vehicles for urban, rural, fleet, and last-mile delivery. their mission blends performance, affordability, and digital innovation to accelerate the shift to green transport.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/wireless-battery-management-system-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Wireless Battery Management System</h5>
+                                <p>An emerging player in the electric mobility space, focused on delivering sustainable and intelligent two-/three-wheeler electric vehicles for urban…</p>
+                                <a href="case-studies/wireless-battery-management-system.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="automotive" data-service="emerging-tech" data-market="" data-search="uwb based authentication the us-based oem was evaluating advanced peps (passive entry passive start) solutions utilizing ultra-wideband (uwb) technology to achieve high-precision localization, enhanced resistance to relay attacks, and improved in-cabin presence detection, aligning with next-generation vehicle security and usability standards.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/uwb-based-authentication-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>UWB Based Authentication</h5>
+                                <p>The US-based OEM was evaluating advanced PEPS (Passive Entry Passive Start) solutions utilizing Ultra-Wideband (UWB) technology to achieve…</p>
+                                <a href="case-studies/uwb-based-authentication.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="automotive" data-service="emerging-tech" data-market="" data-search="firmware over the air (fota) platform a top-tier global mobility oem is building a comprehensive fota platform, supports multiple ecu variants and ensuring secure, remote firmware updates for their expanding connected vehicle ecosystem.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/firmware-over-the-air-platform-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>Firmware Over The Air (FoTA) Platform</h5>
+                                <p>A top-tier global mobility OEM is building a comprehensive FoTA platform, supports multiple ECU variants and ensuring secure, remote firmware updates…</p>
+                                <a href="case-studies/firmware-over-the-air-platform.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 cs-item" data-cat="emerging-tech" data-industry="automotive" data-service="emerging-tech" data-market="" data-search="adas case study a european tier-1 supplier, who manufacture ecus for connected, autonomous, and electrified vehicles.">
+                    <div class="case-card cs-card" style="background-image:url('img/case-studies/adas-case-study-thumb.webp')">
+                        <span class="cs-card-tag">Automotive &amp; Mobility</span>
+                        <div class="case-overlay">
+                            <div class="case-body">
+                                <h5>ADAS case study</h5>
+                                <p>A European Tier-1 supplier, who Manufacture ECUs for connected, autonomous, and electrified vehicles.</p>
+                                <a href="case-studies/adas-case-study.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="cs-empty" id="cs-empty" hidden>No case studies match these filters. <button type="button" class="cs-clear-inline" id="cs-clear-2">Clear filters</button></p>
+
+            <div class="text-center mt-4">
+                <button type="button" class="btn hero-btn" id="cs-more">Load More <i class="bi bi-arrow-down ms-1"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT (shared: includes/form.html) ===================== -->
+    <div id="site-form"></div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div id="site-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/include.js"></script>
+    <script src="js/case-studies.js"></script>
+
+</body>
+
+</html>
