@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>CS TECH Ai | Page Not Found</title>
+    <script>
+        // Hosts that answer unknown paths with this page (GitHub Pages, Netlify, http-server, ...)
+        // cannot serve case-studies.html/<Category>/Industries/<Industry>/... directly. Hand the
+        // filter path to case-studies.html as ?route=, which js/case-studies.js turns back into the path URL.
+        (function () {
+            var m = location.pathname.match(/^(.*\/)case-studies\.html\/(.+)$/);
+            if (!m) return;
+            var params = new URLSearchParams(location.search);
+            params.set('route', decodeURIComponent(m[2]));
+            location.replace(m[1] + 'case-studies.html?' + params.toString() + location.hash);
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Self-contained: this page can be served at any depth, where relative css/ paths would break -->
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #EEF2F9;
+            font-family: Geist, Inter, "Segoe UI", system-ui, sans-serif;
+            color: #1f2937;
+            text-align: center;
+            padding: 24px;
+        }
+
+        .eyebrow {
+            color: #d81159;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            color: #000080;
+            font-size: 2.2rem;
+            margin: 8px 0 12px;
+        }
+
+        p {
+            color: #6b7280;
+            margin: 0 0 24px;
+        }
+
+        a {
+            display: inline-block;
+            background: #000080;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="eyebrow">Error 404</div>
+        <h1>Page not found</h1>
+        <p>The page you are looking for does not exist or has moved.</p>
+        <a href="/">Back to Home</a>
+    </main>
+</body>
+
+</html>

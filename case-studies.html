@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS TECH Ai | Case Studies - Real-World Impact Across Industries</title>
+    <script>
+        // Category URLs (case-studies.html/Mobility) sit one level "below" this file, and the
+        // category tabs switch to them without a reload. Pin relative links (css/, img/, js/,
+        // case-studies/...) to the site folder so they resolve the same on every URL.
+        (function () {
+            var p = location.pathname, i = p.indexOf('/case-studies.html');
+            if (i !== -1) document.write('<base href="' + p.slice(0, i + 1) + '">');
+        })();
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">

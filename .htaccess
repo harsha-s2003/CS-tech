@@ -1,0 +1,8 @@
+# Apache: case-studies.html/<Category>[/Industries/<Industry>][/Services/<Service>]
+# (e.g. case-studies.html/Industries/Water-Wastewater) is case-studies.html with filters;
+# js/case-studies.js reads them from the path.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^(.*/)case-studies\.html/.+$
+    RewriteRule ^ %1case-studies.html [L]
+</IfModule>
