@@ -10213,3 +10213,117 @@ body {
         background: linear-gradient(180deg, rgba(238, 242, 249, 0.96) 0%, rgba(238, 242, 249, 0.85) 100%);
     }
 }
+
+/* =====================================================================
+   NEWS (news.html + news/*.html) - reuses the blog and case-study styles
+   ===================================================================== */
+.news-list {
+    scroll-margin-top: 70px;
+}
+
+.news-years {
+    justify-content: flex-end;
+}
+
+.news-pager {
+    display: flex;
+    gap: 20px;
+}
+
+.news-side-date {
+    display: block;
+    color: var(--cs-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+@media (max-width: 767.98px) {
+    .news-years {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+    }
+
+    .news-years .career-chip {
+        white-space: nowrap;
+    }
+}
+
+/* News covers are graphics with text in them: show the whole 5:3 thumbnail, never crop it to a strip */
+.news-featured .blog-featured-img {
+    min-height: 0;
+    aspect-ratio: 5 / 3;
+    align-self: center;
+}
+
+/* Links inside article text (news, case studies, blog) follow the theme, not the browser blue */
+.blog-content p a,
+.blog-content li a {
+    color: var(--cs-primary);
+    font-weight: 600;
+    text-decoration-color: rgba(226, 58, 89, 0.5);
+    text-underline-offset: 3px;
+}
+
+.blog-content p a:hover,
+.blog-content li a:hover {
+    color: #e23a59;
+}
+
+/* ---- About: Vision & Mission (below Company Snapshot) ---- */
+.about-vm {
+    background: #fff;
+}
+
+.about-vm-card {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--cs-border);
+    border-left: 4px solid #e23a59;
+    border-radius: 10px;
+    padding: 28px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-vm-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(0, 0, 128, 0.1);
+}
+
+.about-vm-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #fdecef;
+    color: #e23a59;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-vm-card .about-title {
+    margin-bottom: 0.6rem;
+}
+
+.about-vm-card p {
+    color: var(--cs-text);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+    .about-vm-card {
+        flex-direction: column;
+        gap: 14px;
+        padding: 22px;
+    }
+}
