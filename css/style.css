@@ -9945,7 +9945,7 @@ body {
 
 .cs-filters {
     display: grid;
-    grid-template-columns: minmax(200px, 1.2fr) repeat(2, minmax(160px, 1fr)) auto;
+    grid-template-columns: repeat(2, minmax(160px, 1fr)) auto;
     gap: 12px;
     align-items: center;
     background: var(--cs-bg-light);
@@ -9954,19 +9954,6 @@ body {
     margin-bottom: 28px;
 }
 
-.cs-search {
-    position: relative;
-}
-
-.cs-search i {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--cs-muted);
-}
-
-.cs-search input,
 .cs-select {
     width: 100%;
     border: 1px solid var(--cs-border);
@@ -9978,11 +9965,6 @@ body {
     outline: none;
 }
 
-.cs-search input {
-    padding-left: 40px;
-}
-
-.cs-search input:focus,
 .cs-select:focus {
     border-color: var(--cs-primary);
     box-shadow: 0 0 0 3px rgba(0, 0, 128, 0.08);
@@ -10184,10 +10166,6 @@ body {
 @media (max-width: 991.98px) {
     .cs-filters {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .cs-search {
-        grid-column: 1 / -1;
     }
 }
 

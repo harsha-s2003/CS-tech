@@ -1,9 +1,9 @@
 // ===== Case studies listing (case-studies.html) =====
-// Category tabs, the dropdowns and the search box narrow the grid together. Clicking a tab
-// resets both dropdowns. Only one dropdown filters at a time: picking an Industry resets
-// Service to "All Services" and vice versa.
+// Category tabs and the dropdowns narrow the grid together. Clicking a tab resets both
+// dropdowns. Only one dropdown filters at a time: picking an Industry resets Service to
+// "All Services" and vice versa.
 //
-// The category and the active dropdown live in the path (search does not):
+// The category and the active dropdown live in the path:
 //   case-studies.html                                     All, no filter
 //   case-studies.html/Mobility                            category
 //   case-studies.html/Industries/Water-Wastewater         industry (All category)
@@ -20,7 +20,6 @@
     var PAGE = 12;
     var items = [].slice.call(grid.querySelectorAll('.cs-item'));
     var tabs = [].slice.call(document.querySelectorAll('.cs-tab'));
-    var search = document.getElementById('cs-search');
     var selects = {
         industry: document.getElementById('cs-industry'),
         service: document.getElementById('cs-service')
@@ -148,11 +147,9 @@
     }
 
     function matches(el) {
-        var q = search.value.trim().toLowerCase();
         return (cat === 'all' || has(el, 'cat', cat)) &&
             has(el, 'industry', selects.industry.value) &&
-            has(el, 'service', selects.service.value) &&
-            (!q || el.dataset.search.indexOf(q) !== -1);
+            has(el, 'service', selects.service.value);
     }
 
     function render() {
@@ -166,7 +163,7 @@
         if (count) count.textContent = total;
         empty.hidden = total !== 0;
         more.parentElement.hidden = total <= limit;
-        clear.hidden = cat === 'all' && !search.value && !selects.industry.value && !selects.service.value;
+        clear.hidden = cat === 'all' && !selects.industry.value && !selects.service.value;
     }
 
     function reset() {
@@ -200,12 +197,10 @@
             syncUrl(true);
         });
     });
-    search.addEventListener('input', reset);
     more.addEventListener('click', function () { limit += PAGE; render(); });
 
     function clearAll() {
         setCat('all');
-        search.value = '';
         Object.keys(selects).forEach(function (k) { selects[k].value = ''; });
         reset();
         syncUrl(true);
@@ -234,8 +229,6 @@
 
     // Preset from the URL
     applyState(stateFromUrl());
-    var q = new URLSearchParams(location.search).get('q');
-    if (q) search.value = q;
 
     render();
     syncUrl(false);
