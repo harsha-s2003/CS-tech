@@ -1,5 +1,5 @@
 // ===== Card slider =====
-// Same behaviour as the Industries slider on index.html, but drives every
+// Same behaviour as the Industries slider on home.html, but drives every
 // .industry-slider-wrap on the page independently. Slide widths come from the
 // CSS breakpoints; the script reads how many fit instead of hard-coding them.
 (function () {

@@ -10665,3 +10665,760 @@ body {
         margin: 8px 0 0;
     }
 }
+
+/* =====================================================================
+   GEOSPATIAL SERVICES (services/geospatial-services.html)
+   ===================================================================== */
+/* The banner has MAP / PLAN labels baked in on its left: cover them more so the text stays clear */
+.geo-hero {
+    background-position: right center;
+}
+
+.geo-hero::before {
+    background: linear-gradient(90deg,
+            rgba(238, 244, 252, 0.97) 0%,
+            rgba(238, 244, 252, 0.92) 45%,
+            rgba(238, 244, 252, 0) 72%);
+}
+
+@media (max-width: 991.98px) {
+    .geo-hero::before {
+        background: rgba(238, 244, 252, 0.88);
+    }
+}
+
+/* ---- Experience at scale ---- */
+.geo-stats-sec {
+    background: #fff;
+}
+
+.geo-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.geo-stat {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 6px 18px;
+    border-left: 1px solid var(--cs-border);
+}
+
+.geo-stat-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--cs-primary);
+    margin-top: 4px;
+}
+
+.geo-stat h3 {
+    color: var(--cs-primary);
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.geo-stat h3 small {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.geo-stat p {
+    color: var(--cs-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ---- Services ---- */
+.geo-services {
+    background: var(--cs-bg-light);
+}
+
+.geo-svc-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(3, 40, 107, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.geo-svc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(3, 40, 107, 0.12);
+}
+
+.geo-svc-img {
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    background-color: #cbd6e8;
+}
+
+.geo-svc-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 22px 22px;
+}
+
+.geo-svc-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.geo-svc-icon {
+    width: 38px;
+    height: 38px;
+    color: #e23a59;
+}
+
+.geo-svc-head h5 {
+    color: #000;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.geo-svc-body p {
+    color: var(--cs-text);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.geo-svc-link {
+    margin-top: auto;
+    color: var(--cs-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.geo-svc-link i {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.geo-svc-link:hover {
+    color: var(--cs-accent);
+}
+
+.geo-svc-link:hover i {
+    transform: translateX(3px);
+}
+
+/* ---- Lifecycle: the six-step wave journey (.am-journey) ---- */
+.am-journey-6 {
+    margin-top: 40px;
+}
+
+/* ---- What we help you achieve ---- */
+.geo-achieve {
+    background: #fff;
+}
+
+.geo-achieve-row {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.geo-achieve-item {
+    text-align: center;
+    padding: 8px 18px;
+}
+
+.geo-achieve-item + .geo-achieve-item {
+    border-left: 1px solid var(--cs-border);
+}
+
+.geo-achieve-icon {
+    width: 46px;
+    height: 46px;
+    color: var(--cs-primary);
+    margin-bottom: 14px;
+}
+
+.geo-achieve-item h5 {
+    color: var(--cs-primary);
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.geo-achieve-item p {
+    color: var(--cs-text);
+    font-size: 0.86rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+@media (max-width: 1199.98px) {
+    .geo-stat:first-child {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    .geo-achieve-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 28px;
+    }
+
+    .geo-achieve-item:nth-child(3n + 1) {
+        border-left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .geo-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 24px;
+    }
+
+    .geo-stat:nth-child(odd) {
+        border-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .geo-achieve-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .geo-achieve-item,
+    .geo-achieve-item + .geo-achieve-item {
+        border-left: 0;
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .geo-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .geo-stat {
+        border-left: 0;
+        padding: 0;
+    }
+}
+
+/* =====================================================================
+   PRODUCTS HOME (product/products.html) - reuses the geo-* cards above
+   ===================================================================== */
+/* Bootstrap-icon stand-ins where the design set has no SVG */
+.geo-achieve-bi {
+    display: inline-block;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: var(--cs-primary);
+    margin-bottom: 14px;
+}
+
+.prod-built-row {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.prod-built-row .geo-achieve-item {
+    padding: 8px 12px;
+}
+
+.prod-tech {
+    background: linear-gradient(135deg, var(--cs-primary-dark) 0%, var(--cs-primary) 100%);
+    color: #fff;
+}
+
+.prod-tech-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.prod-tech-title {
+    position: relative;
+    color: #fff;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0;
+    padding-left: 48px;
+}
+
+.prod-tech-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 32px;
+    height: 3px;
+    background: var(--cs-accent);
+}
+
+.prod-tech-flow {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* every step is the same width, so the chevrons between them are evenly spaced */
+.prod-tech-flow li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 118px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.prod-tech-flow li + li {
+    margin-left: 22px;
+}
+
+/* chevron centred in the gap, level with the middle of the icon circle (bootstrap-icons "chevron-right") */
+.prod-tech-flow li:not(:last-child)::after {
+    content: "\F285";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    top: 28px;
+    left: 100%;
+    width: 22px;
+    transform: translateY(-50%);
+    text-align: center;
+    color: var(--cs-accent);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* icons sit in matching circles so they read as one set whatever their own proportions */
+.prod-tech-ico {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.prod-tech-ico .svg-icon {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+
+.prod-tech-ico .bi {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+    .prod-tech-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .prod-tech-flow {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 22px;
+        width: 100%;
+    }
+
+    .prod-tech-flow li {
+        width: 33%;
+    }
+
+    .prod-tech-flow li + li {
+        margin-left: 0;
+    }
+
+    .prod-tech-flow li::after {
+        display: none;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .prod-built-row {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        row-gap: 28px;
+    }
+
+    .prod-built-row .geo-achieve-item:nth-child(3n + 1) {
+        border-left: 1px solid var(--cs-border);
+    }
+
+    .prod-built-row .geo-achieve-item:nth-child(4n + 1) {
+        border-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .prod-built-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .prod-built-row .geo-achieve-item,
+    .prod-built-row .geo-achieve-item:nth-child(3n + 1) {
+        border-left: 0;
+    }
+}
+
+/* =====================================================================
+   SATELLITE DATA INTELLIGENCE (solution/satellite-data-intelligence.html)
+   ===================================================================== */
+/* Benefits: icon, title and a line of text stacked */
+.sat-benefit-row .sol-benefit {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 6px 18px;
+}
+
+.sat-benefit-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.sat-benefit-text {
+    font-weight: 400;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Designed for: title with a description line */
+.sat-prog-list .vm-prog-text strong {
+    display: block;
+    color: var(--cs-primary);
+    font-weight: 700;
+}
+
+.sat-prog-list .vm-prog-text small {
+    display: block;
+    color: var(--cs-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* 7 sector rows beside 6 platform cards: compact rows (bare icon, plain arrow) so both columns end level */
+.sat-prog-list {
+    gap: 8px;
+}
+
+.sat-prog-list .vm-prog-card {
+    gap: 14px;
+    padding: 7px 18px;
+    border-radius: 10px;
+}
+
+.sat-prog-list .vm-prog-card .vm-plat-ico {
+    width: 30px !important;
+    height: 30px !important;
+    background: none;
+}
+
+.sat-prog-list .vm-plat-ico .sol-plat-icon {
+    width: 26px;
+    height: 26px;
+}
+
+.sat-prog-list .vm-prog-text {
+    line-height: 1.3;
+}
+
+.sat-prog-list .vm-prog-text strong {
+    font-size: 0.9rem;
+}
+
+.sat-prog-list .vm-prog-text small {
+    font-size: 0.78rem;
+    margin-top: 1px;
+}
+
+.sat-prog-list .vm-prog-arrow {
+    width: auto;
+    height: auto;
+    background: none;
+    color: var(--cs-accent);
+}
+
+.sat-prog-list .vm-prog-card:hover .vm-prog-arrow {
+    background: none;
+    color: var(--cs-accent);
+    transform: translateX(4px);
+}
+
+/* Let the platform cards take up the small remaining height difference */
+@media (min-width: 992px) {
+    .sat-platform .vm-platform-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sat-platform .vm-plat-grid {
+        flex: 1;
+        grid-auto-rows: 1fr;
+    }
+}
+
+/* Products home: product cards in the case-study card style, five to a row on desktop.
+   The narrower cards need a little more room for the tagline + description shown on hover. */
+.prod-cards .case-card {
+    min-height: 380px;
+}
+
+.prod-cards .case-card:hover .case-body p,
+.prod-cards .case-card:focus-within .case-body p {
+    max-height: 260px;
+}
+
+.prod-case-tagline {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+/* Experience at Scale with three credentials (transportation-infrastructure.html) */
+.ind-stats-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 575.98px) {
+    .ind-stats-3 {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+
+    .ind-stats-3 .ind-stat:last-child {
+        grid-column: auto;
+    }
+}
+
+/* =====================================================================
+   MINING INTELLIGENCE (solution/mining-intelligence.html)
+   Reuses the solution-page sections; only the bits below are its own.
+   ===================================================================== */
+/* Bootstrap truck icon standing in where the site has no vehicle SVG: size/colour it like the mask icons */
+.mi-bi {
+    color: #e23a59;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.sol-flip-icon .mi-bi {
+    font-size: 1.5rem;
+}
+
+/* Platform modules: icon + heading only, numbered 01-07 */
+.mi-plat-grid .vm-plat-card {
+    padding-top: 26px;
+}
+
+.mi-plat-no {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background: var(--cs-primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 4px 7px;
+    border-radius: 6px;
+}
+
+/* Here the 7 modules are taller than the 5 stakeholder rows: stretch the rows so both columns end level */
+@media (min-width: 992px) {
+    .mi-platform .vm-platform-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mi-platform .sat-prog-list {
+        flex: 1;
+    }
+
+    .mi-platform .sat-prog-list .vm-prog-card {
+        flex: 1;
+    }
+}
+
+/* Proven at state scale */
+.mi-proven {
+    background: #fff;
+}
+
+.mi-proven-img {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    background-color: #cbd6e8;
+    box-shadow: 0 12px 28px rgba(3, 40, 107, 0.12);
+}
+
+/* =====================================================================
+   ABOUT (about.html) - review fixes
+   ===================================================================== */
+/* Company snapshot: every icon in the same 44px box and every number block the same
+   height (with or without a "Miles/Hours" line), so icons, numbers and labels line up */
+.about-stat > i {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    margin-bottom: 10px;
+    vertical-align: top;
+}
+
+.about-stat > i.auto-svg {
+    width: 44px;
+    height: 44px;
+}
+
+.about-stat h3 {
+    min-height: 3.35rem;
+    line-height: 1.2;
+}
+
+/* Global presence: office pins drawn over the map at their real positions */
+.about-map-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.about-pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.about-pin i {
+    color: #f47b20;
+    font-size: 1.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 2px rgba(3, 40, 107, 0.25));
+}
+
+.about-pin span {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 2px;
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* UK and Germany sit close together: UK's label goes on the left */
+.about-pin-left span {
+    left: auto;
+    right: 100%;
+    margin: 0 2px 0 0;
+}
+
+.about-pin-hq i {
+    color: var(--cs-primary);
+}
+
+/* Board / Management "Read Profile" pop-up */
+.about-profile-modal .modal-content {
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.about-profile-modal .modal-header {
+    gap: 16px;
+    align-items: center;
+    background: var(--cs-bg-light);
+    border-bottom: 0;
+    padding: 20px 24px;
+}
+
+.about-profile-photo {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center top;
+    background-color: #e9eef6;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 128, 0.12);
+}
+
+.about-profile-modal .modal-title {
+    color: var(--cs-primary);
+    font-weight: 800;
+    margin: 0;
+}
+
+.about-profile-role {
+    color: var(--cs-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 2px 0 0;
+}
+
+.about-profile-modal .modal-header .btn-close {
+    align-self: flex-start;
+    margin-left: auto;
+}
+
+.about-profile-modal .modal-body {
+    padding: 22px 24px 26px;
+    color: var(--cs-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.about-profile-modal .modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Home "Our Services": each service links to its page (the whole item is clickable) */
+.split-service {
+    position: relative;
+}
+
+.split-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.split-service:hover .split-link {
+    color: var(--cs-primary);
+}

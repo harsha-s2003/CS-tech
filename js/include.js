@@ -33,7 +33,7 @@
     if (form) tasks.push(loadHTML('includes/form.html', form));
 
     Promise.all(tasks).then(function () {
-        var path = location.pathname.replace(/\/$/, '/index.html');
+        var path = location.pathname.replace(/\/$/, '/home.html');
         document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
             var href = link.getAttribute('href');
             if (!href || href.charAt(0) === '#' || link.hash) return;
@@ -43,7 +43,9 @@
         });
         // A page reached through a dropdown highlights its item and the menu it sits in
         document.querySelectorAll('.navbar-nav .dropdown-item').forEach(function (item) {
-            if (item.hash || item.pathname !== path) return;
+            // href="#" (a page still to come) resolves to the current page - never mark it
+            var itemHref = item.getAttribute('href');
+            if (!itemHref || itemHref.charAt(0) === '#' || item.hash || item.pathname !== path) return;
             item.classList.add('active');
             var toggle = item.closest('.dropdown').querySelector('.nav-link');
             if (toggle) toggle.classList.add('active');
