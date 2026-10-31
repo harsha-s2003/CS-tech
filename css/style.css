@@ -11558,3 +11558,45 @@ div.da-industry-pill:hover {
     height: 42px;
     font-size: 2.2rem;
 }
+
+/* ===== Service pages: Modelling & Analytics, Solution Development, AI Consulting ===== */
+/* Busy banners behind the copy: the light fade reaches further than .auto-hero's own */
+.svc-hero-fade::before {
+    background: linear-gradient(90deg,
+            rgba(238, 244, 252, 0.97) 0%,
+            rgba(238, 244, 252, 0.93) 45%,
+            rgba(238, 244, 252, 0.6) 60%,
+            rgba(238, 244, 252, 0) 78%);
+}
+
+@media (max-width: 991.98px) {
+    .svc-hero-fade::before {
+        background: rgba(238, 244, 252, 0.9);
+    }
+}
+
+.svc-hero-tagline {
+    color: var(--cs-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Project Lighthouse: each step names what it hands over */
+.am-journey-body .am-journey-output {
+    margin-top: 8px;
+    color: var(--cs-primary);
+    font-size: 0.8rem;
+}
+
+.am-journey-output strong {
+    color: #d81159;
+}
+
+.svc-closing-line {
+    margin: 36px 0 0;
+    text-align: center;
+    color: var(--cs-primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
