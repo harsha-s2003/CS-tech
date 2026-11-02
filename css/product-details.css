@@ -100,8 +100,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 58px;
-    height: 58px;
+    width: 70px;
+    height: 70px;
     border-radius: 12px;
     background: #eff8ff;
     flex-shrink: 0;
@@ -241,9 +241,10 @@
 }
 
 /* Same icon sizes as the industry pages: 28px inside the 58px capability box */
+/* Same 40px icon as the capability cards on the other pages */
 .product-detail-cap-icon .product-detail-icon {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
 }
 
 @media (max-width: 767.98px) {

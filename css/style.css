@@ -10846,12 +10846,12 @@ body {
 .geo-achieve-icon {
     width: 46px;
     height: 46px;
-    color: var(--cs-primary);
+    color: var(--cs-icon);
     margin-bottom: 14px;
 }
 
 .geo-achieve-item h5 {
-    color: var(--cs-primary);
+    color: #000;
     font-size: 0.98rem;
     font-weight: 700;
     margin-bottom: 8px;
@@ -10923,7 +10923,7 @@ body {
     display: inline-block;
     font-size: 2.6rem;
     line-height: 1;
-    color: var(--cs-primary);
+    color: var(--cs-icon);
     margin-bottom: 14px;
 }
 
