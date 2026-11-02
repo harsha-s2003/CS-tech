@@ -11600,3 +11600,225 @@ div.da-industry-pill:hover {
     font-weight: 700;
     font-size: 1.05rem;
 }
+
+/* Industrial & Manufacturing stats on phones: a tidy 2x2 grid with dividers, headings sized to fit */
+@media (max-width: 575.98px) {
+    .ind-stats-4 {
+        row-gap: 0;
+    }
+
+    .ind-stats-4 .ind-stat {
+        padding: 18px 10px;
+    }
+
+    .ind-stats-4 .ind-stat:nth-child(odd) {
+        border-right: 1px solid var(--cs-border) !important;
+    }
+
+    .ind-stats-4 .ind-stat:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--cs-border);
+    }
+
+    .ind-stats-4 .ind-stat > i {
+        font-size: 2rem;
+    }
+
+    .ind-stats-4 .ind-stat h3 {
+        font-size: 1.05rem;
+    }
+
+    .ind-stats-4 .ind-stat p {
+        font-size: 0.8rem;
+    }
+}
+
+/* automotive.html: the partnership icon is much wider than tall; a wider box lets it reach the same height as the square icons */
+.auto-svg.auto-svg-wide {
+    width: 1.7em;
+}
+
+
+/* ===== Industries We Serve pills (service pages): every box the same height, every icon in the same box ===== */
+.da-industry-pill {
+    height: 64px;
+    min-height: 0;
+    padding: 0 20px;
+}
+
+.da-industry-pill > img {
+    width: 30px !important;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* AI Consulting capabilities: picture on top gives the title the full card width, so the icon
+   centres on a short one- or two-line title */
+.ai-capabilities .da-cap-head {
+    align-items: center;
+}
+
+.ai-capabilities .da-cap-head h5 {
+    margin: 0;
+    text-wrap: balance;
+}
+
+/* AI Consulting capabilities: flip cards. Front: picture, icon, title, summary. Back (on hover, or on
+   tap/focus for touch and keyboard): icon, title and the bullet points */
+.ai-flip-card {
+    height: 100%;
+    min-height: 380px;
+    perspective: 1200px;
+    outline: none;
+    cursor: pointer;
+}
+
+.ai-flip-inner {
+    position: relative;
+    height: 100%;
+    min-height: inherit;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.ai-flip-card:hover .ai-flip-inner,
+.ai-flip-card:focus-within .ai-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.ai-flip-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 2px 10px rgba(3, 40, 107, 0.05);
+}
+
+.ai-flip-front {
+    background: #fff;
+}
+
+.ai-flip-front .da-cap-img {
+    flex: 0 0 auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.ai-flip-front p,
+.ai-flip-back .da-cap-head {
+    padding: 0 4px;
+}
+
+.ai-flip-front p {
+    margin: 0;
+    color: var(--cs-muted, #6b7280);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.ai-flip-back {
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 28px 24px;
+    background: linear-gradient(160deg, #000080 0%, #03286b 100%);
+    box-shadow: 0 12px 28px rgba(3, 40, 107, 0.2);
+}
+
+.ai-flip-back h5 {
+    color: #fff;
+}
+
+.ai-flip-back .da-cap-icon {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.ai-flip-back .da-cap-list {
+    border-top-color: rgba(255, 255, 255, 0.25);
+}
+
+.ai-flip-back .da-cap-list li {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.88rem;
+    margin-bottom: 9px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ai-flip-inner {
+        transition: none;
+    }
+}
+
+/* About - Company Snapshot: one 56x40 box for every icon. Square glyphs fill its height (40px), wide ones
+   (people, handshake) its width, so all six read as the same size; the font icon is sized to match */
+.about-stat > i.auto-svg {
+    width: 56px;
+    height: 40px;
+}
+
+.about-stat > i.bi {
+    width: 56px;
+    height: 40px;
+    font-size: 2.6rem;
+    line-height: 40px;
+}
+
+/* Power page: industry-resources.css stacks .ind-stats to one column on phones; keep the four-stat row as
+   the same 2x2 grid as Industrial & Manufacturing */
+@media (max-width: 575.98px) {
+    .resource-industry .ind-stats.ind-stats-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+    }
+}
+
+/* Power page services: flip cards like AI Consulting, but each back carries five long points - a little more
+   height, a compact list, and a taller front picture so the front is not left half empty */
+.power-flip-card {
+    min-height: 410px;
+}
+
+.power-flip-card .ai-flip-front .da-cap-img {
+    aspect-ratio: 4 / 3;
+}
+
+.power-flip-card .ai-flip-back {
+    padding: 22px 20px;
+    gap: 12px;
+}
+
+.power-flip-card .ai-flip-back .da-cap-list li {
+    font-size: 0.84rem;
+    line-height: 1.45;
+    margin-bottom: 7px;
+}
+
+@media (max-width: 1199.98px) {
+    .power-flip-card {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .power-flip-card {
+        min-height: 470px;
+    }
+}
+
+/* Flip cards drop the .da-cap-card wrapper, so give their titles the same card-title style */
+.ai-flip-front h5 {
+    color: #000;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.ai-flip-back h5 {
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
