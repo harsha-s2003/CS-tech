@@ -3500,8 +3500,8 @@ body {
     top: 46px;
     right: clamp(24px, 4vw, 70px);
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    width: min(820px, 52vw);
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    width: min(880px, 56vw);
     min-height: 64px;
     align-items: center;
     gap: 16px;
@@ -3550,7 +3550,7 @@ body {
     }
 
     .ps-hero-platforms {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 8px 14px;
         min-height: 88px;
         padding: 10px 14px;
@@ -3572,7 +3572,7 @@ body {
 
 .ps-ecosystem-grid {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 12px;
     margin-top: 28px;
 }
@@ -3704,7 +3704,7 @@ body {
 
 @media (max-width: 1199.98px) {
     .ps-ecosystem-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .ps-value-grid {
@@ -11821,4 +11821,31 @@ div.da-industry-pill:hover {
     font-weight: 700;
     font-size: 0.9rem;
     line-height: 1.3;
+}
+
+/* About: partner rows with 5 logos, and the single JV partner logo */
+.about-logos.about-logos-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.about-logos.about-logos-1 {
+    grid-template-columns: minmax(0, 240px);
+}
+
+.about-logos-5 .about-logo,
+.about-logos-1 .about-logo {
+    min-height: 96px;
+    padding: 14px 20px;
+}
+
+.about-logos-5 .about-logo img,
+.about-logos-1 .about-logo img {
+    max-height: 56px;
+}
+
+@media (max-width: 767.98px) {
+    .about-logos.about-logos-5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261104a">
     <link rel="stylesheet" href="css/icons.css">
 
 <body>
@@ -22,30 +22,75 @@
     <!-- ===================== HERO ===================== -->
     
     <section class="hero-section">
-        <div class="hero-slide" style="background-image:url('img/usa/banner.webp')">
-            <div class="hero-overlay"></div>
-            <div class="container position-relative">
-                <div class="row">
-                    <div class="col-lg-7 col-xl-6">
-                        <div class="hero-content">
-                            <p class="gcc-hero-eyebrow"><span class="gcc-hero-dash"></span>CS TECH Ai GEOSPATIAL AMERICAS</p>
-                            
-                            <h1 class="hero-title hero-title-gradient">
-                                Geospatial Intelligence.<br>
-                                Engineering Expertise.<br>
-                                Digital Delivery.
-                            </h1>
-                            <p class="hero-sub">
-                                CS TECH Ai delivers integrated geospatial, engineering and digital solutions across
-                                North America &mdash; from data acquisition and spatial analytics to consulting,
-                                engineering support and enterprise digital platforms.
-                            </p>
-                            <a href="#contact" class="btn hero-btn">
-                                 Talk to Our Geospatial Team <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <div class="hero-slide" style="background-image:url('img/usa/banner.webp')">
+                    <div class="hero-overlay"></div>
+                    <div class="container position-relative">
+                        <div class="row">
+                            <div class="col-lg-7 col-xl-6">
+                                <div class="hero-content">
+                                    <p class="gcc-hero-eyebrow"><span class="gcc-hero-dash"></span>CS TECH Ai GEOSPATIAL AMERICAS</p>
+                                    
+                                    <h1 class="hero-title hero-title-gradient">
+                                        Geospatial Intelligence.<br>
+                                        Engineering Expertise.<br>
+                                        Digital Delivery.
+                                    </h1>
+                                    <p class="hero-sub">
+                                        CS TECH Ai delivers integrated geospatial, engineering and digital solutions across
+                                        North America &mdash; from data acquisition and spatial analytics to consulting,
+                                        engineering support and enterprise digital platforms.
+                                    </p>
+                                    <a href="#contact" class="btn hero-btn">
+                                         Talk to Our Geospatial Team <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                </div>
+
+                <!-- Slide 2: Mobility / Automotive (same as the home page slider) -->
+                <div class="carousel-item">
+                    <div class="hero-slide hero-slide-mobility" style="background-image:url('img/home/banner3-new.webp')">
+                        <div class="hero-overlay"></div>
+                        <div class="container position-relative">
+                            <div class="row">
+                                <div class="col-lg-7 col-xl-6">
+                                    <div class="hero-content">
+                                        <p class="gcc-hero-eyebrow"><span class="gcc-hero-dash"></span>AUTOMOTIVE - MOBILITY - ENGINEERING</p>
+                                        <h1 class="hero-title hero-title-gradient">
+                                            Product &amp; Manufacturing<br>
+                                            Engineering Solutions for<br>
+                                            Mobility
+                                        </h1>
+                                        <p class="hero-sub">
+                                            From design to validation, engineering services across product
+                                            development, industrial automation, and electrification
+                                            for OEMs &amp; Tier 1&rsquo;s globally.
+                                        </p>
+                                        <a href="mobility/automotive.html" class="btn hero-btn">
+                                            Learn More <i class="bi bi-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-arrow"><i class="bi bi-chevron-left"></i></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-arrow"><i class="bi bi-chevron-right"></i></span>
+            </button>
+            <div class="carousel-dots">
+                <button type="button" class="dot active" data-bs-target="#heroCarousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                <button type="button" class="dot" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
         </div>
     </section>
@@ -669,6 +714,19 @@
             document.addEventListener('visibilitychange', function () {
                 if (document.hidden) stop();
                 else if (isMobile()) start();
+            });
+        })();
+    </script>
+    <script>
+        // ===== Hero carousel: sync active dot with current slide =====
+        (function () {
+            var carousel = document.getElementById('heroCarousel');
+            var dots = document.querySelectorAll('.carousel-dots .dot');
+            if (!carousel || !dots.length) return;
+            carousel.addEventListener('slide.bs.carousel', function (e) {
+                dots.forEach(function (d, i) {
+                    d.classList.toggle('active', i === e.to);
+                });
             });
         })();
     </script>
