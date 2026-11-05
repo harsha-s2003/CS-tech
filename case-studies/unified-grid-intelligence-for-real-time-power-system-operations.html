@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unified Grid Intelligence for Real-Time Power System Operations | CS TECH Ai Case Studies</title>
+    <title>Unified Grid Intelligence for a State Load Despatch Centre | CS TECH Ai Case Studies</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -26,10 +26,10 @@
             <nav class="blog-crumb" aria-label="breadcrumb">
                 <a href="../home.html">Home</a><i class="bi bi-chevron-right"></i>
                 <a href="../case-studies.html">Case Studies</a><i class="bi bi-chevron-right"></i>
-                <span>Unified Grid Intelligence for Real-Time Power…</span>
+                <span>Unified Grid Intelligence for a State Load Despatch…</span>
             </nav>
             <p class="section-eyebrow"><span class="eyebrow-bar"></span>CASE STUDY</p>
-            <h1 class="blog-post-title">Unified Grid Intelligence for Real-Time Power System Operations</h1>
+            <h1 class="blog-post-title">Unified Grid Intelligence for a State Load Despatch Centre</h1>
         </div>
     </section>
 
@@ -40,33 +40,31 @@
                 <div class="col-lg-8">
                     <article class="blog-content cs-content">
                         <figure class="blog-cover">
-                            <img src="../img/case-studies/unified-grid-intelligence-for-real-time-power-system-operations.webp" alt="Unified Grid Intelligence for Real-Time Power System Operations">
+                            <img src="../img/case-studies/unified-grid-intelligence-for-real-time-power-system-operations.webp?v=20261104" alt="Unified Grid Intelligence for a State Load Despatch Centre">
                         </figure>
                         <h2>About the Client</h2>
-                        <p>The Maharashtra State Load Despatch Centre (MSLDC) plays a critical role in monitoring and managing power-system operations across Maharashtra.</p>
-                        <p>Its operating environment involves information generated across multiple grid, market, metering and renewable-energy systems, creating a need for a unified view of operational data to support monitoring, analysis and informed decision-making.</p>
+                        <p>The client is a state load despatch centre responsible for integrated operation of a large intra-state power system with growing renewable generation.</p>
+                        <p>It handles scheduling, despatch and energy accounting, and works with systems for SCADA, synchrophasor measurement, scheduling and settlement, renewable energy management and open access.</p>
                         <h2>The Challenge</h2>
-                        <p>Power-system operations generate large volumes of information across different operational and enterprise platforms. At MSLDC, relevant information was distributed across systems including SCADA, SAMAST, REMC, MDM, DSM and WRPC data sources.</p>
-                        <p>Working across these separate systems made it difficult to establish a consolidated operational view and efficiently analyse information across different datasets.</p>
-                        <p>MSLDC therefore required an integrated data environment capable of bringing together information from multiple IT and OT sources and making it readily available for operational monitoring, analysis and reporting.</p>
+                        <p>The load despatch centre was dealing with large volumes of operational data arriving at intervals ranging from milliseconds to 15 minutes.</p>
+                        <p>However, most analysis ran within individual applications using only the data stored in each system. Data from multiple IT and OT systems needed to be combined and analysed together, while manual interventions made analysis slower and cross-system integration complex and error-prone.</p>
+                        <p>A secure and scalable platform was therefore required to integrate existing and future systems while enabling unified analysis of operational data.</p>
                         <h2>The Solution</h2>
-                        <p>CS TECH Ai worked on a Proof of Value for a Unified Grid Intelligence environment using the AVEVA PI System, creating a centralized operational-data framework for integrating and visualizing information from multiple power-system sources.</p>
-                        <p>The solution brought together data from systems including SCADA, SAMAST, REMC, MDM, DSM and WRPC, providing a common environment for operational information.</p>
-                        <p>The approach supported:</p>
-                        <ul class="cs-list-items"><li>Centralized IT-OT data integration across multiple operational systems</li><li>Consolidation of grid and related operational information within a common data environment</li><li>Real-time monitoring and visualization of relevant operational parameters</li><li>Historical data access and analysis</li><li>Demand and grid-operation analysis</li><li>Monitoring and analysis of renewable-energy information</li><li>Operational dashboards and analytical views</li><li>Data availability for regulatory and operational reporting</li><li>A common information foundation to support further operational analytics and decision-making</li></ul>
-                        <p>By using the AVEVA PI System as the operational-data infrastructure, information originating in otherwise separate systems could be organized and presented within a unified operational context.</p>
+                        <p>CS TECH Ai implemented a unified operational data platform on AVEVA PI System. It integrates real-time and file-based data from SCADA, scheduling, meter data management, renewable energy management and regional settlement sources, with automated analytics running on top.</p>
+                        <p>Data flows one way from the OT network to the IT environment through a firewall, ensuring that OT systems are never exposed.</p>
+                        <p>The solution integrated 12 OT and IT data sources, covering RE schedules, DISCOM drawl schedules, actual meter data, generator despatch schedules and declared capacity, bus voltages, ISTS line loading, frequency, ISTS drawl, long-term scheduling, merit-order despatch, PSS-wise RE generation and web data.</p>
+                        <p>Key capabilities included:</p>
+                        <ul class="cs-list-items"><li><strong>Multi-protocol connectivity</strong> using IEC 60870-5-104 for SCADA, JSON for scheduling and meter systems, CSV and SFTP for settlement and renewable-energy data, along with web crawling.</li><li><strong>Resource shortfall analysis for DISCOMs</strong>, comparing demand forecasts with actual drawl across pre-despatch, real-time and post-despatch stages.</li><li><strong>DISCOM-wise demand analysis</strong> using 15-minute meter data from taluka to state level, including coincident and non-coincident demand.</li><li><strong>Generator capacity and availability analysis</strong>, comparing declared capacity with ex-bus capacity to identify under-performing units and support resource-adequacy planning.</li><li><strong>Renewable-energy deviation and ISTS drawl analysis</strong>, correlating SCADA and metered data to monitor PSS-wise RE schedule deviations and state-periphery drawl deviations.</li><li><strong>Dashboards, alerts and automated reports</strong> providing operators and planners with access to real-time and historical grid information.</li></ul>
                         <h2>The Impact</h2>
-                        <p>The Proof of Value demonstrated how a unified grid-intelligence environment could give MSLDC a more consolidated view of its operational information and reduce dependence on individually accessing multiple source systems.</p>
-                        <p>The integrated approach enabled:</p>
+                        <p>The unified operational data platform created a single source of truth across multiple critical systems, including scheduling, settlement, renewable management and SCADA.</p>
+                        <p>It enabled:</p>
                         <div class="cs-impact">
-                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>Improved visibility across grid and operational datasets</span></div>
-                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>A common environment for analysing information from multiple IT and OT systems</span></div>
-                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>Easier access to current and historical operational information</span></div>
-                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>Better support for demand analysis and renewable-energy monitoring</span></div>
-                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>More streamlined access to information required for operational and regulatory reporting</span></div>
-                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>A stronger data foundation for grid analysis and operational decision support</span></div>
+                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>Real-time and historical data integration for rapid retrieval and automated analysis.</span></div>
+                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>Early identification of resource shortfalls and high-deviation pooling substations.</span></div>
+                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>Insights into demand trends and embedded renewables to support network and resource-adequacy planning.</span></div>
+                            <div class="cs-impact-item"><i class="bi bi-check2-circle"></i><span>A secure and scalable foundation for additional use cases such as automated deviation reports, PMU analytics and fuel-stock monitoring.</span></div>
                         </div>
-                        <p>The result was a framework for transforming fragmented power-system information into connected operational intelligence, helping grid operators obtain a more comprehensive view of system conditions and supporting more informed power-system management.</p>
+                        <p>The implementation brought together 12 OT and IT data sources, delivered 5 analytics use cases, enabled 15-minute block-wise analysis from real-time to annual timeframes, and maintained secure one-way OT-to-IT data flow.</p>
 
                         <div class="blog-post-foot">
                             <a href="../case-studies.html" class="blog-read"><i class="bi bi-arrow-left"></i> Back to all case studies</a>
