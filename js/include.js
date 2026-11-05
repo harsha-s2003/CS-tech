@@ -33,11 +33,13 @@
     if (form) tasks.push(loadHTML('includes/form.html', form));
 
     Promise.all(tasks).then(function () {
-        var path = location.pathname.replace(/\/$/, '/home.html');
+        // Clean URLs: /about, /about.html and the home page (/, /index, /home) compare equal
+        function norm(p) { return p.replace(/\.html$/, '').replace(/\/(index|home)$/, '/'); }
+        var path = norm(location.pathname);
         document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
             var href = link.getAttribute('href');
             if (!href || href.charAt(0) === '#' || link.hash) return;
-            if (link.pathname === path || link.pathname === path.replace('.html', '')) {
+            if (norm(link.pathname) === path) {
                 link.classList.add('active');
             }
         });
@@ -45,7 +47,7 @@
         document.querySelectorAll('.navbar-nav .dropdown-item').forEach(function (item) {
             // href="#" (a page still to come) resolves to the current page - never mark it
             var itemHref = item.getAttribute('href');
-            if (!itemHref || itemHref.charAt(0) === '#' || item.hash || item.pathname !== path) return;
+            if (!itemHref || itemHref.charAt(0) === '#' || item.hash || norm(item.pathname) !== path) return;
             item.classList.add('active');
             var toggle = item.closest('.dropdown').querySelector('.nav-link');
             if (toggle) toggle.classList.add('active');
