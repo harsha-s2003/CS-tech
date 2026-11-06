@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# Redirect lists for the server, not pages
+Disallow: /seo-migration/
+
+Sitemap: https://cst.convomax.online/sitemap.xml
