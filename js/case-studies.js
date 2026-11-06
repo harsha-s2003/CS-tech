@@ -152,6 +152,119 @@
             has(el, 'service', selects.service.value);
     }
 
+
+    // ---- SEO per filter view (CS_Tech_On_Page_SEO_2.xlsx): title, description, keywords, H1 ----
+    var SEO = {
+        "Industries/Land-Natural-Resources": {
+            "t": "Land Natural Resources Case Studies",
+            "d": "Explore CS TECH Ai case studies in land natural resources, with project approaches and practical applications across client engagements.",
+            "h": "Land Natural Resources Case Studies",
+            "k": "land natural resources case studies"
+        },
+        "Services/Data-Acquisition": {
+            "t": "Data Acquisition Case Studies",
+            "d": "Explore CS TECH Ai case studies in data acquisition, with project approaches and practical applications across client engagements.",
+            "h": "Data Acquisition Case Studies",
+            "k": "data acquisition case studies"
+        },
+        "Industries/Industrial-Manufacturing": {
+            "t": "Industrial Manufacturing Case Studies",
+            "d": "Explore CS TECH Ai case studies in industrial manufacturing, with project approaches and practical applications across client engagements.",
+            "h": "Industrial Manufacturing Case Studies",
+            "k": "industrial manufacturing case studies"
+        },
+        "Services/Engineering-Consulting": {
+            "t": "Engineering Consulting Case Studies",
+            "d": "Explore CS TECH Ai case studies in engineering consulting, with project approaches and practical applications across client engagements.",
+            "h": "Engineering Consulting Case Studies",
+            "k": "engineering consulting case studies"
+        },
+        "Services/Mobility-Engineering": {
+            "t": "Mobility Engineering Case Studies",
+            "d": "Explore CS TECH Ai case studies in mobility engineering, with project approaches and practical applications across client engagements.",
+            "h": "Mobility Engineering Case Studies",
+            "k": "mobility engineering case studies"
+        },
+        "Services/Enterprise-GIS-Spatial-Intelligence": {
+            "t": "Enterprise GIS & Spatial Intelligence Case Studies",
+            "d": "Explore CS TECH Ai case studies in enterprise gis & spatial intelligence, with project approaches and practical applications across client engagements.",
+            "h": "Enterprise GIS Spatial Intelligence Case Studies",
+            "k": "enterprise gis & spatial intelligence case studies"
+        },
+        "Services/Geospatial-Data-Processing-Mapping": {
+            "t": "Geospatial Mapping Case Studies",
+            "d": "Explore CS TECH Ai case studies in geospatial mapping, with project approaches and practical applications across client engagements.",
+            "h": "Geospatial Data Processing Mapping Case Studies",
+            "k": "geospatial mapping case studies"
+        },
+        "Industries/Automotive-Mobility": {
+            "t": "Automotive Mobility Case Studies",
+            "d": "Explore CS TECH Ai case studies in automotive mobility, with project approaches and practical applications across client engagements.",
+            "h": "Automotive Mobility Case Studies",
+            "k": "automotive mobility case studies"
+        },
+        "Industries/Architecture-Engineering-Construction": {
+            "t": "AEC Case Studies",
+            "d": "Explore CS TECH Ai case studies in aec, with project approaches and practical applications across client engagements.",
+            "h": "Architecture Engineering Construction Case Studies",
+            "k": "aec case studies"
+        },
+        "Industries/Transportation-Infrastructure": {
+            "t": "Transportation Infrastructure Case Studies",
+            "d": "Explore CS TECH Ai case studies in transportation infrastructure, with project approaches and practical applications across client engagements.",
+            "h": "Transportation Infrastructure Case Studies",
+            "k": "transportation infrastructure case studies"
+        },
+        "Services/BIM-3D-Modelling-Digital-Twins": {
+            "t": "BIM & Digital Twins Case Studies",
+            "d": "Explore CS TECH Ai case studies in bim & digital twins, with project approaches and practical applications across client engagements.",
+            "h": "BIM 3D Modelling Digital Twins Case Studies",
+            "k": "bim & digital twins case studies"
+        },
+        "Industries/Water-Wastewater": {
+            "t": "Water Wastewater Case Studies",
+            "d": "Explore CS TECH Ai case studies in water wastewater, with project approaches and practical applications across client engagements.",
+            "h": "Water Wastewater Case Studies",
+            "k": "water wastewater case studies"
+        },
+        "Industries/Power-Energy": {
+            "t": "Power Energy Case Studies",
+            "d": "Explore CS TECH Ai case studies in power energy, with project approaches and practical applications across client engagements.",
+            "h": "Power Energy Case Studies",
+            "k": "power energy case studies"
+        },
+        "Services/Modelling-Analytics": {
+            "t": "Modelling Analytics Case Studies",
+            "d": "Explore CS TECH Ai case studies in modelling analytics, with project approaches and practical applications across client engagements.",
+            "h": "Modelling Analytics Case Studies",
+            "k": "modelling analytics case studies"
+        },
+        "Services/Solution-Development": {
+            "t": "Solution Development Case Studies",
+            "d": "Explore CS TECH Ai case studies in solution development, with project approaches and practical applications across client engagements.",
+            "h": "Solution Development Case Studies",
+            "k": "solution development case studies"
+        }
+    };
+    var seoH1 = document.querySelector(".hero-content h1");
+    var seoMeta = function (name) { return document.querySelector('meta[name="' + name + '"]'); };
+    var seoBase = {
+        t: document.title,
+        d: (seoMeta("description") || {}).content,
+        k: (seoMeta("keywords") || {}).content,
+        h: seoH1 ? seoH1.lastChild.textContent : ""
+    };
+    function updateSeo() {
+        var route = pathFor(currentState()).slice(pagePath.length + 1).toLowerCase();
+        var hit = null;
+        Object.keys(SEO).forEach(function (r) { if (r.toLowerCase() === route) hit = SEO[r]; });
+        var v = hit || seoBase;
+        document.title = v.t;
+        if (seoMeta("description") && v.d) seoMeta("description").content = v.d;
+        if (seoMeta("keywords") && v.k) seoMeta("keywords").content = v.k;
+        if (seoH1 && v.h) seoH1.lastChild.textContent = v.h;
+    }
+
     function render() {
         var shown = 0, total = 0;
         items.forEach(function (el) {
@@ -164,6 +277,7 @@
         empty.hidden = total !== 0;
         more.parentElement.hidden = total <= limit;
         clear.hidden = cat === 'all' && !selects.industry.value && !selects.service.value;
+        updateSeo();
     }
 
     function reset() {

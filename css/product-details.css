@@ -18,7 +18,7 @@
     color: #fff;
 }
 
-.product-detail-hero h1 {
+.product-detail-hero .product-hero-title {
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.2;
@@ -248,7 +248,7 @@
 }
 
 @media (max-width: 767.98px) {
-    .product-detail-hero h1 {
+    .product-detail-hero .product-hero-title {
         font-size: 1.9rem;
     }
 }
@@ -265,7 +265,7 @@
     color: #334155;
 }
 
-.product-detail-hero h1 {
+.product-detail-hero .product-hero-title {
     color: var(--cs-primary);
 }
 

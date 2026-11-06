@@ -1,5 +1,5 @@
 # BEGIN old-site redirects
-# 301: old cstech.ai URLs -> new pages (list: seo-migration/url-redirects.csv)
+# 301: old cstech.ai URLs -> new pages (used only if this site is served by Apache on cstech.ai)
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule ^about/?$ /about.html [R=301,L]
@@ -23,7 +23,7 @@
     RewriteRule ^geospatialamericas/industries/utilities-and-energy/?$ /usa.html [R=301,L]
     RewriteRule ^geospatialamericas/services/analytics/?$ /usa.html [R=301,L]
     RewriteRule ^geospatialamericas/services/consulting/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/services/data-acquisition/?$ /usa.html [R=301,L]
+    RewriteRule ^geospatialamericas/services/data-acquisition/?$ /services/data-acquisition.html [R=301,L]
     RewriteRule ^geospatialamericas/services/digital-enterprise/?$ /usa.html [R=301,L]
     RewriteRule ^geospatialamericas/services/engineering-support/?$ /usa.html [R=301,L]
     RewriteRule ^infra-utilities/?$ /services/geospatial-services.html [R=301,L]

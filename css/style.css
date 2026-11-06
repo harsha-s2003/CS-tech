@@ -4265,6 +4265,14 @@ body {
     margin-bottom: 1.25rem;
 }
 
+/* The banner eyebrow is the page <h1> (SEO); keep it looking like the small label it was */
+h1.gcc-hero-eyebrow,
+h1.section-eyebrow,
+h1.hero-eyebrow {
+    font-family: inherit;
+    line-height: inherit;
+}
+
 .gcc-hero-dash {
     display: inline-block;
     width: 36px;
