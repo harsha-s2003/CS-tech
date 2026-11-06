@@ -17,6 +17,9 @@
         return fetch(new URL(file, root))
             .then(function (res) { return res.text(); })
             .then(function (html) {
+                // header.html also carries a <head> part (added by js/head.js); only its <body> goes here
+                var body = html.match(/<body[^>]*>([\s\S]*?)(<\/body>|$)/i);
+                if (body) html = body[1];
                 target.innerHTML = html;
                 fixLinks(target);
                 target.replaceWith.apply(target, target.childNodes);
