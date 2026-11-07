@@ -1,2 +1,5 @@
 # Archives (zip exports of the site or images) - too large for GitHub, keep them out of the repo
 *.zip
+
+# Local Apache test server logs (seo-migration/local-apache)
+seo-migration/local-apache/logs/

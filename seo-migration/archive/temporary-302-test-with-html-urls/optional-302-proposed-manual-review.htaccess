@@ -1,0 +1,94 @@
+# =====================================================================
+# OPTIONAL - the 45 proposed Manual Review mappings (NOT approved yet), same 302 test format.
+# To test them too, paste these lines into the cstech-temporary-302-test block, above "</IfModule>".
+# =====================================================================
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^about/?$ https://cst.convomax.online/about.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^careers/?$ https://cst.convomax.online/careers.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^contact/?$ https://cst.convomax.online/contact.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/?$ https://cst.convomax.online/services/geospatial-services.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/analytics/?$ https://cst.convomax.online/services/modelling-analytics.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/consulting/?$ https://cst.convomax.online/services/engineering-consulting.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/digital-enterprise/?$ https://cst.convomax.online/services/enterprise-gis-spatial-intelligence.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/engineering-support/?$ https://cst.convomax.online/services/bim-3d-modelling-digital-twins.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/software-solutions/?$ https://cst.convomax.online/services/solution-development.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/about/?$ https://cst.convomax.online/about.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/contact/?$ https://cst.convomax.online/contact.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/industries/public-infrastructure/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/industries/telecom-and-fiber/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/industries/utilities-and-energy/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/services/analytics/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/services/consulting/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/services/digital-enterprise/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/services/engineering-support/?$ https://cst.convomax.online/usa.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/industries/aec-and-bim/?$ https://cst.convomax.online/industries/aec-bim.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/industries/energy/?$ https://cst.convomax.online/industries/power-utilities.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/industries/land-and-natural-resources/?$ https://cst.convomax.online/industries/land-natural-resources.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/industries/transportation/?$ https://cst.convomax.online/industries/transportation-infrastructure.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/industries/water/?$ https://cst.convomax.online/industries/water-wastewater.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/solutions/disaster-management/?$ https://cst.convomax.online/solution/disaster-management.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/solutions/smart-city-solutions/?$ https://cst.convomax.online/solution/smart-city.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/solutions/spatial-data-infrastructure/?$ https://cst.convomax.online/solution/spatial-data-infrastructure.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^infra-utilities/solutions/vegetation-management/?$ https://cst.convomax.online/solution/vegetation-management.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^investors/?$ https://cst.convomax.online/investors.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^mobility/?$ https://cst.convomax.online/mobility/automotive.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^mobility/industries/?$ https://cst.convomax.online/mobility/automotive-industries.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^mobility/offerings/?$ https://cst.convomax.online/mobility/automotive-services.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^mobility/solutions/?$ https://cst.convomax.online/mobility/automotive-solutions.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/blogs/?$ https://cst.convomax.online/blogs.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/blogs/digital-twins-revolutionizing-industry/?$ https://cst.convomax.online/blogs/digital-twins-revolutionizing-industry.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/emerging-tech/?$ https://cst.convomax.online/case-studies.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/instrument-panel-development/?$ https://cst.convomax.online/case-studies/instrument-panel-development.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/mobility/?$ https://cst.convomax.online/case-studies.html?industry=automotive [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/modular-6d0f-armrest/?$ https://cst.convomax.online/case-studies/modular-6d0f-armrest.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/multi-feature-armrest-development/?$ https://cst.convomax.online/case-studies/multi-feature-armrest-development.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/new-recreation-vehicle-launch/?$ https://cst.convomax.online/case-studies/new-recreation-vehicle-launch.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology/?$ https://cst.convomax.online/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance/?$ https://cst.convomax.online/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions/?$ https://cst.convomax.online/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/?$ https://cst.convomax.online/news.html [R=302,L,NC,E=CST_TEST_302:1]

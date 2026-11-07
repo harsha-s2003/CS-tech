@@ -1,18 +1,20 @@
-// ===== Case studies listing (case-studies.html) =====
+// ===== Case studies listing (/case-studies) =====
 // Category tabs and the dropdowns narrow the grid together. Clicking a tab resets both
 // dropdowns. Only one dropdown filters at a time: picking an Industry resets Service to
 // "All Services" and vice versa.
 //
-// The category and the active dropdown live in the path:
-//   case-studies.html                                     All, no filter
-//   case-studies.html/Mobility                            category
-//   case-studies.html/Industries/Water-Wastewater         industry (All category)
-//   case-studies.html/Services/Data-Acquisition           service (All category)
-//   case-studies.html/Mobility/Industries/Automotive-Mobility        category + industry
-//   case-studies.html/Industries/Industries/Water-Wastewater         Industries tab + industry
+// The category and the active dropdown live in the path (clean URLs; the server serves
+// case-studies.html for these paths, see .htaccess "case-studies filter views"):
+//   /case-studies                                     All, no filter
+//   /case-studies/Mobility                            category
+//   /case-studies/Industries/Water-Wastewater         industry (All category)
+//   /case-studies/Services/Data-Acquisition           service (All category)
+//   /case-studies/Mobility/Industries/Automotive-Mobility        category + industry
+//   /case-studies/Industries/Industries/Water-Wastewater         Industries tab + industry
 // "Industries"/"Services" right before an option slug is the dropdown, otherwise the tab.
 // Slugs come from the tab and option labels, so they read like the UI. Older links
-// (?category=gcc&industry=water, and ?route=... from 404.html) are read and rewritten to this form.
+// (case-studies.html/..., ?category=gcc&industry=water, and ?route=... from 404.html)
+// are read and rewritten to this form.
 (function () {
     var grid = document.getElementById('cs-grid');
     if (!grid) return;
@@ -32,8 +34,9 @@
     var limit = PAGE;
 
     // ---- URL <-> filters ----
-    var PAGE_FILE = 'case-studies.html';
-    var pagePath = location.pathname.slice(0, location.pathname.indexOf(PAGE_FILE) + PAGE_FILE.length);
+    // The listing itself: /case-studies (clean URL) or .../case-studies.html (file URL, local preview)
+    var pageMatch = location.pathname.match(/^(.*?\/case-studies(?:\.html)?)(?=\/|$)/);
+    var pagePath = pageMatch ? pageMatch[1] : location.pathname;
     var KEY = { industry: 'Industries', service: 'Services' };
 
     // "Water & Wastewater" -> "Water-Wastewater", "BIM, 3D Modelling & Digital Twins" -> "BIM-3D-Modelling-Digital-Twins"
@@ -254,15 +257,30 @@
         k: (seoMeta("keywords") || {}).content,
         h: seoH1 ? seoH1.lastChild.textContent : ""
     };
+    // Canonical of each view: a filter view with its own SEO entry is its own page
+    // (https://cstech.ai/case-studies/Industries/Water-Wastewater); every other combination
+    // points to the main listing, so thin filter mixes are not indexed separately.
+    var CANONICAL_BASE = 'https://cstech.ai/case-studies';
+    function setCanonical(href) {
+        var link = document.querySelector('link[rel="canonical"]');
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'canonical';
+            document.head.appendChild(link);
+        }
+        link.href = href;
+    }
+
     function updateSeo() {
         var route = pathFor(currentState()).slice(pagePath.length + 1).toLowerCase();
-        var hit = null;
-        Object.keys(SEO).forEach(function (r) { if (r.toLowerCase() === route) hit = SEO[r]; });
+        var hit = null, hitRoute = '';
+        Object.keys(SEO).forEach(function (r) { if (r.toLowerCase() === route) { hit = SEO[r]; hitRoute = r; } });
         var v = hit || seoBase;
         document.title = v.t;
         if (seoMeta("description") && v.d) seoMeta("description").content = v.d;
         if (seoMeta("keywords") && v.k) seoMeta("keywords").content = v.k;
         if (seoH1 && v.h) seoH1.lastChild.textContent = v.h;
+        setCanonical(hit ? CANONICAL_BASE + '/' + hitRoute : CANONICAL_BASE);
     }
 
     function render() {

@@ -1,5 +1,10 @@
 
 <head>
+    <!-- Demo/staging guard: noindex everywhere except the production domain cstech.ai.
+         It switches itself off at cutover; nothing to remove. -->
+    <script>
+        if (!/(^|\.)cstech\.ai$/i.test(location.hostname)) document.write('<meta name="robots" content="noindex, nofollow">');
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -42,77 +47,77 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-2">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="industries/industries.html" id="industriesDropdown"
+                        <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Industries
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="industriesDropdown">
-                            <li><a class="dropdown-item" href="industries/aec-bim.html">AEC &amp; BIM</a></li>
-                            <li><a class="dropdown-item" href="industries/industrial-manufacturing.html">Industrial
+                            <li><a class="dropdown-item" href="industries/aec-bim">AEC &amp; BIM</a></li>
+                            <li><a class="dropdown-item" href="industries/industrial-manufacturing">Industrial
                                     &amp;
                                     Manufacturing</a></li>
                             <!-- <li class="dropdown-submenu">
-                            <a class="dropdown-item submenu-toggle" href="industries/land-natural-resources.html"
+                            <a class="dropdown-item submenu-toggle" href="industries/land-natural-resources"
                                 role="button" aria-expanded="false">Land &amp; Natural Resources</a>
                             <ul class="dropdown-menu submenu">
-                                <li><a class="dropdown-item" href="industries/LandNaturalResources/land-urban-rural-development.html">Land - Urban-Rural Development</a></li>
-                                <li><a class="dropdown-item" href="industries/LandNaturalResources/land-natural-resources.html">Land - Natural Resources</a></li>
-                                <li><a class="dropdown-item" href="industries/LandNaturalResources/agriculture.html">Agriculture</a></li>
+                                <li><a class="dropdown-item" href="industries/LandNaturalResources/land-urban-rural-development">Land - Urban-Rural Development</a></li>
+                                <li><a class="dropdown-item" href="industries/LandNaturalResources/land-natural-resources">Land - Natural Resources</a></li>
+                                <li><a class="dropdown-item" href="industries/LandNaturalResources/agriculture">Agriculture</a></li>
                             </ul>
                         </li> -->
-                            <li><a class="dropdown-item" href="industries/land-natural-resources.html">Land &amp;
+                            <li><a class="dropdown-item" href="industries/land-natural-resources">Land &amp;
                                     Natural Resources</a></li>
 
-                            <li><a class="dropdown-item" href="industries/power-utilities.html">Power & Utilities</a>
+                            <li><a class="dropdown-item" href="industries/power-utilities">Power & Utilities</a>
                             </li>
                             <li><a class="dropdown-item"
-                                    href="industries/transportation-infrastructure.html">Transportation
+                                    href="industries/transportation-infrastructure">Transportation
                                     Infrastructure</a></li>
-                            <li><a class="dropdown-item" href="industries/water-wastewater.html">Water, Wastewater &amp;
+                            <li><a class="dropdown-item" href="industries/water-wastewater">Water, Wastewater &amp;
                                     Water
                                     Resources</a></li>
-                            <li><a class="dropdown-item" href="mobility/automotive.html">Automotive &amp; Mobility</a>
+                            <li><a class="dropdown-item" href="mobility/automotive">Automotive &amp; Mobility</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="services/data-acquisition.html" id="servicesDropdown"
+                        <a class="nav-link dropdown-toggle" href="services/data-acquisition" id="servicesDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item submenu-toggle" href="services/geospatial-services.html"
+                                <a class="dropdown-item submenu-toggle" href="services/geospatial-services"
                                     role="button" aria-expanded="false">Geospatial Services</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="services/geospatial-services.html">Geospatial
+                                    <li><a class="dropdown-item" href="services/geospatial-services">Geospatial
                                             Services Home</a></li>
-                                    <li><a class="dropdown-item" href="services/data-acquisition.html">Data
+                                    <li><a class="dropdown-item" href="services/data-acquisition">Data
                                             Acquisition</a>
                                     </li>
                                     <li><a class="dropdown-item"
-                                            href="services/geospatial-data-processing-mapping.html">Geospatial Data
+                                            href="services/geospatial-data-processing-mapping">Geospatial Data
                                             Processing &amp; Mapping</a></li>
-                                    <li><a class="dropdown-item" href="services/solution-development.html">Solution
+                                    <li><a class="dropdown-item" href="services/solution-development">Solution
                                             Development</a></li>
-                                    <li><a class="dropdown-item" href="services/modelling-analytics.html">Modelling
+                                    <li><a class="dropdown-item" href="services/modelling-analytics">Modelling
                                             &amp; Analytics</a></li>
                                     <li><a class="dropdown-item"
-                                            href="services/enterprise-gis-spatial-intelligence.html">Enterprise GIS
+                                            href="services/enterprise-gis-spatial-intelligence">Enterprise GIS
                                             &amp;
                                             Spatial Intelligence</a></li>
                                     <li><a class="dropdown-item"
-                                            href="services/bim-3d-modelling-digital-twins.html">BIM, 3D
+                                            href="services/bim-3d-modelling-digital-twins">BIM, 3D
                                             Modelling &amp; Digital Twins</a></li>
                                 </ul>
                             </li>
-                            <li><a class="dropdown-item" href="services/engineering-consulting.html">Engineering &amp;
+                            <li><a class="dropdown-item" href="services/engineering-consulting">Engineering &amp;
                                     Consulting</a></li>
-                            <li><a class="dropdown-item" href="mobility/automotive-services.html">Mobility
+                            <li><a class="dropdown-item" href="mobility/automotive-services">Mobility
                                     Engineering</a>
                             </li>
-                            <li><a class="dropdown-item" href="services/product-services.html">Product Services</a></li>
-                            <li><a class="dropdown-item" href="services/ai-consulting-product-development.html">AI
+                            <li><a class="dropdown-item" href="services/product-services">Product Services</a></li>
+                            <li><a class="dropdown-item" href="services/ai-consulting-product-development">AI
                                     Consulting &amp; Product
                                     Development</a></li>
                         </ul>
@@ -123,55 +128,55 @@
                             Solutions &amp; Products</a>
                         <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item submenu-toggle" href="solution.html" role="button"
+                                <a class="dropdown-item submenu-toggle" href="#" role="button"
                                     aria-expanded="false">Solutions</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="solution/smart-city.html">Smart City
+                                    <li><a class="dropdown-item" href="solution/smart-city">Smart City
                                             Solutions</a>
                                     </li>
                                     <li><a class="dropdown-item"
-                                            href="solution/spatial-data-infrastructure.html">Spatial
+                                            href="solution/spatial-data-infrastructure">Spatial
                                             Data Infrastructure</a></li>
                                     <li><a class="dropdown-item"
-                                            href="solution/satellite-data-intelligence.html">Satellite
+                                            href="solution/satellite-data-intelligence">Satellite
                                             Data Intelligence</a></li>
-                                    <li><a class="dropdown-item" href="solution/mining-intelligence.html">Mining
+                                    <li><a class="dropdown-item" href="solution/mining-intelligence">Mining
                                             Intelligence</a></li>
-                                    <li><a class="dropdown-item" href="mobility/automotive-solutions.html">Mobility
+                                    <li><a class="dropdown-item" href="mobility/automotive-solutions">Mobility
                                             Solutions</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item submenu-toggle" href="product/products.html" role="button"
+                                <a class="dropdown-item submenu-toggle" href="product/products" role="button"
                                     aria-expanded="false">Products</a>
                                 <ul class="dropdown-menu submenu">
-                                    <li><a class="dropdown-item" href="product/products.html">Product Home</a></li>
-                                    <li><a class="dropdown-item" href="product/giscanvas-ai.html">GISCanvas.Ai</a></li>
-                                    <li><a class="dropdown-item" href="product/road-asset-condition.html">Road Asset
+                                    <li><a class="dropdown-item" href="product/products">Product Home</a></li>
+                                    <li><a class="dropdown-item" href="product/giscanvas-ai">GISCanvas.Ai</a></li>
+                                    <li><a class="dropdown-item" href="product/road-asset-condition">Road Asset
                                             &amp; Condition</a></li>
-                                    <li><a class="dropdown-item" href="product/realitymesh-ai.html">RealityMesh.Ai</a>
+                                    <li><a class="dropdown-item" href="product/realitymesh-ai">RealityMesh.Ai</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="product/inspect-ai.html">Inspect.Ai</a></li>
+                                    <li><a class="dropdown-item" href="product/inspect-ai">Inspect.Ai</a></li>
 
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="mobility/automotive.html" id="mobilityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="mobility/automotive" id="mobilityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Mobility
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="mobilityDropdown">
                         
-                        <li><a class="dropdown-item" href="mobility/automotive-industries.html">Industries We Serve</a></li>
-                        <li><a class="dropdown-item" href="mobility/automotive-services.html">Engineering Services</a></li>
+                        <li><a class="dropdown-item" href="mobility/automotive-industries">Industries We Serve</a></li>
+                        <li><a class="dropdown-item" href="mobility/automotive-services">Engineering Services</a></li>
                         
                     </ul>
                 </li> -->
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="investors.html">Investors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="investors">Investors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
                 </ul>
                 <div class="dropdown">
                     <button class="btn btn-link region-btn dropdown-toggle" data-bs-toggle="dropdown">
@@ -179,8 +184,8 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="./">India &amp; Global</a></li>
-                        <li><a class="dropdown-item" href="usa.html">USA</a></li>
-                        <li><a class="dropdown-item" href="gcc.html">GCC</a></li>
+                        <li><a class="dropdown-item" href="usa">USA</a></li>
+                        <li><a class="dropdown-item" href="gcc">GCC</a></li>
                     </ul>
                 </div>
             </div>

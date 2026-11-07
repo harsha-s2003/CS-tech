@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Filter URLs (/case-studies/Industries/Water-Wastewater) sit one or more levels "below"
+        // this page, and the filters switch to them without a reload. Pin relative links (css/,
+        // img/, js/, case-studies/...) to the site folder so they resolve the same on every URL.
+        // Works for the clean URL (/case-studies) and the file URL (case-studies.html) alike.
+        // Must come before js/head.js, which is loaded through this <base> too.
+        (function () {
+            var m = location.pathname.match(/^(.*\/)case-studies(?:\.html)?(?:\/|$)/);
+            if (m) document.write('<base href="' + m[1] + '">');
+        })();
+    </script>
     <!-- Shared CSS + tracking: HEAD part of includes/header.html -->
-    <script src="js/head.js"></script>
+    <script src="/js/head.js"></script>
     <title>Engineering &amp; Geospatial Case Studies | CS TECH Ai</title>
     <meta name="description" content="Explore CS TECH Ai projects across geospatial, mobility and emerging technology, with client challenges, technical approaches and delivery details.">
     <meta name="keywords" content="engineering geospatial case studies">
-    <script>
-        // Category URLs (case-studies.html/Mobility) sit one level "below" this file, and the
-        // category tabs switch to them without a reload. Pin relative links (css/, img/, js/,
-        // case-studies/...) to the site folder so they resolve the same on every URL.
-        (function () {
-            var p = location.pathname, i = p.indexOf('/case-studies.html');
-            if (i !== -1) document.write('<base href="' + p.slice(0, i + 1) + '">');
-        })();
-    </script>
 </head>
 
 <body>
@@ -106,7 +108,7 @@
                             <div class="case-body">
                                 <h5>LiDAR Sensor Digital Twin for Testing &amp; Validation</h5>
                                 <p>Testing and validating LiDAR sensors requires the ability to evaluate sensor performance across different scenarios and operating conditions.</p>
-                                <a href="case-studies/lidar-sensor-digital-twin-for-testing-and-validation.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/lidar-sensor-digital-twin-for-testing-and-validation" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -118,7 +120,7 @@
                             <div class="case-body">
                                 <h5>Web &amp; Mobile Platform for Site Inspection &amp; Billing</h5>
                                 <p>Site inspection and billing processes involve multiple stakeholders, field activities, validations and approvals. Managing these activities…</p>
-                                <a href="case-studies/web-and-mobile-platform-for-site-inspection-and-billing.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/web-and-mobile-platform-for-site-inspection-and-billing" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +132,7 @@
                             <div class="case-body">
                                 <h5>Turning Multi-Source Imagery and LiDAR into Structured Geospatial Intelligence</h5>
                                 <p>Large volumes of imagery and 3D point-cloud data contain valuable information about infrastructure, assets and the surrounding environment. Extracting…</p>
-                                <a href="case-studies/turning-multi-source-imagery-and-lidar-into-structured-geospatial-intelligence.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/turning-multi-source-imagery-and-lidar-into-structured-geospatial-intelligence" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -142,7 +144,7 @@
                             <div class="case-body">
                                 <h5>Digital Project Management System</h5>
                                 <p>Managing 924 multi-village water supply schemes across multiple regions required a centralized digital environment for project monitoring, information…</p>
-                                <a href="case-studies/digital-project-management-system-for-water-supply-schemes.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/digital-project-management-system-for-water-supply-schemes" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -158,7 +160,7 @@
                                 <h5>Citywide NRW Reduction Programme</h5>
                                 <p>Reducing Non-Revenue Water across a large urban water distribution system requires a
                                     detailed understanding of existing network conditions, demand…</p>
-                                <a href="case-studies/citywide-nrw-reduction-programme.html"
+                                <a href="case-studies/citywide-nrw-reduction-programme"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -175,7 +177,7 @@
                                 <h5>Land Management &amp; Digital Transformation Platform</h5>
                                 <p>Managing land, projects and related administrative processes across multiple
                                     stakeholders can involve disconnected records, documents and approval…</p>
-                                <a href="case-studies/land-management-and-digital-transformation-platform.html"
+                                <a href="case-studies/land-management-and-digital-transformation-platform"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -189,7 +191,7 @@
                             <div class="case-body">
                                 <h5>Electrical Distribution Network Modernisation</h5>
                                 <p>Large electrical distribution networks require accurate, connected and up-to-date information on network infrastructure, assets and consumers to…</p>
-                                <a href="case-studies/electrical-distribution-network-modernisation.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/electrical-distribution-network-modernisation" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -201,7 +203,7 @@
                             <div class="case-body">
                                 <h5>New-Generation Electric Two-Wheeler – Product Development &amp; Vehicle Integration</h5>
                                 <p>A leading electric two-wheeler manufacturer required engineering support for the development of a new-generation electric vehicle platform, covering…</p>
-                                <a href="case-studies/new-generation-electric-two-wheeler-product-development-and-vehicle-integration.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/new-generation-electric-two-wheeler-product-development-and-vehicle-integration" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -213,7 +215,7 @@
                             <div class="case-body">
                                 <h5>Automotive Interior / Exterior System Engineering</h5>
                                 <p>An automotive OEM required engineering support for the development of interior and exterior vehicle systems, with a focus on translating styling and…</p>
-                                <a href="case-studies/automotive-interior-exterior-system-engineering.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/automotive-interior-exterior-system-engineering" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -230,7 +232,7 @@
                                 <h5>Digital Twin for Airport Operations &amp; Facility Management</h5>
                                 <p>An international airport was planning extensive renovations and wanted to evaluate
                                     the use of a 3D digital model for facility management and planning.</p>
-                                <a href="case-studies/digital-twin-for-airport-operations-and-facility-management-services.html"
+                                <a href="case-studies/digital-twin-for-airport-operations-and-facility-management-services"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -249,7 +251,7 @@
                                 <h5>Scan-to-BIM for Manufacturing Plant Expansion</h5>
                                 <p>A pharmaceutical manufacturing plant in North Carolina was undergoing an expansion
                                     and retrofit to improve plant operations. The existing mechanical…</p>
-                                <a href="case-studies/scan-to-bim-for-manufacturing-plant-expansion-services.html"
+                                <a href="case-studies/scan-to-bim-for-manufacturing-plant-expansion-services"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -268,7 +270,7 @@
                                 <h5>5D BIM &amp; Program Management for Major Infrastructure</h5>
                                 <p>A major road infrastructure project required an integrated digital project-management
                                     environment to improve visibility across design, construction…</p>
-                                <a href="case-studies/5d-bim-and-program-management-for-major-infrastructure.html"
+                                <a href="case-studies/5d-bim-and-program-management-for-major-infrastructure"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -287,7 +289,7 @@
                                 <h5>Statewide Spatial Data Infrastructure Using High-Resolution Satellite Imagery</h5>
                                 <p>A large-scale government mapping programme required high-resolution satellite imagery
                                     to establish a consistent spatial-data foundation for statewide…</p>
-                                <a href="case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery.html"
+                                <a href="case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -306,7 +308,7 @@
                                 <h5>Heritage Conservation Using BIM-Based Architectural and Structural Modelling</h5>
                                 <p>Historic monuments and heritage structures require detailed documentation to support
                                     conservation, restoration and long-term preservation. Their…</p>
-                                <a href="case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modelling.html"
+                                <a href="case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modelling"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -325,7 +327,7 @@
                                 <h5>Road Asset Management System for Efficient Infrastructure Oversight</h5>
                                 <p>Road infrastructure authorities require reliable and up-to-date information about
                                     both roadway condition and the assets distributed along the network…</p>
-                                <a href="case-studies/road-asset-management-system-for-efficient-infrastructure-oversight.html"
+                                <a href="case-studies/road-asset-management-system-for-efficient-infrastructure-oversight"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -344,7 +346,7 @@
                                 <h5>Detailed Design &amp; Engineering for Water Infrastructure</h5>
                                 <p>Water and wastewater infrastructure projects require coordinated engineering across
                                     multiple disciplines to ensure that treatment facilities…</p>
-                                <a href="case-studies/detailed-design-and-engineering-for-water-infrastructure.html"
+                                <a href="case-studies/detailed-design-and-engineering-for-water-infrastructure"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -363,7 +365,7 @@
                                 <h5>Project Management Consultancy for Large-Scale Water Programmes</h5>
                                 <p>The State Water &amp; Sanitation Mission, Uttar Pradesh required Project Management
                                     Consultancy support for the implementation of large-scale rural piped…</p>
-                                <a href="case-studies/project-management-consultancy-for-large-scale-water-programmes.html"
+                                <a href="case-studies/project-management-consultancy-for-large-scale-water-programmes"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -382,7 +384,7 @@
                                 <h5>Technical &amp; Digital Project Management for Transportation Infrastructure</h5>
                                 <p>Large transportation infrastructure programmes require coordinated technical,
                                     engineering and project-management inputs across planning, design…</p>
-                                <a href="case-studies/technical-and-digital-project-management-for-transportation-infrastructure.html"
+                                <a href="case-studies/technical-and-digital-project-management-for-transportation-infrastructure"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -401,7 +403,7 @@
                                 <h5>Unified GIS Platform for Utility-Scale Power Distribution Management</h5>
                                 <p>Power utilities manage extensive networks of interconnected assets, consumers and
                                     operational systems. As the volume and complexity of network…</p>
-                                <a href="case-studies/unified-gis-platform-for-utility-scale-power-distribution-management.html"
+                                <a href="case-studies/unified-gis-platform-for-utility-scale-power-distribution-management"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -420,7 +422,7 @@
                                 <h5>GIS-Enabled Property &amp; Tax Information Management</h5>
                                 <p>Urban local bodies and government agencies require accurate property information to
                                     support administration, planning, service delivery and…</p>
-                                <a href="case-studies/gis-enabled-property-and-tax-information-management.html"
+                                <a href="case-studies/gis-enabled-property-and-tax-information-management"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -439,7 +441,7 @@
                                 <h5>WebGIS-Based Asset Mapping &amp; Land Management</h5>
                                 <p>Government organisations and public-sector agencies often manage large portfolios of
                                     land, buildings, infrastructure and other geographically…</p>
-                                <a href="case-studies/webgis-based-asset-mapping-and-land-management.html"
+                                <a href="case-studies/webgis-based-asset-mapping-and-land-management"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -458,7 +460,7 @@
                                 <h5>Roadside GIS Asset Extraction at Scale</h5>
                                 <p>Large road networks generate substantial volumes of LiDAR, imagery and point-cloud
                                     data containing valuable information about roadside infrastructure.…</p>
-                                <a href="case-studies/roadside-gis-asset-extraction-at-scale.html"
+                                <a href="case-studies/roadside-gis-asset-extraction-at-scale"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -477,7 +479,7 @@
                                 <h5>Statewide Spatial Data Processing &amp; Mapping</h5>
                                 <p>Large-scale government mapping and land-administration programmes require spatial
                                     information that is accurate, consistent and structured for use…</p>
-                                <a href="case-studies/statewide-spatial-data-processing-and-mapping.html"
+                                <a href="case-studies/statewide-spatial-data-processing-and-mapping"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -496,7 +498,7 @@
                                 <h5>Cadastral &amp; Land Parcel Mapping</h5>
                                 <p>Land-administration and government GIS programmes depend on structured,
                                     geographically referenced information that clearly represents land parcels and…</p>
-                                <a href="case-studies/cadastral-and-land-parcel-mapping.html"
+                                <a href="case-studies/cadastral-and-land-parcel-mapping"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -516,7 +518,7 @@
                                 <h5>Drainage Infrastructure Mapping</h5>
                                 <p>Accurate mapping of drainage infrastructure across large and varied environments
                                     requires a combination of capture technologies capable of documenting…</p>
-                                <a href="case-studies/drainage-infrastructure-mapping.html"
+                                <a href="case-studies/drainage-infrastructure-mapping"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -531,7 +533,7 @@
                             <div class="case-body">
                                 <h5>Offshore Laser Scanning</h5>
                                 <p>Offshore facilities present demanding reality-capture conditions due to their remote locations, complex industrial infrastructure and tightly…</p>
-                                <a href="case-studies/offshore-laser-scanning.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/offshore-laser-scanning" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -543,7 +545,7 @@
                             <div class="case-body">
                                 <h5>Telecom As-Built Capture &amp; 3D Modelling</h5>
                                 <p>Telecom infrastructure is continuously upgraded and maintained, requiring engineers and field teams to have accurate, current information on towers…</p>
-                                <a href="case-studies/telecom-as-built-capture-and-3d-modelling.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/telecom-as-built-capture-and-3d-modelling" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -559,7 +561,7 @@
                                 <h5>Digital Twin for Airport Operations &amp; Facility Management</h5>
                                 <p>A major airport was planning extensive renovations and wanted to evaluate the use of
                                     a 3D digital model for energy studies, facility planning and…</p>
-                                <a href="case-studies/digital-twin-for-airport-operations-and-facility-management.html"
+                                <a href="case-studies/digital-twin-for-airport-operations-and-facility-management"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -577,7 +579,7 @@
                                 <h5>Scan-to-BIM for Manufacturing Plant Expansion</h5>
                                 <p>A pharmaceutical manufacturing plant in North Carolina was undergoing an expansion
                                     and retrofit to improve plant operations.</p>
-                                <a href="case-studies/scan-to-bim-for-manufacturing-plant-expansion-aec.html"
+                                <a href="case-studies/scan-to-bim-for-manufacturing-plant-expansion-aec"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -595,7 +597,7 @@
                                 <h5>BIM-Enabled Digital Project Management for a Major Road Corridor</h5>
                                 <p>A major road infrastructure project required an integrated digital project management
                                     framework to improve visibility and control across design…</p>
-                                <a href="case-studies/bim-enabled-digital-project-management-for-a-major-road-corridor.html"
+                                <a href="case-studies/bim-enabled-digital-project-management-for-a-major-road-corridor"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -613,7 +615,7 @@
                                 <h5>Architecture, Structure, MEP &amp; Digital Twin Modelling</h5>
                                 <p>The assignment required the development of a coordinated digital representation of a
                                     building environment, bringing architectural, structural and MEP…</p>
-                                <a href="case-studies/architecture-structure-mep-and-digital-twin-modelling.html"
+                                <a href="case-studies/architecture-structure-mep-and-digital-twin-modelling"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -627,7 +629,7 @@
                             <div class="case-body">
                                 <h5>3D Modelling &amp; GeoBIM for Infrastructure Asset Management</h5>
                                 <p>Revit-based BIM models for bridges, viaducts, stations and tunnels converted into structured, GIS-ready 3D assets…</p>
-                                <a href="case-studies/3d-modelling-and-geobim-for-infrastructure-asset-management.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/3d-modelling-and-geobim-for-infrastructure-asset-management" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -639,7 +641,7 @@
                             <div class="case-body">
                                 <h5>Integrated Digital Delivery Platform (IDDP) for Metro Rail</h5>
                                 <p>A connected digital delivery environment bringing together OSO governance, CDE, GIS, 3D/4D/5D BIM and project dashboards…</p>
-                                <a href="case-studies/integrated-digital-delivery-platform-iddp-for-metro-rail.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/integrated-digital-delivery-platform-iddp-for-metro-rail" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -655,7 +657,7 @@
                                 <h5>Automated Battery Module Assembly Line Engineering</h5>
                                 <p>A battery manufacturing programme required the engineering and development of
                                     production tooling for an automated battery module assembly line.</p>
-                                <a href="case-studies/automated-battery-module-assembly-line-engineering.html"
+                                <a href="case-studies/automated-battery-module-assembly-line-engineering"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -673,7 +675,7 @@
                                 <h5>Digital Manufacturing &amp; Robotic Production-Line Engineering</h5>
                                 <p>An American automotive OEM required manufacturing engineering support to design and
                                     optimize automated production lines integrating welding fixtures…</p>
-                                <a href="case-studies/digital-manufacturing-and-robotic-production-line-engineering.html"
+                                <a href="case-studies/digital-manufacturing-and-robotic-production-line-engineering"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -691,7 +693,7 @@
                                 <h5>Virtual Assembly Validation for Construction Equipment</h5>
                                 <p>A North American construction equipment OEM required virtual validation of its
                                     assembly processes before physical production.</p>
-                                <a href="case-studies/virtual-assembly-validation-for-construction-equipment.html"
+                                <a href="case-studies/virtual-assembly-validation-for-construction-equipment"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -709,7 +711,7 @@
                                 <h5>AI-Based 360° Inspection of Automotive Gears</h5>
                                 <p>Automotive gear manufacturing requires consistent inspection of component surfaces
                                     while maintaining the cycle times demanded by high-speed production…</p>
-                                <a href="case-studies/ai-based-360-inspection-of-automotive-gears.html"
+                                <a href="case-studies/ai-based-360-inspection-of-automotive-gears"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -727,7 +729,7 @@
                                 <h5>Complete BIW Body Shop – Controls &amp; Automation</h5>
                                 <p>A major automotive manufacturing programme required controls and automation
                                     engineering for a complete Body-in-White (BIW) body shop.</p>
-                                <a href="case-studies/complete-biw-body-shop-controls-and-automation.html"
+                                <a href="case-studies/complete-biw-body-shop-controls-and-automation"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -745,7 +747,7 @@
                                 <h5>Electrical Design for Automotive Welding Line</h5>
                                 <p>An automotive manufacturing programme required electrical engineering support for an
                                     automated welding line, with multiple production stations and…</p>
-                                <a href="case-studies/electrical-design-for-automotive-welding-line.html"
+                                <a href="case-studies/electrical-design-for-automotive-welding-line"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -763,7 +765,7 @@
                                 <h5>Teamcenter / PLM Engineering Transformation</h5>
                                 <p>A leading Asian automotive Tier-1 supplier required a centralized Product Lifecycle
                                     Management (PLM) environment to improve the management of CAD…</p>
-                                <a href="case-studies/teamcenter-plm-engineering-transformation.html"
+                                <a href="case-studies/teamcenter-plm-engineering-transformation"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -781,7 +783,7 @@
                                 <h5>Scan-to-BIM for Manufacturing Plant Expansion</h5>
                                 <p>A pharmaceutical manufacturing plant in North Carolina was undergoing an expansion
                                     and retrofit to improve plant operations.</p>
-                                <a href="case-studies/scan-to-bim-for-manufacturing-plant-expansion.html"
+                                <a href="case-studies/scan-to-bim-for-manufacturing-plant-expansion"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -799,7 +801,7 @@
                                 <h5>Heritage Mapping &amp; Digital Documentation</h5>
                                 <p>Heritage sites require accurate documentation to support conservation, restoration
                                     and long-term management. Urbanisation and continuing…</p>
-                                <a href="case-studies/heritage-mapping-and-digital-documentation.html"
+                                <a href="case-studies/heritage-mapping-and-digital-documentation"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -817,7 +819,7 @@
                                 <h5>Land &amp; Cadastral Information Management</h5>
                                 <p>Land administration requires accurate, structured and accessible information about
                                     land parcels, boundaries and associated records. When cadastral…</p>
-                                <a href="case-studies/land-and-cadastral-information-management.html"
+                                <a href="case-studies/land-and-cadastral-information-management"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -835,7 +837,7 @@
                                 <h5>Smart Agriculture Decision-Support Platform</h5>
                                 <p>The assignment involved developing a centralized smart agriculture platform to bring
                                     together information from multiple sources and make it easily…</p>
-                                <a href="case-studies/smart-agriculture-decision-support-platform.html"
+                                <a href="case-studies/smart-agriculture-decision-support-platform"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -853,7 +855,7 @@
                                 <h5>Enterprise GIS for Electrical Transmission Across Three States</h5>
                                 <p>The engagement involved electrical transmission utilities across three Indian states,
                                     responsible for managing critical power-transmission…</p>
-                                <a href="case-studies/enterprise-gis-for-electrical-transmission-across-three-states.html"
+                                <a href="case-studies/enterprise-gis-for-electrical-transmission-across-three-states"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -872,7 +874,7 @@
                                 </h5>
                                 <p>A large power distribution utility programme covering 587+ towns, requiring a unified
                                     technology environment to improve visibility of the electrical…</p>
-                                <a href="case-studies/building-connected-grid-operations-through-gis-scada-and-utility-system-integrat.html"
+                                <a href="case-studies/building-connected-grid-operations-through-gis-scada-and-utility-system-integrat"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -890,7 +892,7 @@
                                 <h5>Advanced Metering &amp; Network Mapping for 10M Consumers</h5>
                                 <p>A large electricity distribution environment serving approximately 10 million
                                     consumers, requiring comprehensive network mapping and structured…</p>
-                                <a href="case-studies/advanced-metering-and-network-mapping-for-10m-consumers.html"
+                                <a href="case-studies/advanced-metering-and-network-mapping-for-10m-consumers"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -908,7 +910,7 @@
                                 <h5>Offshore 3D Laser Scanning for Oil &amp; Gas Facilities</h5>
                                 <p>An offshore Oil &amp; Gas operator requiring high-detail existing-condition capture
                                     of multiple offshore platforms in Angola to create dependable digital…</p>
-                                <a href="case-studies/offshore-3d-laser-scanning-for-oil-and-gas-facilities.html"
+                                <a href="case-studies/offshore-3d-laser-scanning-for-oil-and-gas-facilities"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -926,7 +928,7 @@
                                 <h5>Transmission Asset Management System for 400 kV Substations</h5>
                                 <p>A major power transmission utility in Maharashtra responsible for operating and
                                     maintaining critical high-voltage transmission infrastructure…</p>
-                                <a href="case-studies/transmission-asset-management-system-for-400-kv-substations.html"
+                                <a href="case-studies/transmission-asset-management-system-for-400-kv-substations"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -943,7 +945,7 @@
                             <div class="case-body">
                                 <h5>Unified Grid Intelligence for a State Load Despatch Centre</h5>
                                 <p>The client is a state load despatch centre responsible for integrated operation of a large intra-state power system with growing renewable generation.</p>
-                                <a href="case-studies/unified-grid-intelligence-for-real-time-power-system-operations.html"
+                                <a href="case-studies/unified-grid-intelligence-for-real-time-power-system-operations"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -960,7 +962,7 @@
                             <div class="case-body">
                                 <h5>Enterprise-Wide Unified GIS for Power Distribution Utilities</h5>
                                 <p>The programme covered distribution utilities serving large urban, semi-urban and rural areas: the four regional DISCOMs of a state power corporation, and a private…</p>
-                                <a href="case-studies/unified-gis-for-statewide-power-distribution-network-management.html"
+                                <a href="case-studies/unified-gis-for-statewide-power-distribution-network-management"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -978,7 +980,7 @@
                                 <h5>5D BIM &amp; Program Management – Missing Link Project</h5>
                                 <p>The Missing Link Project required an integrated digital approach to program
                                     management for a major transportation infrastructure development.</p>
-                                <a href="case-studies/5d-bim-and-program-management-missing-link-project.html"
+                                <a href="case-studies/5d-bim-and-program-management-missing-link-project"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -996,7 +998,7 @@
                                 <h5>BIM-Enabled Digital PMC – Real-Time Road Infrastructure Progress Monitoring</h5>
                                 <p>A major road infrastructure project required a digitally enabled project management
                                     approach to improve visibility and control over construction…</p>
-                                <a href="case-studies/bim-enabled-digital-pmc-real-time-road-infrastructure-progress-monitoring.html"
+                                <a href="case-studies/bim-enabled-digital-pmc-real-time-road-infrastructure-progress-monitoring"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1014,7 +1016,7 @@
                                 <h5>Road Asset Management for Toll Operate and Transfer (ToT)</h5>
                                 <p>The assignment involved assessing the physical condition of National Highway assets
                                     as part of the Toll Operate and Transfer (ToT) framework for…</p>
-                                <a href="case-studies/road-asset-management-for-toll-operate-and-transfer-tot.html"
+                                <a href="case-studies/road-asset-management-for-toll-operate-and-transfer-tot"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1032,7 +1034,7 @@
                                 <h5>LiDAR-Based Transportation Corridor &amp; Clearance Analysis</h5>
                                 <p>The assignment involved the use of Mobile LiDAR data to capture and analyse
                                     transportation corridors and surrounding infrastructure assets with a high…</p>
-                                <a href="case-studies/lidar-based-transportation-corridor-and-clearance-analysis.html"
+                                <a href="case-studies/lidar-based-transportation-corridor-and-clearance-analysis"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1050,7 +1052,7 @@
                                 <h5>Project Formulation DPR – Urban &amp; Rural</h5>
                                 <p>Government agencies required Detailed Project Reports (DPRs) for urban and rural
                                     water supply and wastewater schemes across multiple states and…</p>
-                                <a href="case-studies/project-formulation-dpr-urban-and-rural.html"
+                                <a href="case-studies/project-formulation-dpr-urban-and-rural"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1068,7 +1070,7 @@
                                 <h5>Wainganga–Nalganga River-Linking Project</h5>
                                 <p>The Wainganga–Nalganga River-Linking Project was conceived to transfer water from the
                                     Gosikhurd (Indira Sagar) Project on the Wainganga River to the…</p>
-                                <a href="case-studies/wainganga-nalganga-river-linking-project.html"
+                                <a href="case-studies/wainganga-nalganga-river-linking-project"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1086,7 +1088,7 @@
                                 <h5>Pench Lift Irrigation Schemes – WAPCOS / VIDC</h5>
                                 <p>The Pench Irrigation Project required planning of Lift Irrigation Schemes to support
                                     command areas affected by upstream utilisation of Pench water at…</p>
-                                <a href="case-studies/pench-lift-irrigation-schemes-wapcos-vidc.html"
+                                <a href="case-studies/pench-lift-irrigation-schemes-wapcos-vidc"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1104,7 +1106,7 @@
                                 <h5>Nar-Par-Girna River Link Project – WAPCOS / TIDC</h5>
                                 <p>The Nar-Par-Girna River Link Project required a comprehensive Detailed Project Report
                                     (DPR) for transferring surplus water from the Nar, Par, Auranga…</p>
-                                <a href="case-studies/nar-par-girna-river-link-project-wapcos-tidc.html"
+                                <a href="case-studies/nar-par-girna-river-link-project-wapcos-tidc"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1122,7 +1124,7 @@
                                 <h5>Barrages on Wardha River – WAPCOS / VIDC</h5>
                                 <p>WAPCOS, for Vidarbha Irrigation Development Corporation (VIDC), required Detailed
                                     Project Reports (DPRs) for the development of three barrages on the…</p>
-                                <a href="case-studies/barrages-on-wardha-river-wapcos-vidc.html"
+                                <a href="case-studies/barrages-on-wardha-river-wapcos-vidc"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1140,7 +1142,7 @@
                                 <h5>IoT-Sensor-Based Monitoring System for Rural Water Supply – SWSM Maharashtra</h5>
                                 <p>State Water &amp; Sanitation Mission (SWSM), Maharashtra required a digital
                                     monitoring framework to improve visibility of rural water distribution across…</p>
-                                <a href="case-studies/iot-sensor-based-monitoring-system-for-rural-water-supply-swsm-maharashtra.html"
+                                <a href="case-studies/iot-sensor-based-monitoring-system-for-rural-water-supply-swsm-maharashtra"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1159,7 +1161,7 @@
                                     Maharashtra</h5>
                                 <p>State Water &amp; Sanitation Mission (SWSM), Maharashtra required a centralized
                                     digital platform to manage and monitor the implementation of 924…</p>
-                                <a href="case-studies/digital-project-management-system-for-water-supply-construction-monitoring-swsm.html"
+                                <a href="case-studies/digital-project-management-system-for-water-supply-construction-monitoring-swsm"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1177,7 +1179,7 @@
                                 <h5>Project Formulation DPR – Rural Uttar Pradesh</h5>
                                 <p>The State Water &amp; Sanitation Mission required Detailed Project Reports (DPRs) for
                                     rural water supply schemes across the Jhansi and Mirzapur districts…</p>
-                                <a href="case-studies/project-formulation-dpr-rural-uttar-pradesh.html"
+                                <a href="case-studies/project-formulation-dpr-rural-uttar-pradesh"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1195,7 +1197,7 @@
                                 <h5>Project Formulation DPR – Jal Jeevan Mission, Assam</h5>
                                 <p>The Public Health Engineering Department (PHED), Assam required Detailed Project
                                     Reports (DPRs) for implementing rural water supply schemes under the…</p>
-                                <a href="case-studies/project-formulation-dpr-jal-jeevan-mission-assam.html"
+                                <a href="case-studies/project-formulation-dpr-jal-jeevan-mission-assam"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1213,7 +1215,7 @@
                                 <h5>Project Management Consultancy – Sonbhadra, Uttar Pradesh</h5>
                                 <p>The State Water &amp; Sanitation Mission required Project Management Consultancy
                                     (PMC) support for the implementation of rural piped water supply schemes…</p>
-                                <a href="case-studies/project-management-consultancy-sonbhadra-uttar-pradesh.html"
+                                <a href="case-studies/project-management-consultancy-sonbhadra-uttar-pradesh"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1232,7 +1234,7 @@
                                 </h5>
                                 <p>The State Water &amp; Sanitation Mission, Uttar Pradesh required independent Third
                                     Party Inspection &amp; Monitoring (TPIM) support for large-scale rural…</p>
-                                <a href="case-studies/third-party-inspection-and-monitoring-rural-water-supply-projects-uttar-pradesh.html"
+                                <a href="case-studies/third-party-inspection-and-monitoring-rural-water-supply-projects-uttar-pradesh"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1250,7 +1252,7 @@
                                 <h5>Non-Revenue Water Management – SMART &amp; AMRUT Cities</h5>
                                 <p>Urban water utilities across Smart City and AMRUT cities in Chhattisgarh, Uttar
                                     Pradesh, Odisha and Andhra Pradesh required support to assess and…</p>
-                                <a href="case-studies/non-revenue-water-management-smart-and-amrut-cities.html"
+                                <a href="case-studies/non-revenue-water-management-smart-and-amrut-cities"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1268,7 +1270,7 @@
                                 <h5>Water Supply Reforms – Urban Local Bodies, Maharashtra</h5>
                                 <p>Urban Local Bodies (ULBs) across Maharashtra required support to improve the
                                     efficiency, management and sustainability of their urban water supply…</p>
-                                <a href="case-studies/water-supply-reforms-urban-local-bodies-maharashtra.html"
+                                <a href="case-studies/water-supply-reforms-urban-local-bodies-maharashtra"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1286,7 +1288,7 @@
                                 <h5>Delhi Jal Board – Hydraulic Modelling, DMA Creation &amp; NRW Reduction</h5>
                                 <p>Delhi Jal Board required consultancy support to improve consumer service levels and
                                     address high Non-Revenue Water (NRW) within the command areas of…</p>
-                                <a href="case-studies/delhi-jal-board-hydraulic-modelling-dma-creation-and-nrw-reduction.html"
+                                <a href="case-studies/delhi-jal-board-hydraulic-modelling-dma-creation-and-nrw-reduction"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1304,7 +1306,7 @@
                                 <h5>Nagpur Municipal Corporation – Consumer Survey &amp; Water Audit</h5>
                                 <p>Nagpur Municipal Corporation required a comprehensive consumer survey and water audit
                                     to assess the performance of the city's water supply system…</p>
-                                <a href="case-studies/nagpur-municipal-corporation-consumer-survey-and-water-audit.html"
+                                <a href="case-studies/nagpur-municipal-corporation-consumer-survey-and-water-audit"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1323,7 +1325,7 @@
                                     Oversight</h5>
                                 <p>A public-sector agency responsible for implementing and managing large-scale water
                                     supply projects across multiple regional jurisdictions. The client…</p>
-                                <a href="case-studies/digital-project-management-system.html"
+                                <a href="case-studies/digital-project-management-system"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1337,7 +1339,7 @@
                             <div class="case-body">
                                 <h5>Transforming Water Distribution Management with IoT and Digital Integration</h5>
                                 <p>A government-owned water utility responsible for planning, execution, and oversight of water supply infrastructure in urban and peri-urban regions.…</p>
-                                <a href="case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1353,7 +1355,7 @@
                                 <h5>Integrated Digital Project Management Platform for Expressway Construction</h5>
                                 <p>A public-sector agency tasked with planning, developing, and overseeing high-value
                                     expressway infrastructure projects across diverse terrain…</p>
-                                <a href="case-studies/integrated-digital-project-management-platform-for-expressway-construction.html"
+                                <a href="case-studies/integrated-digital-project-management-platform-for-expressway-construction"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1371,7 +1373,7 @@
                                 <h5>Web-GIS Based Asset Mapping and Land Management for Government Facilities</h5>
                                 <p>A state government department responsible for managing and monitoring public land
                                     assets across districts, including educational institutions…</p>
-                                <a href="case-studies/web-gis-based-asset-mapping.html"
+                                <a href="case-studies/web-gis-based-asset-mapping"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1389,7 +1391,7 @@
                                 <h5>Web-GIS Enabled Property Survey and Digitization for Urban Local Bodies</h5>
                                 <p>A municipal corporation overseeing urban planning, property tax collection, and civic
                                     infrastructure across multiple city zones. The client needed a…</p>
-                                <a href="case-studies/web-gis-enabled-property-survey.html"
+                                <a href="case-studies/web-gis-enabled-property-survey"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1407,7 +1409,7 @@
                                 <h5>Enterprise Platform for Data-Driven Smart Agriculture</h5>
                                 <p>A state agriculture department supporting farmers, agri-extension workers, and
                                     research institutions through planning, monitoring, and delivery of…</p>
-                                <a href="case-studies/enterprise-platform-for-data-driven-smart-agriculture.html"
+                                <a href="case-studies/enterprise-platform-for-data-driven-smart-agriculture"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1425,7 +1427,7 @@
                                 <h5>Designing a GIS-Enabled Platform for Property and Tax Information Management</h5>
                                 <p>An urban local body responsible for municipal governance and revenue generation
                                     through property taxation. The client aimed to streamline property…</p>
-                                <a href="case-studies/designing-a-gis-enabled-platform.html"
+                                <a href="case-studies/designing-a-gis-enabled-platform"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1443,7 +1445,7 @@
                                 <h5>Road Asset Management System for Efficient Infrastructure Oversight</h5>
                                 <p>A state-level public works department responsible for maintaining the road network
                                     across thousands of kilometers of highways, rural roads, and…</p>
-                                <a href="case-studies/road-asset-management.html" class="case-link stretched-link">Read
+                                <a href="case-studies/road-asset-management" class="case-link stretched-link">Read
                                     Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
@@ -1461,7 +1463,7 @@
                                 </h5>
                                 <p>A national disaster management agency responsible for early warning, risk assessment,
                                     and mitigation planning for natural disasters including floods…</p>
-                                <a href="case-studies/predictive-flood-modeling.html"
+                                <a href="case-studies/predictive-flood-modeling"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1479,7 +1481,7 @@
                                 <h5>Third-Party Quality Inspection for Rural Water Infrastructure Projects</h5>
                                 <p>A government department overseeing rural water supply programs aimed at ensuring
                                     equitable access to drinking water across villages and habitations.…</p>
-                                <a href="case-studies/third-party-inspection.html" class="case-link stretched-link">Read
+                                <a href="case-studies/third-party-inspection" class="case-link stretched-link">Read
                                     Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
@@ -1492,7 +1494,7 @@
                             <div class="case-body">
                                 <h5>GIS-Based Asset Mapping for Optical Fibre Cable Infrastructure</h5>
                                 <p>A leading telecom infrastructure provider responsible for planning, deploying, and maintaining optical fibre cable (OFC) networks to expand digital…</p>
-                                <a href="case-studies/optical-fibre-cable-infrastructure.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/optical-fibre-cable-infrastructure" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1508,7 +1510,7 @@
                                 <h5>Geospatial and Engineering Support for River Linking Infrastructure</h5>
                                 <p>A state-level water resources department undertaking an ambitious river linking
                                     project aimed at improving water availability for irrigation, drinking…</p>
-                                <a href="case-studies/river-linking-infrastructure.html"
+                                <a href="case-studies/river-linking-infrastructure"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1526,7 +1528,7 @@
                                 <h5>GPS-Based Tree Census for Urban Forestry and Environmental Monitoring</h5>
                                 <p>A municipal corporation, aiming to implement a 3D-enabled smart city initiative by
                                     improving environmental visibility through data-backed urban…</p>
-                                <a href="case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring.html"
+                                <a href="case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1544,7 +1546,7 @@
                                 <h5>Unified GIS Platform for Utility-Scale Power Distribution Management</h5>
                                 <p>A public-sector electricity distribution agency participating in a nationwide
                                     infrastructure modernization initiative aimed at improving service…</p>
-                                <a href="case-studies/unified-gis-platform-for-utility-scale-power-distribution-management-2.html"
+                                <a href="case-studies/unified-gis-platform-for-utility-scale-power-distribution-management-2"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1562,7 +1564,7 @@
                                 <h5>Integrated GIS Platform for Utility Asset Management and Consumer Data Visualization
                                 </h5>
                                 <p>A regional electricity utility responsible for power distribution.</p>
-                                <a href="case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization.html"
+                                <a href="case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1580,7 +1582,7 @@
                                 <h5>Heritage Conservation Using BIM-Based Architectural and Structural Modeling</h5>
                                 <p>A state archaeological department tasked with preserving historically significant
                                     monuments through restoration, documentation, and digital archiving.…</p>
-                                <a href="case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling.html"
+                                <a href="case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1594,7 +1596,7 @@
                             <div class="case-body">
                                 <h5>Khanij Online 2.0 – Mineral Governance at State Scale</h5>
                                 <p>A unified digital platform integrating mining lessees, end-use plants and vehicles with real-time monitoring, e-Permit and e-Transit Pass capabilities…</p>
-                                <a href="case-studies/khanij-online-2-0-mineral-governance-at-state-scale.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/khanij-online-2-0-mineral-governance-at-state-scale" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1610,7 +1612,7 @@
                                 <h5>Unified Enterprise Platform for Mining Process Management</h5>
                                 <p>A state government’s mining department tasked with regulating and monitoring mineral
                                     exploration, extraction, and transportation. The client needed a…</p>
-                                <a href="case-studies/unified-enterprise-platform-for-mining-process-management.html"
+                                <a href="case-studies/unified-enterprise-platform-for-mining-process-management"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1628,7 +1630,7 @@
                                 <h5>Statewide Spatial Data Infrastructure Using High-Resolution Satellite Imagery</h5>
                                 <p>A state government agency undertaking a major land governance modernization program
                                     as part of the National GIS initiative. The objective was to…</p>
-                                <a href="case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery-2.html"
+                                <a href="case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery-2"
                                     class="case-link stretched-link">Read Case Study <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
@@ -1642,7 +1644,7 @@
                             <div class="case-body">
                                 <h5>Smart Water Monitoring System for Rural Infrastructure Using IoT Technology</h5>
                                 <p>A state-level water supply department implementing a large-scale rural water delivery program aimed at ensuring equitable and sustainable access to…</p>
-                                <a href="case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1654,7 +1656,7 @@
                             <div class="case-body">
                                 <h5>From Concept to Reality: Modular 6DOF Armrest for Off-Highway Vehicle Comfort and Functionality</h5>
                                 <p>A European OEM specializing in off-highway vehicles, seeking to improve operator comfort through the development of an advanced, modular armrest…</p>
-                                <a href="case-studies/modular-6d0f-armrest.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/modular-6d0f-armrest" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1666,7 +1668,7 @@
                             <div class="case-body">
                                 <h5>Virtual Validation of Heavy Machinery Cab Design for Safety Compliance and Operator Protection</h5>
                                 <p>A European cab manufacturer serving the off-highway vehicle segment. The client sought engineering validation support to ensure its heavy machinery…</p>
-                                <a href="case-studies/virtual-validation-of-heavy-machinery-cab-design.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/virtual-validation-of-heavy-machinery-cab-design" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1678,7 +1680,7 @@
                             <div class="case-body">
                                 <h5>Lean Manufacturing Strategy for Multi-Variant Electric Two-Wheeler Assembly Facility</h5>
                                 <p>A plant assembly integrator focused on the growing electric mobility segment. The client partnered with CS TECH Ai to plan and design a lean…</p>
-                                <a href="case-studies/lean-manufacturing-strategy.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/lean-manufacturing-strategy" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1690,7 +1692,7 @@
                             <div class="case-body">
                                 <h5>Virtual Validation of Instrument Panel Design for Regulatory Compliance and Tooling Readiness</h5>
                                 <p>A Tier-1 automotive interior systems supplier based in Europe, supporting global OEMs. The client required virtual validation of a new instrument…</p>
-                                <a href="case-studies/virtual-validation-of-instrument-panel-design.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/virtual-validation-of-instrument-panel-design" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1702,7 +1704,7 @@
                             <div class="case-body">
                                 <h5>Electrical System Integration for Emission Compliance in Off-Road Equipment</h5>
                                 <p>An off-road equipment manufacturer adapting its vehicle platforms to meet new emission norms as part of a regulatory compliance and sustainability…</p>
-                                <a href="case-studies/electric-system-integration.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/electric-system-integration" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1714,7 +1716,7 @@
                             <div class="case-body">
                                 <h5>Multi-Feature Armrest Development for Global Luxury Passenger Vehicle Platform</h5>
                                 <p>A European luxury passenger car OEM designing feature-rich interior components for global markets. The client required a multi-functional front and…</p>
-                                <a href="case-studies/multi-feature-armrest-development.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/multi-feature-armrest-development" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1726,7 +1728,7 @@
                             <div class="case-body">
                                 <h5>Instrument Panel Development for High-Customization Recreation Vehicle Program</h5>
                                 <p>A U.S.-based recreation vehicle (RV) OEM preparing to launch a new model featuring high-end automotive design elements. The client required a…</p>
-                                <a href="case-studies/instrument-panel-development.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/instrument-panel-development" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1738,7 +1740,7 @@
                             <div class="case-body">
                                 <h5>Front Cap Styling and Surface Development for New Recreation Vehicle Launch</h5>
                                 <p>A U.S.-based recreation vehicle (RV) OEM known for delivering high-end, customizable products. The client aimed to refresh the exterior design of a…</p>
-                                <a href="case-studies/new-recreation-vehicle-launch.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/new-recreation-vehicle-launch" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1750,7 +1752,7 @@
                             <div class="case-body">
                                 <h5>End-to-End Door Panel Design for European Luxury Passenger Vehicle</h5>
                                 <p>A premium European OEM in the passenger car luxury segment. The client required a multi-party engineering partnership to support the design…</p>
-                                <a href="case-studies/door-panel-design-for-european-luxury-passenger-vehicle.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/door-panel-design-for-european-luxury-passenger-vehicle" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1762,7 +1764,7 @@
                             <div class="case-body">
                                 <h5>Integrated Interface Development for ARAS Innovator, SAP, and CAD Platforms</h5>
                                 <p>A European mobility OEM managing complex engineering and manufacturing operations across multiple locations. The client required seamless integration…</p>
-                                <a href="case-studies/integrated-interface-development.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/integrated-interface-development" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1774,7 +1776,7 @@
                             <div class="case-body">
                                 <h5>End-to-End Cockpit Platform Engineering for Luxury Passenger Vehicles</h5>
                                 <p>A leading European luxury passenger car manufacturer pursuing a multi-variant product launch strategy. The client required a design and engineering…</p>
-                                <a href="case-studies/cockpit-platform-engineering.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/cockpit-platform-engineering" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1786,7 +1788,7 @@
                             <div class="case-body">
                                 <h5>Digital BIW Process Planning and Fitment Strategy for Global Automotive OEM</h5>
                                 <p>A global automotive OEM manufacturing vehicles with diverse styles and complex geometries. The client required a precise and coordinated approach to…</p>
-                                <a href="case-studies/digital-biw-process-planning-and-fitment-strategy.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/digital-biw-process-planning-and-fitment-strategy" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1798,7 +1800,7 @@
                             <div class="case-body">
                                 <h5>End-to-End System and Product Design for Software-Defined Vehicle Platform</h5>
                                 <p>A global mobility OEM (confidential) undertaking the development of a multi-variant, software-defined vehicle (SDV) platform. The client required a…</p>
-                                <a href="case-studies/software-defined-vehicle-platform.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/software-defined-vehicle-platform" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1810,7 +1812,7 @@
                             <div class="case-body">
                                 <h5>eVision: AI-Based Computer Vision System for Automated Inspection in Chassis Assembly</h5>
                                 <p>A Tier-1 automotive supplier, producing chassis systems for multiple vehicle models. The client needed to improve inspection accuracy across chassis…</p>
-                                <a href="case-studies/evision.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/evision" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1822,7 +1824,7 @@
                             <div class="case-body">
                                 <h5>Third-Party Inspection Application for Infrastructure Quality Assurance</h5>
                                 <p>The client is a private-sector consulting organization operating as a third-party inspection (TPI) agency. They specialize in independent quality…</p>
-                                <a href="case-studies/third-party-inspection-application-for-infrastructure-quality-assurance.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/third-party-inspection-application-for-infrastructure-quality-assurance" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1834,7 +1836,7 @@
                             <div class="case-body">
                                 <h5>Wireless Battery Management System</h5>
                                 <p>An emerging player in the electric mobility space, focused on delivering sustainable and intelligent two-/three-wheeler electric vehicles for urban…</p>
-                                <a href="case-studies/wireless-battery-management-system.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/wireless-battery-management-system" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1846,7 +1848,7 @@
                             <div class="case-body">
                                 <h5>UWB Based Authentication</h5>
                                 <p>The US-based OEM was evaluating advanced PEPS (Passive Entry Passive Start) solutions utilizing Ultra-Wideband (UWB) technology to achieve…</p>
-                                <a href="case-studies/uwb-based-authentication.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/uwb-based-authentication" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1858,7 +1860,7 @@
                             <div class="case-body">
                                 <h5>Firmware Over The Air (FoTA) Platform</h5>
                                 <p>A top-tier global mobility OEM is building a comprehensive FoTA platform, supports multiple ECU variants and ensuring secure, remote firmware updates…</p>
-                                <a href="case-studies/firmware-over-the-air-platform.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/firmware-over-the-air-platform" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1871,7 +1873,7 @@
                             <div class="case-body">
                                 <h5>ADAS case study</h5>
                                 <p>A European Tier-1 supplier, who Manufacture ECUs for connected, autonomous, and electrified vehicles.</p>
-                                <a href="case-studies/adas-case-study.html" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
+                                <a href="case-studies/adas-case-study" class="case-link stretched-link">Read Case Study <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1896,8 +1898,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="js/include.js"></script>
-    <script src="js/case-studies.js?v=20261106"></script>
+    <script src="/js/include.js"></script>
+    <script src="/js/case-studies.js?v=20261106-2"></script>
 
 </body>
 

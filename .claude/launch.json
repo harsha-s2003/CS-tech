@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cstech-apache",
+      "runtimeExecutable": "F:/xampp/apache/bin/httpd.exe",
+      "runtimeArgs": ["-f", "F:/cs/CS-tech_NewPages/seo-migration/local-apache/httpd.conf"],
+      "port": 8080
+    }
+  ]
+}

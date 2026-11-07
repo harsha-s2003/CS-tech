@@ -2,80 +2,91 @@
 <html lang="en">
 
 <head>
-    <!-- Tracking codes: HEAD part of includes/header.html (scripts only) -->
-    <script src="/js/head.js" data-tracking-only></script><!-- root path: the 404 page can be shown at any URL depth -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>CS TECH Ai | Page Not Found</title>
+    <!-- Shown by the server for every unknown URL (.htaccess: ErrorDocument 404 /404.html), at any URL
+         depth, so every path on this page is root-absolute (/js/..., /css/..., /about). -->
     <script>
-        // Hosts that answer unknown paths with this page (GitHub Pages, Netlify, http-server, ...)
-        // cannot serve case-studies.html/<Category>/Industries/<Industry>/... directly. Hand the
-        // filter path to case-studies.html as ?route=, which js/case-studies.js turns back into the path URL.
+        // Hosts without rewrite rules (e.g. a plain static server) cannot serve case-studies filter
+        // views like /case-studies/Industries/Water-Wastewater directly. Hand the filter path to the
+        // listing as ?route=, which js/case-studies.js turns back into the path URL.
+        // Only the known filter words are handed over, so a mistyped case-study URL stays a 404.
         (function () {
-            var m = location.pathname.match(/^(.*\/)case-studies\.html\/(.+)$/);
+            var m = location.pathname.match(/^(.*\/)case-studies(?:\.html)?\/((?:Geospatial|Mobility|Emerging-Tech|Industries|Services|GCC|USA)(?:\/.*)?)$/i);
             if (!m) return;
             var params = new URLSearchParams(location.search);
             params.set('route', decodeURIComponent(m[2]));
-            location.replace(m[1] + 'case-studies.html?' + params.toString() + location.hash);
+            location.replace(m[1] + 'case-studies?' + params.toString() + location.hash);
         })();
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Self-contained: this page can be served at any depth, where relative css/ paths would break -->
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #EEF2F9;
-            font-family: Geist, Inter, "Segoe UI", system-ui, sans-serif;
-            color: #1f2937;
-            text-align: center;
-            padding: 24px;
-        }
-
-        .eyebrow {
-            color: #d81159;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            color: #000080;
-            font-size: 2.2rem;
-            margin: 8px 0 12px;
-        }
-
-        p {
-            color: #6b7280;
-            margin: 0 0 24px;
-        }
-
-        a {
-            display: inline-block;
-            background: #000080;
-            color: #fff;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 6px;
-            padding: 12px 24px;
-        }
-    </style>
+    <!-- Shared CSS + tracking: HEAD part of includes/header.html -->
+    <script src="/js/head.js"></script>
+    <title>Page Not Found | CS TECH Ai</title>
+    <meta name="robots" content="noindex, follow">
 </head>
 
 <body>
-    <main>
-        <div class="eyebrow">Error 404</div>
-        <h1>Page not found</h1>
-        <p>The page you are looking for does not exist or has moved.</p>
-        <a href="/">Back to Home</a>
-    </main>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <div id="site-header"></div>
+
+    <!-- ===================== NOT FOUND ===================== -->
+    <section class="py-5" style="background:#EEF2F9;">
+        <div class="container py-lg-5 text-center">
+            <p class="section-eyebrow justify-content-center"><span class="eyebrow-bar"></span>ERROR 404</p>
+            <h1 class="section-title mb-3">Page not found</h1>
+            <p class="text-muted mx-auto mb-4" style="max-width:640px;">
+                The page you are looking for does not exist or has moved. Our website has a new structure &ndash;
+                the sections below will help you find what you need.
+            </p>
+            <a href="/" class="btn hero-btn">Back to Home <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+        </div>
+    </section>
+
+    <!-- ===================== POPULAR SECTIONS ===================== -->
+    <section class="py-5" style="background-color:#010082;">
+        <div class="container">
+            <p class="section-eyebrow text-white"><span class="eyebrow-bar"></span>EXPLORE CS TECH Ai</p>
+            <div class="row g-3 mt-1">
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/services/geospatial-services" class="da-industry-pill"><i class="bi bi-globe2 fs-4" aria-hidden="true"></i><span class="text-dark">Geospatial Services</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/mobility/automotive" class="da-industry-pill"><i class="bi bi-car-front fs-4" aria-hidden="true"></i><span class="text-dark">Automotive &amp; Mobility</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/product/products" class="da-industry-pill"><i class="bi bi-box-seam fs-4" aria-hidden="true"></i><span class="text-dark">Products</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/case-studies" class="da-industry-pill"><i class="bi bi-journal-text fs-4" aria-hidden="true"></i><span class="text-dark">Case Studies</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/news" class="da-industry-pill"><i class="bi bi-newspaper fs-4" aria-hidden="true"></i><span class="text-dark">News &amp; Publications</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/investors" class="da-industry-pill"><i class="bi bi-graph-up-arrow fs-4" aria-hidden="true"></i><span class="text-dark">Investors</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/about" class="da-industry-pill"><i class="bi bi-building fs-4" aria-hidden="true"></i><span class="text-dark">About Us</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/careers" class="da-industry-pill"><i class="bi bi-people fs-4" aria-hidden="true"></i><span class="text-dark">Careers</span></a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="/contact" class="da-industry-pill"><i class="bi bi-envelope fs-4" aria-hidden="true"></i><span class="text-dark">Contact Us</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div id="site-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="/js/include.js"></script>
+
 </body>
 
 </html>

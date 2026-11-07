@@ -1,140 +1,284 @@
-# BEGIN old-site redirects
-# 301: old cstech.ai URLs -> new pages (used only if this site is served by Apache on cstech.ai)
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteRule ^about/?$ /about.html [R=301,L]
-    RewriteRule ^careers/?$ /careers.html [R=301,L]
-    RewriteRule ^contact/?$ /contact.html [R=301,L]
-    RewriteRule ^emerging-tech/?$ /services/emerging-tech.html [R=301,L]
-    RewriteRule ^geospatial/?$ /services/geospatial-services.html [R=301,L]
-    RewriteRule ^geospatial/analytics/?$ /services/modelling-analytics.html [R=301,L]
-    RewriteRule ^geospatial/consulting/?$ /services/engineering-consulting.html [R=301,L]
-    RewriteRule ^geospatial/data-acquisition/?$ /services/data-acquisition.html [R=301,L]
-    RewriteRule ^geospatial/digital-enterprise/?$ /services/enterprise-gis-spatial-intelligence.html [R=301,L]
-    RewriteRule ^geospatial/engineering-support/?$ /services/bim-3d-modelling-digital-twins.html [R=301,L]
-    RewriteRule ^geospatial/software-solutions/?$ /services/solution-development.html [R=301,L]
-    RewriteRule ^geospatial/support-ticket/?$ /services/support-ticket.html [R=301,L]
-    RewriteRule ^geospatialamericas/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/about/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/contact/?$ /contact.html [R=301,L]
-    RewriteRule ^geospatialamericas/industries/public-infrastructure/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/industries/retail-and-real-estate/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/industries/telecom-and-fiber/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/industries/utilities-and-energy/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/services/analytics/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/services/consulting/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/services/data-acquisition/?$ /services/data-acquisition.html [R=301,L]
-    RewriteRule ^geospatialamericas/services/digital-enterprise/?$ /usa.html [R=301,L]
-    RewriteRule ^geospatialamericas/services/engineering-support/?$ /usa.html [R=301,L]
-    RewriteRule ^infra-utilities/?$ /services/geospatial-services.html [R=301,L]
-    RewriteRule ^infra-utilities/industries/aec-and-bim/?$ /industries/aec-bim.html [R=301,L]
-    RewriteRule ^infra-utilities/industries/energy/?$ /industries/power-utilities.html [R=301,L]
-    RewriteRule ^infra-utilities/industries/land-and-natural-resources/?$ /industries/land-natural-resources.html [R=301,L]
-    RewriteRule ^infra-utilities/industries/oil-and-gas/?$ /services/bim-3d-modelling-digital-twins.html [R=301,L]
-    RewriteRule ^infra-utilities/industries/telecom/?$ /services/enterprise-gis-spatial-intelligence.html [R=301,L]
-    RewriteRule ^infra-utilities/industries/transportation/?$ /industries/transportation-infrastructure.html [R=301,L]
-    RewriteRule ^infra-utilities/industries/water/?$ /industries/water-wastewater.html [R=301,L]
-    RewriteRule ^infra-utilities/solutions/disaster-management/?$ /solution/satellite-data-intelligence.html [R=301,L]
-    RewriteRule ^infra-utilities/solutions/smart-city-solutions/?$ /solution/smart-city.html [R=301,L]
-    RewriteRule ^infra-utilities/solutions/spatial-data-infrastructure/?$ /solution/spatial-data-infrastructure.html [R=301,L]
-    RewriteRule ^infra-utilities/solutions/vegetation-management/?$ /solution/satellite-data-intelligence.html [R=301,L]
-    RewriteRule ^investors/?$ /investors.html [R=301,L]
-    RewriteRule ^mobility/?$ /mobility/automotive.html [R=301,L]
-    RewriteRule ^mobility/industries/?$ /mobility/automotive-industries.html [R=301,L]
-    RewriteRule ^mobility/offerings/?$ /mobility/automotive-services.html [R=301,L]
-    RewriteRule ^mobility/solutions/?$ /mobility/automotive-solutions.html [R=301,L]
-    RewriteRule ^resources/?$ /case-studies.html [R=301,L]
-    RewriteRule ^resources/blogs/?$ /blogs.html [R=301,L]
-    RewriteRule ^resources/blogs/digital-twins-revolutionizing-industry/?$ /blogs/digital-twins-revolutionizing-industry.html [R=301,L]
-    RewriteRule ^resources/case-studies/?$ /case-studies.html [R=301,L]
-    RewriteRule ^resources/case-studies/adas-case-study/?$ /case-studies/adas-case-study.html [R=301,L]
-    RewriteRule ^resources/case-studies/cockpit-platform-engineering/?$ /case-studies/cockpit-platform-engineering.html [R=301,L]
-    RewriteRule ^resources/case-studies/designing-a-gis-enabled-platform/?$ /case-studies/designing-a-gis-enabled-platform.html [R=301,L]
-    RewriteRule ^resources/case-studies/digital-biw-process-planning-and-fitment-strategy/?$ /case-studies/digital-biw-process-planning-and-fitment-strategy.html [R=301,L]
-    RewriteRule ^resources/case-studies/digital-project-management-system/?$ /case-studies/digital-project-management-system.html [R=301,L]
-    RewriteRule ^resources/case-studies/door-panel-design-for-european-luxury-passenger-vehicle/?$ /case-studies/door-panel-design-for-european-luxury-passenger-vehicle.html [R=301,L]
-    RewriteRule ^resources/case-studies/electric-system-integration/?$ /case-studies/electric-system-integration.html [R=301,L]
-    RewriteRule ^resources/case-studies/emerging-tech/?$ /services/emerging-tech.html [R=301,L]
-    RewriteRule ^resources/case-studies/enterprise-platform-for-data-driven-smart-agriculture/?$ /case-studies/enterprise-platform-for-data-driven-smart-agriculture.html [R=301,L]
-    RewriteRule ^resources/case-studies/evision/?$ /case-studies/evision.html [R=301,L]
-    RewriteRule ^resources/case-studies/firmware-over-the-air-platform/?$ /case-studies/firmware-over-the-air-platform.html [R=301,L]
-    RewriteRule ^resources/case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring/?$ /case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring.html [R=301,L]
-    RewriteRule ^resources/case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling/?$ /case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling.html [R=301,L]
-    RewriteRule ^resources/case-studies/instrument-panel-development/?$ /case-studies/instrument-panel-development.html [R=301,L]
-    RewriteRule ^resources/case-studies/integrated-digital-project-management-platform-for-expressway-construction/?$ /case-studies/integrated-digital-project-management-platform-for-expressway-construction.html [R=301,L]
-    RewriteRule ^resources/case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization/?$ /case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization.html [R=301,L]
-    RewriteRule ^resources/case-studies/integrated-interface-development/?$ /case-studies/integrated-interface-development.html [R=301,L]
-    RewriteRule ^resources/case-studies/lean-manufacturing-strategy/?$ /case-studies/lean-manufacturing-strategy.html [R=301,L]
-    RewriteRule ^resources/case-studies/mobility/?$ /case-studies.html?industry=automotive [R=301,L]
-    RewriteRule ^resources/case-studies/modular-6d0f-armrest/?$ /case-studies/modular-6d0f-armrest.html [R=301,L]
-    RewriteRule ^resources/case-studies/multi-feature-armrest-development/?$ /case-studies/multi-feature-armrest-development.html [R=301,L]
-    RewriteRule ^resources/case-studies/new-recreation-vehicle-launch/?$ /case-studies/new-recreation-vehicle-launch.html [R=301,L]
-    RewriteRule ^resources/case-studies/optical-fibre-cable-infrastructure/?$ /case-studies/optical-fibre-cable-infrastructure.html [R=301,L]
-    RewriteRule ^resources/case-studies/predictive-flood-modeling/?$ /case-studies/predictive-flood-modeling.html [R=301,L]
-    RewriteRule ^resources/case-studies/river-linking-infrastructure/?$ /case-studies/river-linking-infrastructure.html [R=301,L]
-    RewriteRule ^resources/case-studies/road-asset-management/?$ /case-studies/road-asset-management.html [R=301,L]
-    RewriteRule ^resources/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology/?$ /case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology.html [R=301,L]
-    RewriteRule ^resources/case-studies/software-defined-vehicle-platform/?$ /case-studies/software-defined-vehicle-platform.html [R=301,L]
-    RewriteRule ^resources/case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery/?$ /case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery.html [R=301,L]
-    RewriteRule ^resources/case-studies/third-party-inspection/?$ /case-studies/third-party-inspection.html [R=301,L]
-    RewriteRule ^resources/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance/?$ /case-studies/third-party-inspection-application-for-infrastructure-quality-assurance.html [R=301,L]
-    RewriteRule ^resources/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions/?$ /case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions.html [R=301,L]
-    RewriteRule ^resources/case-studies/unified-enterprise-platform-for-mining-process-management/?$ /case-studies/unified-enterprise-platform-for-mining-process-management.html [R=301,L]
-    RewriteRule ^resources/case-studies/unified-gis-platform-for-utility-scale-power-distribution-management/?$ /case-studies/unified-gis-platform-for-utility-scale-power-distribution-management.html [R=301,L]
-    RewriteRule ^resources/case-studies/uwb-based-authentication/?$ /case-studies/uwb-based-authentication.html [R=301,L]
-    RewriteRule ^resources/case-studies/virtual-validation-of-heavy-machinery-cab-design/?$ /case-studies/virtual-validation-of-heavy-machinery-cab-design.html [R=301,L]
-    RewriteRule ^resources/case-studies/virtual-validation-of-instrument-panel-design/?$ /case-studies/virtual-validation-of-instrument-panel-design.html [R=301,L]
-    RewriteRule ^resources/case-studies/web-gis-based-asset-mapping/?$ /case-studies/web-gis-based-asset-mapping.html [R=301,L]
-    RewriteRule ^resources/case-studies/web-gis-enabled-property-survey/?$ /case-studies/web-gis-enabled-property-survey.html [R=301,L]
-    RewriteRule ^resources/case-studies/wireless-battery-management-system/?$ /case-studies/wireless-battery-management-system.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/?$ /news.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-and-tech-mahindra-partner/?$ /news/cs-tech-ai-and-tech-mahindra-partner.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-awarded-stp-consultancy-project-in-vasai-virar/?$ /news/cs-tech-ai-awarded-stp-consultancy-project-in-vasai-virar.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-ceo-outlines-growth-strategy-on-ndtv-profit/?$ /news/cs-tech-ai-ceo-outlines-growth-strategy-on-ndtv-profit.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-delivers-fy25-record-highs/?$ /news/cs-tech-ai-delivers-fy25-record-highs.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-delivers-stellar-q1-fy26/?$ /news.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-earns-great-place-to-work-certification/?$ /news/cs-tech-ai-earns-great-place-to-work-certification.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-enables-statewide-go-live-of-khanij-online-2-0/?$ /news/cs-tech-ai-enables-statewide-go-live-of-khanij-online-2-0.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-expands-global-footprint-with-strategic-mou-with-aetosky-singapore/?$ /news/cs-tech-ai-expands-global-footprint-with-strategic-mou-with-aetosky-singapore.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-grabs-a-million-dollar-order/?$ /news/cs-tech-ai-grabs-a-million-dollar-order.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-jv-wins-international-gis-project-in-georgia/?$ /news/cs-tech-ai-jv-wins-international-gis-project-in-georgia.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-marks-nse-listing-with-bell-ringing-ceremony/?$ /news/cs-tech-ai-marks-nse-listing-with-bell-ringing-ceremony.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-md-highlights-global-growth-roadmap-on-ndtv-profit/?$ /news/cs-tech-ai-md-highlights-global-growth-roadmap-on-ndtv-profit.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-order-book-crosses-1000-cr/?$ /news/cs-tech-ai-order-book-crosses-1000-cr.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-11-39-crore-pmc-order-for-underground-drainage-project-in-vasai-virar/?$ /news/cs-tech-ai-receives-11-39-crore-pmc-order-for-underground-drainage-project-in-vasai-virar.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-15-95-crore-letter-of-award-from-mmrda-for-arcgis-enterprise-upgrade/?$ /news/cs-tech-ai-receives-15-95-crore-letter-of-award-from-mmrda-for-arcgis-enterprise-upgrade.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-5-50-crore-mmrda-order-for-autodesk-aec-solution-deployment/?$ /news/cs-tech-ai-receives-5-50-crore-mmrda-order-for-autodesk-aec-solution-deployment.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-extension-for-mumbai-pune-expressway-digital-project/?$ /news/cs-tech-ai-receives-extension-for-mumbai-pune-expressway-digital-project.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-letter-of-intent-for-sewage-management-consultancy-project-in-nashik/?$ /news/cs-tech-ai-receives-letter-of-intent-for-sewage-management-consultancy-project-in-nashik.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-soil-survey-and-mapping-work-orders-from-mrsac/?$ /news/cs-tech-ai-receives-soil-survey-and-mapping-work-orders-from-mrsac.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-recognized-by-mjp-for-jal-jeevan-mission-project-support/?$ /news/cs-tech-ai-recognized-by-mjp-for-jal-jeevan-mission-project-support.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-reports-strong-q2-fy25-results/?$ /news/cs-tech-ai-reports-strong-q2-fy25-results.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-2-24-crore-order-for-common-data-environment-implementation/?$ /news/cs-tech-ai-secures-2-24-crore-order-for-common-data-environment-implementation.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-a-multi-million-usd-project-from-mmrda-for-infrastructure-monitoring/?$ /news/cs-tech-ai-secures-a-multi-million-usd-project-from-mmrda-for-infrastructure-monitoring.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-additional-soil-mapping-order-from-mrsac/?$ /news/cs-tech-ai-secures-additional-soil-mapping-order-from-mrsac.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-additional-soil-mapping-work-order-from-mrsac/?$ /news/cs-tech-ai-secures-additional-soil-mapping-work-order-from-mrsac.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-extension-for-rural-water-supply-projects-in-uttar-pradesh/?$ /news/cs-tech-ai-secures-extension-for-rural-water-supply-projects-in-uttar-pradesh.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-isro-subscription-renewal-contract/?$ /news/cs-tech-ai-secures-isro-subscription-renewal-contract.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-major-mhada-project-for-digital-transformation/?$ /news/cs-tech-ai-secures-major-mhada-project-for-digital-transformation.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-to-oversee-city-wide-wastewater-modernization-program-in-india/?$ /news/cs-tech-ai-to-oversee-city-wide-wastewater-modernization-program-in-india.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-wins-cnbc-tv18-sme-champion-award/?$ /news/cs-tech-ai-wins-cnbc-tv18-sme-champion-award.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ai-wins-mmrda-contract-for-smart-urban-monitoring-and-bim-implementation/?$ /news/cs-tech-ai-wins-mmrda-contract-for-smart-urban-monitoring-and-bim-implementation.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ais-digital-platform-secures-top-recognition-at-aec-forum/?$ /news/cs-tech-ais-digital-platform-secures-top-recognition-at-aec-forum.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-ais-lidar-expertise-lands-us-deal/?$ /news/cs-tech-ais-lidar-expertise-lands-us-deal.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-bags-a-multi-million-dollar-order-to-deploy-a-centralized-iot-based-platform/?$ /news/cs-tech-bags-a-multi-million-dollar-order-to-deploy-a-centralized-iot-based-platform.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/cs-tech-receives-extension-of-letter-of-award-from-swsm/?$ /news/cs-tech-receives-extension-of-letter-of-award-from-swsm.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/esri-india-and-autodesk-highlight-bim-gis-integration-at-infraverse-2025/?$ /news/esri-india-and-autodesk-highlight-bim-gis-integration-at-infraverse-2025.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/honble-shri-dattaji-meghe-in-grateful-remembrance/?$ /news/honble-shri-dattaji-meghe-in-grateful-remembrance.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/how-cs-tech-ai-is-reimagining-indias-tech-footprint-with-a-global-vision/?$ /news/how-cs-tech-ai-is-reimagining-indias-tech-footprint-with-a-global-vision.html [R=301,L]
-    RewriteRule ^resources/news-and-publications/transformations-through-innovation-in-aec-technology/?$ /news/transformations-through-innovation-in-aec-technology.html [R=301,L]
-</IfModule>
-# END old-site redirects
+# =====================================================================================
+# CS TECH Ai - https://cstech.ai  (Apache .htaccess for the website root)
+#
+# What this file does, in order:
+#   1. Hides internal folders (tools, git) - they answer 404.
+#   2. Old website URLs -> new pages, 301, one hop        (block generated from seo-migration/redirects.csv)
+#   3. Safety net: unknown URLs under an old section -> that section's new page (also generated)
+#   4. http -> https and www -> cstech.ai
+#   5. Clean URLs: "/about.html", "/about/" and "/index.html" -> "/about", "/"; pages are served without ".html"
+#   6. Case-studies filter views (/case-studies/Industries/Water-Wastewater)
+#   7. Custom 404 page for everything else
+#
+# To add or change a redirect: edit seo-migration/redirects.csv, then run
+#     node seo-migration/build-redirects.js
+# It checks the list and rewrites ONLY the two generated blocks below. Do not hand-edit them
+# (the next build overwrites them); everything else in this file is safe to edit by hand.
+# Full guide: seo-migration/README-REDIRECTS.md
+# =====================================================================================
 
-# Apache: case-studies.html/<Category>[/Industries/<Industry>][/Services/<Service>]
-# (e.g. case-studies.html/Industries/Water-Wastewater) is case-studies.html with filters;
-# js/case-studies.js reads them from the path.
+ErrorDocument 404 /404.html
+
+# /news, /blogs and /case-studies are pages AND folders. Without this, Apache would answer
+# /news with a redirect to /news/ before the clean-URL rules can serve news.html (a loop).
+# Folders without a page answer 404 (section 7), so nothing is ever listed.
+# Needs "AllowOverride All" for the site (standard on cPanel hosting).
+<IfModule mod_dir.c>
+    DirectorySlash Off
+</IfModule>
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{REQUEST_URI} ^(.*/)case-studies\.html/.+$
-    RewriteRule ^ %1case-studies.html [L]
+    RewriteBase /
+
+    # ---- 1. Internal folders: never served -------------------------------------------
+    RewriteRule ^(seo-migration|CS-tech_NewPages|\.git|\.claude|\.vscode)(/|$) - [R=404,L,NC]
+
+    # ---- 2. Old website URLs -> new pages (generated - do not edit by hand) -------------
+    # BEGIN cstech-301-redirects
+    # generated 2026-11-06 from seo-migration/redirects.csv - do not edit by hand
+    RewriteCond %{REQUEST_URI} !^/about$
+    RewriteRule ^about/?$ https://cstech.ai/about [R=301,L,NC]
+    RewriteCond %{REQUEST_URI} !^/careers$
+    RewriteRule ^careers/?$ https://cstech.ai/careers [R=301,L,NC]
+    RewriteCond %{REQUEST_URI} !^/contact$
+    RewriteRule ^contact/?$ https://cstech.ai/contact [R=301,L,NC]
+    RewriteRule ^emerging-tech/?$ https://cstech.ai/services/emerging-tech [R=301,L,NC]
+    RewriteRule ^geospatial/?$ https://cstech.ai/services/geospatial-services [R=301,L,NC]
+    RewriteRule ^geospatial/analytics/?$ https://cstech.ai/services/modelling-analytics [R=301,L,NC]
+    RewriteRule ^geospatial/consulting/?$ https://cstech.ai/services/engineering-consulting [R=301,L,NC]
+    RewriteRule ^geospatial/data-acquisition/?$ https://cstech.ai/services/data-acquisition [R=301,L,NC]
+    RewriteRule ^geospatial/digital-enterprise/?$ https://cstech.ai/services/enterprise-gis-spatial-intelligence [R=301,L,NC]
+    RewriteRule ^geospatial/engineering-support/?$ https://cstech.ai/services/bim-3d-modelling-digital-twins [R=301,L,NC]
+    RewriteRule ^geospatial/software-solutions/?$ https://cstech.ai/services/solution-development [R=301,L,NC]
+    RewriteRule ^geospatial/support-ticket/?$ https://cstech.ai/services/support-ticket [R=301,L,NC]
+    RewriteRule ^geospatialamericas/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/about/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/contact/?$ https://cstech.ai/contact [R=301,L,NC]
+    RewriteRule ^geospatialamericas/industries/public-infrastructure/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/industries/retail-and-real-estate/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/industries/telecom-and-fiber/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/industries/utilities-and-energy/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/services/analytics/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/services/consulting/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/services/data-acquisition/?$ https://cstech.ai/services/data-acquisition [R=301,L,NC]
+    RewriteRule ^geospatialamericas/services/digital-enterprise/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^geospatialamericas/services/engineering-support/?$ https://cstech.ai/usa [R=301,L,NC]
+    RewriteRule ^infra-utilities/?$ https://cstech.ai/services/geospatial-services [R=301,L,NC]
+    RewriteRule ^infra-utilities/industries/aec-and-bim/?$ https://cstech.ai/industries/aec-bim [R=301,L,NC]
+    RewriteRule ^infra-utilities/industries/energy/?$ https://cstech.ai/industries/power-utilities [R=301,L,NC]
+    RewriteRule ^infra-utilities/industries/land-and-natural-resources/?$ https://cstech.ai/industries/land-natural-resources [R=301,L,NC]
+    RewriteRule ^infra-utilities/industries/oil-and-gas/?$ https://cstech.ai/services/bim-3d-modelling-digital-twins [R=301,L,NC]
+    RewriteRule ^infra-utilities/industries/telecom/?$ https://cstech.ai/services/enterprise-gis-spatial-intelligence [R=301,L,NC]
+    RewriteRule ^infra-utilities/industries/transportation/?$ https://cstech.ai/industries/transportation-infrastructure [R=301,L,NC]
+    RewriteRule ^infra-utilities/industries/water/?$ https://cstech.ai/industries/water-wastewater [R=301,L,NC]
+    RewriteRule ^infra-utilities/solutions/disaster-management/?$ https://cstech.ai/solution/satellite-data-intelligence [R=301,L,NC]
+    RewriteRule ^infra-utilities/solutions/smart-city-solutions/?$ https://cstech.ai/solution/smart-city [R=301,L,NC]
+    RewriteRule ^infra-utilities/solutions/spatial-data-infrastructure/?$ https://cstech.ai/solution/spatial-data-infrastructure [R=301,L,NC]
+    RewriteRule ^infra-utilities/solutions/vegetation-management/?$ https://cstech.ai/solution/satellite-data-intelligence [R=301,L,NC]
+    RewriteCond %{REQUEST_URI} !^/investors$
+    RewriteRule ^investors/?$ https://cstech.ai/investors [R=301,L,NC]
+    RewriteRule ^mobility/?$ https://cstech.ai/mobility/automotive [R=301,L,NC]
+    RewriteRule ^mobility/industries/?$ https://cstech.ai/mobility/automotive-industries [R=301,L,NC]
+    RewriteRule ^mobility/offerings/?$ https://cstech.ai/mobility/automotive-services [R=301,L,NC]
+    RewriteRule ^mobility/solutions/?$ https://cstech.ai/mobility/automotive-solutions [R=301,L,NC]
+    RewriteRule ^resources/?$ https://cstech.ai/case-studies [R=301,L,NC]
+    # Added: live old page (linked from the old homepage) missing from the sheet
+    RewriteRule ^resources/awards-and-project-wins/?$ https://cstech.ai/news [R=301,L,NC]
+    RewriteRule ^resources/blogs/?$ https://cstech.ai/blogs [R=301,L,NC]
+    RewriteRule ^resources/blogs/digital-twins-revolutionizing-industry/?$ https://cstech.ai/blogs/digital-twins-revolutionizing-industry [R=301,L,NC]
+    RewriteRule ^resources/case-studies/?$ https://cstech.ai/case-studies [R=301,L,NC]
+    RewriteRule ^resources/case-studies/adas-case-study/?$ https://cstech.ai/case-studies/adas-case-study [R=301,L,NC]
+    RewriteRule ^resources/case-studies/cockpit-platform-engineering/?$ https://cstech.ai/case-studies/cockpit-platform-engineering [R=301,L,NC]
+    RewriteRule ^resources/case-studies/designing-a-gis-enabled-platform/?$ https://cstech.ai/case-studies/designing-a-gis-enabled-platform [R=301,L,NC]
+    RewriteRule ^resources/case-studies/digital-biw-process-planning-and-fitment-strategy/?$ https://cstech.ai/case-studies/digital-biw-process-planning-and-fitment-strategy [R=301,L,NC]
+    # Added: old dead-link variant of the same case study
+    RewriteRule ^resources/case-studies/digital-biw-process-planning-and-fitment-strategy-oem/?$ https://cstech.ai/case-studies/digital-biw-process-planning-and-fitment-strategy [R=301,L,NC]
+    RewriteRule ^resources/case-studies/digital-project-management-system/?$ https://cstech.ai/case-studies/digital-project-management-system [R=301,L,NC]
+    RewriteRule ^resources/case-studies/door-panel-design-for-european-luxury-passenger-vehicle/?$ https://cstech.ai/case-studies/door-panel-design-for-european-luxury-passenger-vehicle [R=301,L,NC]
+    RewriteRule ^resources/case-studies/electric-system-integration/?$ https://cstech.ai/case-studies/electric-system-integration [R=301,L,NC]
+    RewriteRule ^resources/case-studies/emerging-tech/?$ https://cstech.ai/services/emerging-tech [R=301,L,NC]
+    RewriteRule ^resources/case-studies/enterprise-platform-for-data-driven-smart-agriculture/?$ https://cstech.ai/case-studies/enterprise-platform-for-data-driven-smart-agriculture [R=301,L,NC]
+    RewriteRule ^resources/case-studies/evision/?$ https://cstech.ai/case-studies/evision [R=301,L,NC]
+    RewriteRule ^resources/case-studies/firmware-over-the-air-platform/?$ https://cstech.ai/case-studies/firmware-over-the-air-platform [R=301,L,NC]
+    RewriteRule ^resources/case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring/?$ https://cstech.ai/case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring [R=301,L,NC]
+    RewriteRule ^resources/case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling/?$ https://cstech.ai/case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling [R=301,L,NC]
+    RewriteRule ^resources/case-studies/instrument-panel-development/?$ https://cstech.ai/case-studies/instrument-panel-development [R=301,L,NC]
+    RewriteRule ^resources/case-studies/integrated-digital-project-management-platform-for-expressway-construction/?$ https://cstech.ai/case-studies/integrated-digital-project-management-platform-for-expressway-construction [R=301,L,NC]
+    RewriteRule ^resources/case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization/?$ https://cstech.ai/case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization [R=301,L,NC]
+    RewriteRule ^resources/case-studies/integrated-interface-development/?$ https://cstech.ai/case-studies/integrated-interface-development [R=301,L,NC]
+    RewriteRule ^resources/case-studies/lean-manufacturing-strategy/?$ https://cstech.ai/case-studies/lean-manufacturing-strategy [R=301,L,NC]
+    # Sheet target case-studies.html?industry=automotive written as its clean filter page
+    RewriteRule ^resources/case-studies/mobility/?$ https://cstech.ai/case-studies/Industries/Automotive-Mobility [R=301,L,NC]
+    RewriteRule ^resources/case-studies/modular-6d0f-armrest/?$ https://cstech.ai/case-studies/modular-6d0f-armrest [R=301,L,NC]
+    RewriteRule ^resources/case-studies/multi-feature-armrest-development/?$ https://cstech.ai/case-studies/multi-feature-armrest-development [R=301,L,NC]
+    RewriteRule ^resources/case-studies/new-recreation-vehicle-launch/?$ https://cstech.ai/case-studies/new-recreation-vehicle-launch [R=301,L,NC]
+    RewriteRule ^resources/case-studies/optical-fibre-cable-infrastructure/?$ https://cstech.ai/case-studies/optical-fibre-cable-infrastructure [R=301,L,NC]
+    RewriteRule ^resources/case-studies/predictive-flood-modeling/?$ https://cstech.ai/case-studies/predictive-flood-modeling [R=301,L,NC]
+    RewriteRule ^resources/case-studies/river-linking-infrastructure/?$ https://cstech.ai/case-studies/river-linking-infrastructure [R=301,L,NC]
+    RewriteRule ^resources/case-studies/road-asset-management/?$ https://cstech.ai/case-studies/road-asset-management [R=301,L,NC]
+    RewriteRule ^resources/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology/?$ https://cstech.ai/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology [R=301,L,NC]
+    RewriteRule ^resources/case-studies/software-defined-vehicle-platform/?$ https://cstech.ai/case-studies/software-defined-vehicle-platform [R=301,L,NC]
+    RewriteRule ^resources/case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery/?$ https://cstech.ai/case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery [R=301,L,NC]
+    RewriteRule ^resources/case-studies/third-party-inspection/?$ https://cstech.ai/case-studies/third-party-inspection [R=301,L,NC]
+    RewriteRule ^resources/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance/?$ https://cstech.ai/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance [R=301,L,NC]
+    RewriteRule ^resources/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions/?$ https://cstech.ai/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions [R=301,L,NC]
+    RewriteRule ^resources/case-studies/unified-enterprise-platform-for-mining-process-management/?$ https://cstech.ai/case-studies/unified-enterprise-platform-for-mining-process-management [R=301,L,NC]
+    RewriteRule ^resources/case-studies/unified-gis-platform-for-utility-scale-power-distribution-management/?$ https://cstech.ai/case-studies/unified-gis-platform-for-utility-scale-power-distribution-management [R=301,L,NC]
+    RewriteRule ^resources/case-studies/uwb-based-authentication/?$ https://cstech.ai/case-studies/uwb-based-authentication [R=301,L,NC]
+    RewriteRule ^resources/case-studies/virtual-validation-of-heavy-machinery-cab-design/?$ https://cstech.ai/case-studies/virtual-validation-of-heavy-machinery-cab-design [R=301,L,NC]
+    RewriteRule ^resources/case-studies/virtual-validation-of-instrument-panel-design/?$ https://cstech.ai/case-studies/virtual-validation-of-instrument-panel-design [R=301,L,NC]
+    RewriteRule ^resources/case-studies/web-gis-based-asset-mapping/?$ https://cstech.ai/case-studies/web-gis-based-asset-mapping [R=301,L,NC]
+    RewriteRule ^resources/case-studies/web-gis-enabled-property-survey/?$ https://cstech.ai/case-studies/web-gis-enabled-property-survey [R=301,L,NC]
+    RewriteRule ^resources/case-studies/wireless-battery-management-system/?$ https://cstech.ai/case-studies/wireless-battery-management-system [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/?$ https://cstech.ai/news [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-and-tech-mahindra-partner/?$ https://cstech.ai/news/cs-tech-ai-and-tech-mahindra-partner [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-awarded-stp-consultancy-project-in-vasai-virar/?$ https://cstech.ai/news/cs-tech-ai-awarded-stp-consultancy-project-in-vasai-virar [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-ceo-outlines-growth-strategy-on-ndtv-profit/?$ https://cstech.ai/news/cs-tech-ai-ceo-outlines-growth-strategy-on-ndtv-profit [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-delivers-fy25-record-highs/?$ https://cstech.ai/news/cs-tech-ai-delivers-fy25-record-highs [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-delivers-stellar-q1-fy26/?$ https://cstech.ai/news [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-earns-great-place-to-work-certification/?$ https://cstech.ai/news/cs-tech-ai-earns-great-place-to-work-certification [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-enables-statewide-go-live-of-khanij-online-2-0/?$ https://cstech.ai/news/cs-tech-ai-enables-statewide-go-live-of-khanij-online-2-0 [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-expands-global-footprint-with-strategic-mou-with-aetosky-singapore/?$ https://cstech.ai/news/cs-tech-ai-expands-global-footprint-with-strategic-mou-with-aetosky-singapore [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-grabs-a-million-dollar-order/?$ https://cstech.ai/news/cs-tech-ai-grabs-a-million-dollar-order [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-jv-wins-international-gis-project-in-georgia/?$ https://cstech.ai/news/cs-tech-ai-jv-wins-international-gis-project-in-georgia [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-marks-nse-listing-with-bell-ringing-ceremony/?$ https://cstech.ai/news/cs-tech-ai-marks-nse-listing-with-bell-ringing-ceremony [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-md-highlights-global-growth-roadmap-on-ndtv-profit/?$ https://cstech.ai/news/cs-tech-ai-md-highlights-global-growth-roadmap-on-ndtv-profit [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-order-book-crosses-1000-cr/?$ https://cstech.ai/news/cs-tech-ai-order-book-crosses-1000-cr [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-11-39-crore-pmc-order-for-underground-drainage-project-in-vasai-virar/?$ https://cstech.ai/news/cs-tech-ai-receives-11-39-crore-pmc-order-for-underground-drainage-project-in-vasai-virar [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-15-95-crore-letter-of-award-from-mmrda-for-arcgis-enterprise-upgrade/?$ https://cstech.ai/news/cs-tech-ai-receives-15-95-crore-letter-of-award-from-mmrda-for-arcgis-enterprise-upgrade [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-5-50-crore-mmrda-order-for-autodesk-aec-solution-deployment/?$ https://cstech.ai/news/cs-tech-ai-receives-5-50-crore-mmrda-order-for-autodesk-aec-solution-deployment [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-extension-for-mumbai-pune-expressway-digital-project/?$ https://cstech.ai/news/cs-tech-ai-receives-extension-for-mumbai-pune-expressway-digital-project [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-letter-of-intent-for-sewage-management-consultancy-project-in-nashik/?$ https://cstech.ai/news/cs-tech-ai-receives-letter-of-intent-for-sewage-management-consultancy-project-in-nashik [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-soil-survey-and-mapping-work-orders-from-mrsac/?$ https://cstech.ai/news/cs-tech-ai-receives-soil-survey-and-mapping-work-orders-from-mrsac [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-recognized-by-mjp-for-jal-jeevan-mission-project-support/?$ https://cstech.ai/news/cs-tech-ai-recognized-by-mjp-for-jal-jeevan-mission-project-support [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-reports-strong-q2-fy25-results/?$ https://cstech.ai/news/cs-tech-ai-reports-strong-q2-fy25-results [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-2-24-crore-order-for-common-data-environment-implementation/?$ https://cstech.ai/news/cs-tech-ai-secures-2-24-crore-order-for-common-data-environment-implementation [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-a-multi-million-usd-project-from-mmrda-for-infrastructure-monitoring/?$ https://cstech.ai/news/cs-tech-ai-secures-a-multi-million-usd-project-from-mmrda-for-infrastructure-monitoring [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-additional-soil-mapping-order-from-mrsac/?$ https://cstech.ai/news/cs-tech-ai-secures-additional-soil-mapping-order-from-mrsac [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-additional-soil-mapping-work-order-from-mrsac/?$ https://cstech.ai/news/cs-tech-ai-secures-additional-soil-mapping-work-order-from-mrsac [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-extension-for-rural-water-supply-projects-in-uttar-pradesh/?$ https://cstech.ai/news/cs-tech-ai-secures-extension-for-rural-water-supply-projects-in-uttar-pradesh [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-isro-subscription-renewal-contract/?$ https://cstech.ai/news/cs-tech-ai-secures-isro-subscription-renewal-contract [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-major-mhada-project-for-digital-transformation/?$ https://cstech.ai/news/cs-tech-ai-secures-major-mhada-project-for-digital-transformation [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-to-oversee-city-wide-wastewater-modernization-program-in-india/?$ https://cstech.ai/news/cs-tech-ai-to-oversee-city-wide-wastewater-modernization-program-in-india [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-wins-cnbc-tv18-sme-champion-award/?$ https://cstech.ai/news/cs-tech-ai-wins-cnbc-tv18-sme-champion-award [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-wins-mmrda-contract-for-smart-urban-monitoring-and-bim-implementation/?$ https://cstech.ai/news/cs-tech-ai-wins-mmrda-contract-for-smart-urban-monitoring-and-bim-implementation [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ais-digital-platform-secures-top-recognition-at-aec-forum/?$ https://cstech.ai/news/cs-tech-ais-digital-platform-secures-top-recognition-at-aec-forum [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-ais-lidar-expertise-lands-us-deal/?$ https://cstech.ai/news/cs-tech-ais-lidar-expertise-lands-us-deal [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-bags-a-multi-million-dollar-order-to-deploy-a-centralized-iot-based-platform/?$ https://cstech.ai/news/cs-tech-bags-a-multi-million-dollar-order-to-deploy-a-centralized-iot-based-platform [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/cs-tech-receives-extension-of-letter-of-award-from-swsm/?$ https://cstech.ai/news/cs-tech-receives-extension-of-letter-of-award-from-swsm [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/esri-india-and-autodesk-highlight-bim-gis-integration-at-infraverse-2025/?$ https://cstech.ai/news/esri-india-and-autodesk-highlight-bim-gis-integration-at-infraverse-2025 [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/honble-shri-dattaji-meghe-in-grateful-remembrance/?$ https://cstech.ai/news/honble-shri-dattaji-meghe-in-grateful-remembrance [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/how-cs-tech-ai-is-reimagining-indias-tech-footprint-with-a-global-vision/?$ https://cstech.ai/news/how-cs-tech-ai-is-reimagining-indias-tech-footprint-with-a-global-vision [R=301,L,NC]
+    RewriteRule ^resources/news-and-publications/transformations-through-innovation-in-aec-technology/?$ https://cstech.ai/news/transformations-through-innovation-in-aec-technology [R=301,L,NC]
+    # END cstech-301-redirects
+
+    # ---- 3. Safety net for old URLs that are not in the list (generated - do not edit) --
+    # BEGIN cstech-301-safety-net
+    # generated 2026-11-06 from seo-migration/redirects.csv - do not edit by hand
+    # unknown /resources/blogs/... -> https://cstech.ai/blogs
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^resources/blogs/. https://cstech.ai/blogs [R=301,L,NC]
+    # unknown /resources/case-studies/... -> https://cstech.ai/case-studies
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^resources/case-studies/. https://cstech.ai/case-studies [R=301,L,NC]
+    # unknown /resources/news-and-publications/... -> https://cstech.ai/news
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^resources/news-and-publications/. https://cstech.ai/news [R=301,L,NC]
+    # unknown /geospatial/... -> https://cstech.ai/services/geospatial-services
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^geospatial/. https://cstech.ai/services/geospatial-services [R=301,L,NC]
+    # unknown /geospatialamericas/... -> https://cstech.ai/usa
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^geospatialamericas/. https://cstech.ai/usa [R=301,L,NC]
+    # unknown /infra-utilities/... -> https://cstech.ai/services/geospatial-services
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^infra-utilities/. https://cstech.ai/services/geospatial-services [R=301,L,NC]
+    # unknown /mobility/... -> https://cstech.ai/mobility/automotive
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^mobility/. https://cstech.ai/mobility/automotive [R=301,L,NC]
+    # unknown /resources/... -> https://cstech.ai/case-studies
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html !-f
+    RewriteRule ^resources/. https://cstech.ai/case-studies [R=301,L,NC]
+    # END cstech-301-safety-net
+
+    # ---- 4. https and the main host (only for cstech.ai; safe behind a proxy) ------------
+    RewriteCond %{HTTP_HOST} ^(www\.)?cstech\.ai$ [NC]
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
+    RewriteRule ^ https://cstech.ai%{REQUEST_URI} [R=301,L,NE]
+
+    RewriteCond %{HTTP_HOST} ^www\.cstech\.ai$ [NC]
+    RewriteRule ^ https://cstech.ai%{REQUEST_URI} [R=301,L,NE]
+
+    # ---- 5. Clean URLs ------------------------------------------------------------------
+    # /index.html, /home, /home.html -> /
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{THE_REQUEST} \s/+(index|home)(\.html)?[\s?] [NC]
+    RewriteRule ^ / [R=301,L]
+
+    # old filter form /case-studies.html/Industries/X -> /case-studies/Industries/X
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{THE_REQUEST} \s/+case-studies\.html/([^?\s]+) [NC]
+    RewriteRule ^ /case-studies/%1 [R=301,L,NE]
+
+    # /about.html -> /about   (real pages only; the includes/ fragments and the 404 page stay as files)
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{THE_REQUEST} \s/+([^?\s]+?)\.html[\s?] [NC]
+    RewriteCond %1 !^(includes/|404$)
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ /%1 [R=301,L,NE]
+
+    # /about/ -> /about   (a trailing slash on a page; PATH_INFO check = the URL is exactly that page)
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{PATH_INFO} ^/*$
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html -f
+    RewriteRule ^(.+?)/+$ /$1 [R=301,L]
+
+    # ---- 6. Case-studies filter views are the listing page -----------------------------
+    RewriteRule ^case-studies/(Geospatial|Mobility|Emerging-Tech|Industries|Services|GCC|USA)(/[^.]*)?$ case-studies.html [L,NC]
+
+    # ---- 5b. Serve /about from about.html (never the 404 page itself; /about/extra stays a 404) --
+    RewriteCond %{REQUEST_URI} !^/404/?$
+    RewriteCond %{PATH_INFO} ^/*$
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html -f
+    RewriteRule ^(.+?)/?$ $1.html [L]
+
+    # ---- 7. Folders without a page (e.g. /img/, /services/) -> 404, never a listing ----
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_FILENAME}/index.html !-f
+    RewriteRule ^ - [R=404,L]
+
+    # HTML fragments loaded by the pages' JavaScript: never indexed on their own
+    RewriteRule ^includes/ - [E=CS_NOINDEX:1]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex" env=CS_NOINDEX
 </IfModule>

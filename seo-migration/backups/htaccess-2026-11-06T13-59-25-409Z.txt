@@ -1,0 +1,89 @@
+# =====================================================================================
+# CS TECH Ai - https://cstech.ai  (Apache .htaccess for the website root)
+#
+# What this file does, in order:
+#   1. Hides internal folders (tools, git) - they answer 404.
+#   2. Old website URLs -> new pages, 301, one hop        (block generated from seo-migration/redirects.csv)
+#   3. Safety net: unknown URLs under an old section -> that section's new page (also generated)
+#   4. http -> https and www -> cstech.ai
+#   5. Clean URLs: "/about.html", "/about/" and "/index.html" -> "/about", "/"; pages are served without ".html"
+#   6. Case-studies filter views (/case-studies/Industries/Water-Wastewater)
+#   7. Custom 404 page for everything else
+#
+# To add or change a redirect: edit seo-migration/redirects.csv, then run
+#     node seo-migration/build-redirects.js
+# It checks the list and rewrites ONLY the two generated blocks below. Do not hand-edit them
+# (the next build overwrites them); everything else in this file is safe to edit by hand.
+# Full guide: seo-migration/README-REDIRECTS.md
+# =====================================================================================
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # ---- 1. Internal folders: never served -------------------------------------------
+    RewriteRule ^(seo-migration|CS-tech_NewPages|\.git|\.claude|\.vscode)(/|$) - [R=404,L,NC]
+
+    # ---- 2. Old website URLs -> new pages (generated - do not edit by hand) -------------
+    # BEGIN cstech-301-redirects
+    # END cstech-301-redirects
+
+    # ---- 3. Safety net for old URLs that are not in the list (generated - do not edit) --
+    # BEGIN cstech-301-safety-net
+    # END cstech-301-safety-net
+
+    # ---- 4. https and the main host (only for cstech.ai; safe behind a proxy) ------------
+    RewriteCond %{HTTP_HOST} ^(www\.)?cstech\.ai$ [NC]
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
+    RewriteRule ^ https://cstech.ai%{REQUEST_URI} [R=301,L,NE]
+
+    RewriteCond %{HTTP_HOST} ^www\.cstech\.ai$ [NC]
+    RewriteRule ^ https://cstech.ai%{REQUEST_URI} [R=301,L,NE]
+
+    # ---- 5. Clean URLs ------------------------------------------------------------------
+    # /index.html, /home, /home.html -> /
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{THE_REQUEST} \s/+(index|home)(\.html)?[\s?] [NC]
+    RewriteRule ^ / [R=301,L]
+
+    # old filter form /case-studies.html/Industries/X -> /case-studies/Industries/X
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{THE_REQUEST} \s/+case-studies\.html/([^?\s]+) [NC]
+    RewriteRule ^ /case-studies/%1 [R=301,L,NE]
+
+    # /about.html -> /about   (real pages only; the includes/ fragments and the 404 page stay as files)
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{THE_REQUEST} \s/+([^?\s]+?)\.html[\s?] [NC]
+    RewriteCond %1 !^(includes/|404$)
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ /%1 [R=301,L,NE]
+
+    # /about/ -> /about   (a trailing slash on a page)
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html -f
+    RewriteRule ^(.+?)/+$ /$1 [R=301,L]
+
+    # ---- 6. Case-studies filter views are the listing page -----------------------------
+    RewriteRule ^case-studies/(Geospatial|Mobility|Emerging-Tech|Industries|Services|GCC|USA)(/.*)?$ case-studies.html [L,NC]
+
+    # ---- 5b. Serve /about from about.html --------------------------------------------------
+    RewriteCond %{REQUEST_FILENAME} ^(.+?)/*$
+    RewriteCond %1.html -f
+    RewriteRule ^(.+?)/?$ $1.html [L]
+
+    # ---- 7. Folders without a page (e.g. /img/, /services/) -> 404, never a listing ----
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_FILENAME}/index.html !-f
+    RewriteRule ^ - [R=404,L]
+
+    # HTML fragments loaded by the pages' JavaScript: never indexed on their own
+    RewriteRule ^includes/ - [E=CS_NOINDEX:1]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex" env=CS_NOINDEX
+</IfModule>
