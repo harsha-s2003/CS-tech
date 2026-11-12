@@ -1,0 +1,373 @@
+/* Shared additions for the Land & Natural Resources and Power & Energy pages. */
+.resource-industry .resource-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+    color: var(--cs-primary);
+}
+
+.resource-industry .ind-stat .resource-icon {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.resource-industry .ind-svc-icon {
+    width: 58px;
+    height: 58px;
+    overflow: hidden;
+}
+
+.resource-industry .ind-svc-icon .resource-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.resource-service-list {
+    padding-left: 18px;
+    margin: 10px 0 0;
+    color: var(--cs-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.resource-outcomes {
+    color: #fff;
+    background: radial-gradient(ellipse at top right, #15497b, #03204f 70%);
+}
+
+.resource-outcomes .section-eyebrow {
+    color: #fff;
+}
+
+.resource-outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.resource-outcome {
+    padding: 0 18px;
+    text-align: center;
+}
+
+.resource-outcome + .resource-outcome {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.resource-icon-light {
+    color: #fff !important;
+}
+
+.resource-outcome > .bi {
+    display: block;
+    font-size: 2.4rem;
+    height: 40px;
+}
+
+.resource-outcome h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 12px 0 8px;
+}
+
+.resource-outcome p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 991.98px) {
+    .resource-outcome-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 0;
+    }
+
+    .resource-outcome:nth-child(3n + 1) {
+        border-left: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .resource-industry .ind-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .resource-industry .ind-stat {
+        border-right: 0;
+    }
+
+    .resource-outcome-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resource-outcome:nth-child(n) {
+        border-left: 0;
+    }
+
+    .resource-outcome:nth-child(even) {
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media (hover: none) {
+    .resource-industry .case-body p,
+    .resource-industry .case-link {
+        opacity: 1;
+        max-height: none;
+        transform: none;
+    }
+
+    .resource-industry .case-body h5 {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Transportation page additions; shared navigation, forms and cards use style.css. */
+.transportation-page {
+    --transport-accent: #1457eb;
+}
+
+.transport-hero,
+.transport-contact {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    isolation: isolate;
+}
+
+.transport-hero::before,
+.transport-contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 16, 27, 0.96), rgba(0, 16, 27, 0.82) 37%, rgba(0, 16, 27, 0.12) 80%);
+    z-index: -1;
+}
+
+.transport-breadcrumb {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    font-size: 0.75rem;
+}
+
+.transport-breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.transport-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.transport-hero-content {
+    padding: 25px 0 55px;
+}
+
+.transport-hero h1 {
+    font-size: clamp(2rem, 3.2vw, 3.5rem);
+    font-weight: 750;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.transport-hero p:not(.section-eyebrow) {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    max-width: 560px;
+    color: #e0e8ef;
+}
+
+.transport-hero .section-eyebrow,
+.transport-contact .section-eyebrow {
+    color: #66d6e6;
+}
+
+
+
+.transport-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--transport-accent);
+    display: block;
+    margin-bottom: 14px;
+}
+
+.transport-stats {
+    background: #f6fbff;
+}
+
+.transport-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.transport-stat {
+    background: #fff;
+    padding: 22px 18px;
+    border-radius: 6px;
+}
+
+.transport-stat h3 {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 750;
+}
+
+.transport-stat p,
+.transport-outcome p,
+.transport-case p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #647080;
+    margin-bottom: 0;
+}
+
+.transport-service h3,
+.transport-outcome h3,
+.transport-case h3 {
+    color: #000;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.transport-service .transport-icon {
+    margin-bottom: 0;
+}
+
+.transport-service {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.transport-service::after {
+    content: "\2192";
+    position: absolute;
+    right: 16px;
+    bottom: 8px;
+    color: #1252b4;
+}
+
+.transport-outcomes {
+    background: #edf7ff;
+}
+
+.transport-outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.transport-outcome {
+    padding: 0 18px;
+}
+
+.transport-outcome:first-child {
+    padding-left: 0;
+}
+
+.transport-outcome + .transport-outcome {
+    border-left: 1px solid #dceaf5;
+}
+
+.transport-case {
+    height: 100%;
+    border: 1px solid #e7edf5;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transport-case:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(3, 40, 107, 0.1);
+}
+
+.transport-case > img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.transport-case-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+}
+
+.transport-case p {
+    margin-bottom: 16px;
+}
+
+.transport-case .view-all-link {
+    margin-top: auto;
+    font-size: 0.8rem;
+}
+
+.transport-contact::before {
+    background: rgba(0, 25, 44, 0.8);
+}
+
+.transport-contact h2 {
+    font-weight: 700;
+}
+
+.transport-contact p:not(.section-eyebrow) {
+    color: #d8e4ee;
+    font-size: 0.9rem;
+    max-width: 720px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    .transport-stat-grid,
+    .transport-outcome-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px 14px;
+    }
+
+    .transport-outcome:nth-child(3n + 1) {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    .transport-hero::before {
+        background: rgba(0, 16, 27, 0.75);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .transport-stat-grid,
+    .transport-outcome-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .transport-stat:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .transport-outcome:nth-child(n) {
+        padding: 0 8px;
+        border-left: 0;
+    }
+
+    .transport-outcome:nth-child(even) {
+        border-left: 1px solid #dceaf5;
+    }
+
+    .transport-case > img {
+        height: 200px;
+    }
+}
+

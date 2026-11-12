@@ -1,0 +1,181 @@
+# =====================================================================
+# TEMPORARY 302 TEST REDIRECTS - old cstech.ai URLs -> new demo site cst.convomax.online
+# Source: CS_Tech_Old_to_New_301_Redirect_Mapping.xlsx, rows "301 Redirect" (74 approved).
+# NOT the production 301s. Remove this whole block after testing.
+#
+# WHERE: the .htaccess in the document root of the CURRENT cstech.ai server (old website, Apache),
+#        at the very TOP, above every existing rule (the old site already has its own
+#        http->https / www rules). Change nothing else. Keep a backup of that file.
+#
+# WHO IS REDIRECTED: only browsers that carry the cookie  cst_redirect_test=1
+#   switch ON  : open https://cstech.ai/?cst_redirect_test=on    (sets the cookie, 1 day)
+#   switch OFF : open https://cstech.ai/?cst_redirect_test=off   (deletes the cookie)
+#   Everyone else (public visitors, Googlebot) gets the old website exactly as today.
+#
+# - 302 (temporary). Old URL with or without trailing slash, any letter case; query strings are kept.
+# - Unmapped URLs are not redirected. Responses are marked no-store so no cache keeps the 302.
+# =====================================================================
+# BEGIN cstech-temporary-302-test
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # tester switch (cookie only; no redirect)
+    RewriteCond %{QUERY_STRING} (^|&)cst_redirect_test=on(&|$) [NC]
+    RewriteRule ^ - [CO=cst_redirect_test:1:.cstech.ai:1440:/:secure:httponly,E=CST_TEST_302:1]
+    RewriteCond %{QUERY_STRING} (^|&)cst_redirect_test=off(&|$) [NC]
+    RewriteRule ^ - [CO=cst_redirect_test:0:.cstech.ai:-1:/:secure:httponly,E=CST_TEST_302:1]
+
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^emerging-tech/?$ https://cst.convomax.online/services/emerging-tech.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/data-acquisition/?$ https://cst.convomax.online/services/data-acquisition.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatial/support-ticket/?$ https://cst.convomax.online/services/support-ticket.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^geospatialamericas/services/data-acquisition/?$ https://cst.convomax.online/services/data-acquisition.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/?$ https://cst.convomax.online/case-studies.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/adas-case-study/?$ https://cst.convomax.online/case-studies/adas-case-study.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/cockpit-platform-engineering/?$ https://cst.convomax.online/case-studies/cockpit-platform-engineering.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/designing-a-gis-enabled-platform/?$ https://cst.convomax.online/case-studies/designing-a-gis-enabled-platform.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/digital-biw-process-planning-and-fitment-strategy/?$ https://cst.convomax.online/case-studies/digital-biw-process-planning-and-fitment-strategy.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/digital-project-management-system/?$ https://cst.convomax.online/case-studies/digital-project-management-system.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/door-panel-design-for-european-luxury-passenger-vehicle/?$ https://cst.convomax.online/case-studies/door-panel-design-for-european-luxury-passenger-vehicle.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/electric-system-integration/?$ https://cst.convomax.online/case-studies/electric-system-integration.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/enterprise-platform-for-data-driven-smart-agriculture/?$ https://cst.convomax.online/case-studies/enterprise-platform-for-data-driven-smart-agriculture.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/evision/?$ https://cst.convomax.online/case-studies/evision.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/firmware-over-the-air-platform/?$ https://cst.convomax.online/case-studies/firmware-over-the-air-platform.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring/?$ https://cst.convomax.online/case-studies/gps-based-tree-census-for-urban-forestry-and-environmental-monitoring.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling/?$ https://cst.convomax.online/case-studies/heritage-conservation-using-bim-based-architectural-and-structural-modeling.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/integrated-digital-project-management-platform-for-expressway-construction/?$ https://cst.convomax.online/case-studies/integrated-digital-project-management-platform-for-expressway-construction.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization/?$ https://cst.convomax.online/case-studies/integrated-gis-platform-for-utility-asset-management-and-consumer-data-visualization.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/integrated-interface-development/?$ https://cst.convomax.online/case-studies/integrated-interface-development.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/lean-manufacturing-strategy/?$ https://cst.convomax.online/case-studies/lean-manufacturing-strategy.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/optical-fibre-cable-infrastructure/?$ https://cst.convomax.online/case-studies/optical-fibre-cable-infrastructure.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/predictive-flood-modeling/?$ https://cst.convomax.online/case-studies/predictive-flood-modeling.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/river-linking-infrastructure/?$ https://cst.convomax.online/case-studies/river-linking-infrastructure.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/road-asset-management/?$ https://cst.convomax.online/case-studies/road-asset-management.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/software-defined-vehicle-platform/?$ https://cst.convomax.online/case-studies/software-defined-vehicle-platform.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery/?$ https://cst.convomax.online/case-studies/statewide-spatial-data-infrastructure-using-high-resolution-satellite-imagery.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/third-party-inspection/?$ https://cst.convomax.online/case-studies/third-party-inspection.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/unified-enterprise-platform-for-mining-process-management/?$ https://cst.convomax.online/case-studies/unified-enterprise-platform-for-mining-process-management.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/unified-gis-platform-for-utility-scale-power-distribution-management/?$ https://cst.convomax.online/case-studies/unified-gis-platform-for-utility-scale-power-distribution-management.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/uwb-based-authentication/?$ https://cst.convomax.online/case-studies/uwb-based-authentication.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/virtual-validation-of-heavy-machinery-cab-design/?$ https://cst.convomax.online/case-studies/virtual-validation-of-heavy-machinery-cab-design.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/virtual-validation-of-instrument-panel-design/?$ https://cst.convomax.online/case-studies/virtual-validation-of-instrument-panel-design.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/web-gis-based-asset-mapping/?$ https://cst.convomax.online/case-studies/web-gis-based-asset-mapping.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/web-gis-enabled-property-survey/?$ https://cst.convomax.online/case-studies/web-gis-enabled-property-survey.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/case-studies/wireless-battery-management-system/?$ https://cst.convomax.online/case-studies/wireless-battery-management-system.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-and-tech-mahindra-partner/?$ https://cst.convomax.online/news/cs-tech-ai-and-tech-mahindra-partner.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-awarded-stp-consultancy-project-in-vasai-virar/?$ https://cst.convomax.online/news/cs-tech-ai-awarded-stp-consultancy-project-in-vasai-virar.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-ceo-outlines-growth-strategy-on-ndtv-profit/?$ https://cst.convomax.online/news/cs-tech-ai-ceo-outlines-growth-strategy-on-ndtv-profit.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-delivers-fy25-record-highs/?$ https://cst.convomax.online/news/cs-tech-ai-delivers-fy25-record-highs.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-earns-great-place-to-work-certification/?$ https://cst.convomax.online/news/cs-tech-ai-earns-great-place-to-work-certification.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-enables-statewide-go-live-of-khanij-online-2-0/?$ https://cst.convomax.online/news/cs-tech-ai-enables-statewide-go-live-of-khanij-online-2-0.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-expands-global-footprint-with-strategic-mou-with-aetosky-singapore/?$ https://cst.convomax.online/news/cs-tech-ai-expands-global-footprint-with-strategic-mou-with-aetosky-singapore.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-grabs-a-million-dollar-order/?$ https://cst.convomax.online/news/cs-tech-ai-grabs-a-million-dollar-order.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-jv-wins-international-gis-project-in-georgia/?$ https://cst.convomax.online/news/cs-tech-ai-jv-wins-international-gis-project-in-georgia.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-marks-nse-listing-with-bell-ringing-ceremony/?$ https://cst.convomax.online/news/cs-tech-ai-marks-nse-listing-with-bell-ringing-ceremony.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-md-highlights-global-growth-roadmap-on-ndtv-profit/?$ https://cst.convomax.online/news/cs-tech-ai-md-highlights-global-growth-roadmap-on-ndtv-profit.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-order-book-crosses-1000-cr/?$ https://cst.convomax.online/news/cs-tech-ai-order-book-crosses-1000-cr.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-11-39-crore-pmc-order-for-underground-drainage-project-in-vasai-virar/?$ https://cst.convomax.online/news/cs-tech-ai-receives-11-39-crore-pmc-order-for-underground-drainage-project-in-vasai-virar.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-15-95-crore-letter-of-award-from-mmrda-for-arcgis-enterprise-upgrade/?$ https://cst.convomax.online/news/cs-tech-ai-receives-15-95-crore-letter-of-award-from-mmrda-for-arcgis-enterprise-upgrade.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-5-50-crore-mmrda-order-for-autodesk-aec-solution-deployment/?$ https://cst.convomax.online/news/cs-tech-ai-receives-5-50-crore-mmrda-order-for-autodesk-aec-solution-deployment.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-extension-for-mumbai-pune-expressway-digital-project/?$ https://cst.convomax.online/news/cs-tech-ai-receives-extension-for-mumbai-pune-expressway-digital-project.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-letter-of-intent-for-sewage-management-consultancy-project-in-nashik/?$ https://cst.convomax.online/news/cs-tech-ai-receives-letter-of-intent-for-sewage-management-consultancy-project-in-nashik.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-receives-soil-survey-and-mapping-work-orders-from-mrsac/?$ https://cst.convomax.online/news/cs-tech-ai-receives-soil-survey-and-mapping-work-orders-from-mrsac.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-recognized-by-mjp-for-jal-jeevan-mission-project-support/?$ https://cst.convomax.online/news/cs-tech-ai-recognized-by-mjp-for-jal-jeevan-mission-project-support.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-reports-strong-q2-fy25-results/?$ https://cst.convomax.online/news/cs-tech-ai-reports-strong-q2-fy25-results.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-2-24-crore-order-for-common-data-environment-implementation/?$ https://cst.convomax.online/news/cs-tech-ai-secures-2-24-crore-order-for-common-data-environment-implementation.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-a-multi-million-usd-project-from-mmrda-for-infrastructure-monitoring/?$ https://cst.convomax.online/news/cs-tech-ai-secures-a-multi-million-usd-project-from-mmrda-for-infrastructure-monitoring.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-additional-soil-mapping-order-from-mrsac/?$ https://cst.convomax.online/news/cs-tech-ai-secures-additional-soil-mapping-order-from-mrsac.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-additional-soil-mapping-work-order-from-mrsac/?$ https://cst.convomax.online/news/cs-tech-ai-secures-additional-soil-mapping-work-order-from-mrsac.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-extension-for-rural-water-supply-projects-in-uttar-pradesh/?$ https://cst.convomax.online/news/cs-tech-ai-secures-extension-for-rural-water-supply-projects-in-uttar-pradesh.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-isro-subscription-renewal-contract/?$ https://cst.convomax.online/news/cs-tech-ai-secures-isro-subscription-renewal-contract.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-secures-major-mhada-project-for-digital-transformation/?$ https://cst.convomax.online/news/cs-tech-ai-secures-major-mhada-project-for-digital-transformation.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-to-oversee-city-wide-wastewater-modernization-program-in-india/?$ https://cst.convomax.online/news/cs-tech-ai-to-oversee-city-wide-wastewater-modernization-program-in-india.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-wins-cnbc-tv18-sme-champion-award/?$ https://cst.convomax.online/news/cs-tech-ai-wins-cnbc-tv18-sme-champion-award.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ai-wins-mmrda-contract-for-smart-urban-monitoring-and-bim-implementation/?$ https://cst.convomax.online/news/cs-tech-ai-wins-mmrda-contract-for-smart-urban-monitoring-and-bim-implementation.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ais-digital-platform-secures-top-recognition-at-aec-forum/?$ https://cst.convomax.online/news/cs-tech-ais-digital-platform-secures-top-recognition-at-aec-forum.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-ais-lidar-expertise-lands-us-deal/?$ https://cst.convomax.online/news/cs-tech-ais-lidar-expertise-lands-us-deal.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-bags-a-multi-million-dollar-order-to-deploy-a-centralized-iot-based-platform/?$ https://cst.convomax.online/news/cs-tech-bags-a-multi-million-dollar-order-to-deploy-a-centralized-iot-based-platform.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/cs-tech-receives-extension-of-letter-of-award-from-swsm/?$ https://cst.convomax.online/news/cs-tech-receives-extension-of-letter-of-award-from-swsm.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/esri-india-and-autodesk-highlight-bim-gis-integration-at-infraverse-2025/?$ https://cst.convomax.online/news/esri-india-and-autodesk-highlight-bim-gis-integration-at-infraverse-2025.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/honble-shri-dattaji-meghe-in-grateful-remembrance/?$ https://cst.convomax.online/news/honble-shri-dattaji-meghe-in-grateful-remembrance.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/how-cs-tech-ai-is-reimagining-indias-tech-footprint-with-a-global-vision/?$ https://cst.convomax.online/news/how-cs-tech-ai-is-reimagining-indias-tech-footprint-with-a-global-vision.html [R=302,L,NC,E=CST_TEST_302:1]
+    RewriteCond %{HTTP_COOKIE} (^|;\s*)cst_redirect_test=1(;|$)
+    RewriteRule ^resources/news-and-publications/transformations-through-innovation-in-aec-technology/?$ https://cst.convomax.online/news/transformations-through-innovation-in-aec-technology.html [R=302,L,NC,E=CST_TEST_302:1]
+</IfModule>
+<IfModule mod_headers.c>
+    Header always set Cache-Control "no-store, private" env=CST_TEST_302
+    Header always set X-Robots-Tag "noindex" env=CST_TEST_302
+</IfModule>
+# END cstech-temporary-302-test

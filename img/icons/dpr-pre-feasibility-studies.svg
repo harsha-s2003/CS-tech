@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 799 799" width="799" height="799">
+	<style>
+		.s0 { fill: none;stroke: #0b5cff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 44 } 
+	</style>
+	<g>
+		<path class="s0" d="m168 33h330l150 150v584h-480z"/>
+		<path class="s0" d="m498 33v170h150m-380 115h280m-280 115h280m-280 115h210"/>
+	</g>
+</svg>

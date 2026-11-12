@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="1410" viewBox="0 0 1260 1410"><rect width="100%" height="100%" fill="white"/><g transform="translate(85,25) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<rect x="260" y="260" width="504" height="504" rx="72"/>
+<path d="M330 210v50M430 210v50M530 210v50M630 210v50M330 764v50M430 764v50M530 764v50M630 764v50M210 330h50M210 430h50M210 530h50M210 630h50M764 330h50M764 430h50M764 530h50M764 630h50"/>
+<path d="M385 620l92-220h70l92 220M420 540h180M676 400v220"/>
+</g></g><text x="210.0" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">ai-powered-detection</text><g transform="translate(505,25) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<rect x="220" y="170" width="450" height="600" rx="55"/>
+<path d="M320 310h250M320 420h210M320 530h160"/>
+<circle cx="650" cy="650" r="125"/><path d="M742 742l105 105"/>
+<path d="M620 605l-35 60 48 25-34 66"/>
+</g></g><text x="630.0" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">crack-classification-severity</text><g transform="translate(925,25) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<path d="M512 835s245-230 245-430c0-135-110-245-245-245S267 270 267 405c0 200 245 430 245 430z"/>
+<circle cx="512" cy="405" r="82"/>
+</g></g><text x="1050.0" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">accurate-geolocation</text><g transform="translate(85,495) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="512" cy="260" rx="255" ry="105"/>
+<path d="M257 260v190c0 58 114 105 255 105s255-47 255-105V260"/>
+<path d="M257 450v190c0 58 114 105 255 105s255-47 255-105V450"/>
+</g></g><text x="210.0" y="890" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">attribute-management-database</text><g transform="translate(505,495) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<rect x="210" y="250" width="470" height="520" rx="55"/>
+<path d="M390 630l45-150 250-250 105 105-250 250-150 45zM665 250l105 105"/>
+</g></g><text x="630.0" y="890" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">interactive-review-editing</text><g transform="translate(925,495) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<path d="M512 665V210M390 335l122-125 122 125"/>
+<path d="M285 520v240h454V520M285 760h454"/>
+</g></g><text x="1050.0" y="890" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">gis-ready-data-export</text><g transform="translate(85,965) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<rect x="190" y="210" width="644" height="604" rx="60"/>
+<circle cx="360" cy="375" r="60"/>
+<path d="M240 710l185-190 125 125 85-85 150 150"/>
+</g></g><text x="210.0" y="1360" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">import-road-imagery</text><g transform="translate(505,965) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<rect x="220" y="175" width="470" height="650" rx="55"/>
+<path d="M330 330h250M330 450h250M330 570h160"/>
+<circle cx="675" cy="665" r="130"/><path d="M615 665l45 45 85-95"/>
+</g></g><text x="630.0" y="1360" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">review-validate</text><g transform="translate(925,965) scale(.245)"><g stroke="#0B5CFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="512" cy="512" r="300"/>
+<path d="M512 315v210l145 85M512 155v80M815 512h-80M512 869v-80M209 512h80"/>
+</g></g><text x="1050.0" y="1360" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#0B1F66">faster-turnaround</text></svg>

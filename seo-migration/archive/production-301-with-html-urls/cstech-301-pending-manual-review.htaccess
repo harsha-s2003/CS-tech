@@ -1,0 +1,66 @@
+# =====================================================================
+# PENDING APPROVAL - NOT ACTIVE. The 51 "Manual Review" rows, reviewed one by one
+# (see CS_Tech_301_Mapping_Review_All_URLs.xlsx for the reason of each).
+# Nothing here is live: every line is commented out. production.htaccess is unchanged (74 rules).
+# To approve a line: remove its leading "# " and move it into the cstech-301-redirects block
+# of production.htaccess, above "</IfModule>".
+# =====================================================================
+
+# --- Approve 301: equivalent page (34) ---
+# RewriteRule ^about/?$ https://cstech.ai/about.html [R=301,L,NC]
+# RewriteRule ^careers/?$ https://cstech.ai/careers.html [R=301,L,NC]
+# RewriteRule ^contact/?$ https://cstech.ai/contact.html [R=301,L,NC]
+# RewriteRule ^geospatial/?$ https://cstech.ai/services/geospatial-services.html [R=301,L,NC]
+# RewriteRule ^geospatial/analytics/?$ https://cstech.ai/services/modelling-analytics.html [R=301,L,NC]
+# RewriteRule ^geospatial/consulting/?$ https://cstech.ai/services/engineering-consulting.html [R=301,L,NC]
+# RewriteRule ^geospatial/digital-enterprise/?$ https://cstech.ai/services/enterprise-gis-spatial-intelligence.html [R=301,L,NC]
+# RewriteRule ^geospatial/engineering-support/?$ https://cstech.ai/services/bim-3d-modelling-digital-twins.html [R=301,L,NC]
+# RewriteRule ^geospatial/software-solutions/?$ https://cstech.ai/services/solution-development.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/about/?$ https://cstech.ai/about.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/contact/?$ https://cstech.ai/contact.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/industries/aec-and-bim/?$ https://cstech.ai/industries/aec-bim.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/industries/energy/?$ https://cstech.ai/industries/power-utilities.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/industries/land-and-natural-resources/?$ https://cstech.ai/industries/land-natural-resources.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/industries/transportation/?$ https://cstech.ai/industries/transportation-infrastructure.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/industries/water/?$ https://cstech.ai/industries/water-wastewater.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/solutions/smart-city-solutions/?$ https://cstech.ai/solution/smart-city.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/solutions/spatial-data-infrastructure/?$ https://cstech.ai/solution/spatial-data-infrastructure.html [R=301,L,NC]
+# RewriteRule ^investors/?$ https://cstech.ai/investors.html [R=301,L,NC]
+# RewriteRule ^mobility/?$ https://cstech.ai/mobility/automotive.html [R=301,L,NC]
+# RewriteRule ^mobility/industries/?$ https://cstech.ai/mobility/automotive-industries.html [R=301,L,NC]
+# RewriteRule ^mobility/offerings/?$ https://cstech.ai/mobility/automotive-services.html [R=301,L,NC]
+# RewriteRule ^mobility/solutions/?$ https://cstech.ai/mobility/automotive-solutions.html [R=301,L,NC]
+# RewriteRule ^resources/blogs/?$ https://cstech.ai/blogs.html [R=301,L,NC]
+# RewriteRule ^resources/blogs/digital-twins-revolutionizing-industry/?$ https://cstech.ai/blogs/digital-twins-revolutionizing-industry.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/instrument-panel-development/?$ https://cstech.ai/case-studies/instrument-panel-development.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/modular-6d0f-armrest/?$ https://cstech.ai/case-studies/modular-6d0f-armrest.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/multi-feature-armrest-development/?$ https://cstech.ai/case-studies/multi-feature-armrest-development.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/new-recreation-vehicle-launch/?$ https://cstech.ai/case-studies/new-recreation-vehicle-launch.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology/?$ https://cstech.ai/case-studies/smart-water-monitoring-systems-for-rural-infrastructure-using-iot-technology.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance/?$ https://cstech.ai/case-studies/third-party-inspection-application-for-infrastructure-quality-assurance.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions/?$ https://cstech.ai/case-studies/transforming-water-distribution-management-with-iot-and-digital-solutions.html [R=301,L,NC]
+# RewriteRule ^resources/news-and-publications/?$ https://cstech.ai/news.html [R=301,L,NC]
+
+# --- Approve 301: consolidated page (9) ---
+# RewriteRule ^geospatialamericas/industries/public-infrastructure/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/industries/telecom-and-fiber/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/industries/utilities-and-energy/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/services/analytics/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/services/consulting/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/services/digital-enterprise/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^geospatialamericas/services/engineering-support/?$ https://cstech.ai/usa.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/emerging-tech/?$ https://cstech.ai/case-studies.html [R=301,L,NC]
+# RewriteRule ^resources/case-studies/mobility/?$ https://cstech.ai/case-studies.html?industry=automotive [R=301,L,NC]
+
+# --- Re-activate the page first (it is noindex today), then approve (2) ---
+# RewriteRule ^infra-utilities/solutions/disaster-management/?$ https://cstech.ai/solution/disaster-management.html [R=301,L,NC]
+# RewriteRule ^infra-utilities/solutions/vegetation-management/?$ https://cstech.ai/solution/vegetation-management.html [R=301,L,NC]
+
+# --- Hold: no equivalent page, NOT redirected (6) ---
+#   /geospatialamericas/industries/retail-and-real-estate  -> no rule. No retail / real-estate content on the new site. usa.html only covers "Construction / Site Development". Redirect to usa.html only if you accept the regional hub; otherwise 410.
+#   /infra-utilities  -> no rule. Old division hub (water, energy, telecom, transport, land, smart city). The new site has no industries/infrastructure hub. Options: create an overview page, or choose services/geospatial-services.html as the closest hub.
+#   /infra-utilities/industries/oil-and-gas  -> no rule. No Oil & Gas industry page on the new site (only mentions inside service pages and one case study). Create a page or return 410.
+#   /infra-utilities/industries/telecom  -> no rule. No Telecom industry page on the new site (the Telecom filter is also disabled on case studies). Create a page or return 410.
+#   /resources  -> no rule. Old hub linking Case Studies, News and Blogs. The new site has no Resources hub; any single listing would be a partial match. Create a hub, or choose one listing.
+#   /resources/news-and-publications/cs-tech-ai-delivers-stellar-q1-fy26  -> no rule. News article (Q1 FY26 results) has no page on the new site. Migrate it to news/, then redirect; do not send it to the news listing.

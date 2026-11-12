@@ -1,0 +1,5 @@
+# Second lock (the main .htaccess already blocks this): the settings file holds the email
+# password and must never be served, even if the main rules are changed.
+<Files "mail-config.php">
+    Require all denied
+</Files>
