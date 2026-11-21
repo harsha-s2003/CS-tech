@@ -1,9 +1,4 @@
-// ===== Website forms -> email (mail/send-enquiry.php) =====
-// Handles every form with the class "contact-form": the common enquiry form (includes/form.html,
-// added to the page by include.js), the service-page form and the support-ticket form.
-// Sends the form in the background and shows "Submitting...". When the email is sent the visitor
-// goes to the Thank You page (thank-you.html); if not, an error message appears under the button so
-// they can try again. Loaded on every page by the HEAD part of includes/header.html.
+
 (function () {
     var script = document.currentScript;
     var root = new URL('../', script ? script.src : location.href); // site root = the folder above /js/
@@ -52,7 +47,7 @@
 
         fetch(ENDPOINT, { method: 'POST', body: data, credentials: 'same-origin' })
             .then(function (res) {
-                return res.text().then(function (text) { return res.ok && text.trim() === 'success'; });
+                return res.ok;
             })
             .catch(function () { return false; })
             .then(function (ok) {
