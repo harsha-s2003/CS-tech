@@ -1,13 +1,5 @@
 <?php
-// =====================================================================================
-// CS TECH Ai - website forms -> email (PHPMailer over SMTP, same account as the old website)
-//
-// Used by every form on the site (the common enquiry form, the service-page form and the
-// support-ticket form). js/enquiry-form.js posts the form here and shows the result.
-// Answers with the text "success" or "error" (like the old site's email-notification.php).
-//
-// Who receives the emails, the SMTP account and the subject line: mail/mail-config.php
-// =====================================================================================
+
 declare(strict_types=1);
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -17,7 +9,6 @@ require __DIR__ . '/../PHPMailer/src/Exception.php';
 require __DIR__ . '/../PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/../PHPMailer/src/SMTP.php';
 
-// The settings file. A different file can be set on the server only (local tests), never by a visitor.
 $config = require (getenv('CSTECH_MAIL_CONFIG') ?: __DIR__ . '/mail-config.php');
 
 header('Content-Type: text/plain; charset=utf-8');
@@ -45,13 +36,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     finish('error', 405);
 }
 
-// Spam trap: the "website" field is hidden from people; only bots fill it in.
-// Pretend it worked, so the bot does not try again, but send nothing.
 if (trim((string)($_POST['website'] ?? '')) !== '') {
     finish('success');
 }
 
-// Read one field: trimmed, invisible control characters removed, length limited
 function field(string $name, int $max = 300): string
 {
     $value = trim((string)($_POST[$name] ?? ''));
@@ -59,7 +47,6 @@ function field(string $name, int $max = 300): string
     return function_exists('mb_substr') ? mb_substr($value, 0, $max) : substr($value, 0, $max);
 }
 
-// Every field any form on the site can send, with the label shown in the email (in this order)
 $labels = [
     'formName'            => 'Form',
     'fullName'            => 'Full Name',
@@ -91,7 +78,6 @@ foreach ($labels as $name => $label) {
     }
 }
 
-// Minimum needed to answer the enquiry: a valid email address and a name (or ticket subject)
 $email = $data['emailAddress'] ?? '';
 $name = trim(($data['fullName'] ?? '') !== '' ? $data['fullName'] : trim(($data['firstName'] ?? '') . ' ' . ($data['lastName'] ?? '')));
 if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || ($name === '' && !isset($data['ticketSubject']))) {
@@ -124,21 +110,20 @@ $body = '<p>Hello,</p>'
 $mail = new PHPMailer(true);
 try {
     $mail->isSMTP();
-    // Mail servers tried in order ("tls://host:587", then "ssl://host:465"): if a network blocks
-    // one port, PHPMailer moves on to the next server by itself.
+    
     $mail->Host        = implode(';', (array)$config['smtp_servers']);
     $mail->SMTPAuth    = (bool)$config['smtp_auth'];
     $mail->Username    = $config['smtp_username'];
     $mail->Password    = $config['smtp_password'];
     $mail->SMTPAutoTLS = false;   // encryption comes from each server's tls:// or ssl:// prefix
-    $mail->Timeout     = 10;      // seconds per server, so a blocked port falls back quickly
+    $mail->Timeout     = 15;      // seconds per server (an SSL connection can take ~6s); then the next one
     $mail->CharSet     = PHPMailer::CHARSET_UTF8;
 
     $mail->setFrom($config['from_email'], $config['from_name']);
     foreach ($config['to'] as $address => $label) {
         $mail->addAddress($address, $label);
     }
-    $mail->addReplyTo($email, $name);   // "Reply" in the inbox answers the visitor
+    $mail->addReplyTo($email, $name);   
 
     $mail->isHTML(true);
     $mail->Subject = $subject;
@@ -148,7 +133,6 @@ try {
     $mail->send();
     finish('success');
 } catch (Exception $ex) {
-    // The reason goes to the server's PHP error log (cPanel > Errors), never to the visitor
     error_log('CS TECH website form: email not sent - ' . $mail->ErrorInfo);
     finish('error', 500);
 }
