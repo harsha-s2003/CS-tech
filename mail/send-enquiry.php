@@ -24,6 +24,16 @@ header('Content-Type: text/plain; charset=utf-8');
 header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');
 
+define(
+    'GOOGLE_SCRIPT_URL',
+    'https://script.google.com/macros/s/AKfycbyPTw3gu_zHB-F9TP9DYZtuXeAeH_V3iy-ZbQWEA9K3kOmVEFThYzsEwshtsZmo09Zu/exec'
+);
+
+define(
+    'GOOGLE_FORM_SECRET',
+    '8303741cce66cfdc4b5c5ea4c17cc9eb007dc6dc26a659297337139c156ea95a'
+);
+
 function finish(string $text, int $status = 200): void
 {
     http_response_code($status);
